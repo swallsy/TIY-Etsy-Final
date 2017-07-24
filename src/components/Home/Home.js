@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../../styles/Home.css';
+import Nav from '../Header/Nav.js'
+import OrangeBar from './OrangeBar/OrangeBar.js'
 
 export default class Home extends Component {
   render() {
@@ -11,11 +13,11 @@ export default class Home extends Component {
           {/* <ShopCards {category} /> */}
           {/* <BrowseCollections /> */}
           {/* <ShopCards {gifts} /> */}
-          {/* <OrangeBar {safety} /> */}
+          <OrangeBar type="safety" />
           {/* <RecentReviews /> */}
-          {/* <OrangeBar {selling} /> */}
+          <OrangeBar type="selling"/>
           {/* <FreshBlog /> */}
-          {/* <OrangeBar {WhatIsEtsy} /> */}
+          <OrangeBar type="whatIs"/>
           <h1>You're good to go. Now make Etsy!</h1>
       </div>
     );
