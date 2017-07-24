@@ -1,6 +1,6 @@
 
 Monday: Sara set up Trello and feature cards.
 Tuesday: Michael
-Wednesday: Mat
+Wednesday: Matt
 Thursday: Sam
 Friday: Lula
