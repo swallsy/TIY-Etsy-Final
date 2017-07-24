@@ -1,0 +1,25 @@
+#screen_1 {
+  height: 280px;
+}
+
+h1 {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+span {
+  background-color: #lelele;
+}
+.carousel-control-prev-icon {
+  background-color: #lelele;
+}
+
+.carousel-control-prev {
+  width: 10%;
+  margin-right: 0;
+}
+
+.carousel-caption {
+  width:  50%;
+  text-align: left;
+}
