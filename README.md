@@ -1,4 +1,3 @@
-
 ### Monday: Sara
 - set up Trello
 - feature cards
