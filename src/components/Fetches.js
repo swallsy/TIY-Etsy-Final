@@ -1,10 +1,10 @@
 // Fetch.js
 
-// This file should be imported to access all of the necessary fetches using methods, to make the rest of the code less redundant and improve readability.
+// This file should not be imported.  Use the different fetches in here to copy and paste into code in other components.
 
-export default class Fetch {
+
   // URI listings/:listingId endpoint
-  getListing(listingId) {
+  function getListing(listingId) {
     // make the fetch URL
     let fetchURL =
       'https://openapi.etsy.com/v2/listings/' +
@@ -24,7 +24,7 @@ export default class Fetch {
   }
 
   // URI listings/:listingId/images endpoint
-  getListingImages(listingId) {
+  function getListingImages(listingId) {
     // make the fetch URL
     let fetchURL =
       'https://openapi.etsy.com/v2/listings/' +
@@ -44,7 +44,7 @@ export default class Fetch {
   }
 
   // URI /users/:userId endpoint
-  getUser(userId) {
+  function getUser(userId) {
     // make the fetch URL
     let fetchURL =
       'https://openapi.etsy.com/v2/users/' +
@@ -64,7 +64,7 @@ export default class Fetch {
   }
 
   // get items that are in the sellers shop
-  getShopItemsByListingId(listingId) {
+  function getShopItemsByListingId(listingId) {
     // first fetch getListingShop endpoint
     let fetchURL = 'https://openapi.etsy.com/v2/shops/listing/' + listingId + '?api_key=nrfza0h31bu4g5biq6bq6g4c';
 
@@ -72,8 +72,6 @@ export default class Fetch {
     fetch(fetchURL).then(response => {
       console.log(response);
 
-      // now fetch 
+      // now fetch
     })
   }
-
-}
