@@ -24,3 +24,24 @@ export default class Fetch {
       });
   }
 
+  // use listings/:id/images endpoint
+  getListingImages(listingId) {
+    // make the fetch URL
+    let fetchURL =
+      'https://openapi.etsy.com/v2/listings/' +
+      listingId +
+      '/images?api_key=nrfza0h31bu4g5biq6bq6g4c';
+
+    // fetch it and return the json
+    fetch(fetchURL)
+      .then(response => response.json())
+      .then(response => {
+        console.log(response);
+
+        return response;
+      })
+      .catch(function(err) {
+        console.error(err);
+      });
+  }
+}
