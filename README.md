@@ -4,7 +4,7 @@ This project is to build out the functionality of the Etsy categories page.
 Team:
 Lorien Olive
 Jason Grigg
-Micheal Preactor
+Michael Prechter
 Robert(Bob) Hutchins
 
 Team Lead:
