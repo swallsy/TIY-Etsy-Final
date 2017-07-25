@@ -18,7 +18,7 @@ export default class CatBar extends Component {
       <div className="card">
         <AllCategories />
         <Color />
-      
+
       </div>
     )
   }
