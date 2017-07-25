@@ -3,3 +3,8 @@ body {
   padding: 0;
   width: 100%;
 }
+
+.infocard {
+  border: none;
+  text-align: center;
+}
