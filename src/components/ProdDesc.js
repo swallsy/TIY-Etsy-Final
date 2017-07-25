@@ -4,8 +4,10 @@ import '../styles/App.css';
 class ProdDesc extends Component {
   render() {
     return (
-      <div className="ProdDesc">
+      <div>
+				<p className="ProdDesc" className='col-md-6' className='col-md-offset-2' className='bg-success'>
         ProdDesc code needed.
+			</p>
       </div>
     );
   }

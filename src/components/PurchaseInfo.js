@@ -4,8 +4,9 @@ import '../styles/App.css';
 class PurchaseInfo extends Component {
   render() {
     return (
-      <div className="PurchaseInfo">
+      <div> <p className="PurchaseInfo" className='col-md-4' className='col-md-offset-2' className='bg-info'>
         PurchaseInfo code needed.
+			</p>
       </div>
     );
   }
