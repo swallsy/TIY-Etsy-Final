@@ -13,14 +13,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-				<ShopHeader />
-      	<LikeBanner />
-				<ProductImage />
-				<ProdDesc />
-				<PurchaseInfo />
-				<ShopSidebar />
-
-      </div>
+					<div className='row  justify-content-md-center'>
+					<ShopHeader />
+				</div>
+				<div className='row justify-content-md-center'>
+	      	<LikeBanner />
+					<ProductImage />
+					<ProdDesc />
+				</div>
+				<div className='row justify-content-md-center'>
+					<PurchaseInfo />
+					<ShopSidebar />
+				</div>
+			</div>
     );
   }
 }
