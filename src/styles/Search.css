@@ -1,0 +1,17 @@
+.etsyLogo {
+  width: auto;
+  height: 40px;
+}
+.SearchBar {
+  height: 80px;
+  padding-top: 20px;
+  padding-left: 30px;
+  display: inline-block;
+  width: 100vw;
+}
+.logo {
+  width:40%;
+}
+.bar {
+  width: 40%;
+}
