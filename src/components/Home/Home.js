@@ -5,7 +5,8 @@ import ShopCards from './ShopCards/ShopCards.js'
 import Carousel from './Carousel.js'
 import InfoCards from './InfoCards.js';
 import Header from '../Header/Header.js';
-
+import FreshBlog from './FreshBlog.js';
+import '../../styles/Carousel.css';
 export default class Home extends Component {
   render() {
     return (
@@ -19,9 +20,9 @@ export default class Home extends Component {
           <OrangeBar type="safety" />
           {/* <RecentReviews /> */}
           <OrangeBar type="selling"/>
-          {/* <FreshBlog /> */}
+          <FreshBlog type="blog"/>
           <OrangeBar type="whatIs"/>
-          
+
       </div>
     );
   }
