@@ -48,17 +48,38 @@ a:hover {
   box-shadow: none;
 }
 
+#previous-button {
+  color: black;
+}
+
+#next-button {
+  color: black;
+}
 
 #screen_2 h1 {
   color: white;
 }
 
-.carousel-control-prev-icon {
-  color: #323232;
+.carousel-icons .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23323232' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.carousel-icons .carousel-control-next-icon  {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23323232' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-icons {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100px;
+  top: 90px;
 }
 
 .carousel-control-prev {
-  width: 10%;
+  width: 4%;
+  margin-right: 0;
+}
+
+.carousel-control-next {
+  width: 4%;
   margin-right: 0;
 }
 

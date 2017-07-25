@@ -5,7 +5,7 @@ import OrangeBar from './OrangeBar/OrangeBar.js'
 import ShopCards from './ShopCards/ShopCards.js'
 import Carousel from './Carousel.js'
 import InfoCards from './InfoCards.js';
-import '../../styles/Carousel.css';
+
 
 
 export default class Home extends Component {
