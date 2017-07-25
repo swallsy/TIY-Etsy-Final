@@ -13,17 +13,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-					<div className='row  justify-content-md-center'>
-					<ShopHeader />
+				<div className='row  justify-content-md-center'>
+					<div className='row justify-content-md-center' className='col-10'>
+						<ShopHeader />
+					</div>
 				</div>
-				<div className='row justify-content-md-center'>
-	      	<LikeBanner />
-					<ProductImage />
-					<ProdDesc />
-				</div>
-				<div className='row justify-content-md-center'>
-					<PurchaseInfo />
-					<ShopSidebar />
+				<div className = 'row justify-content-md-center'>
+					<div className='row justify-content-md-center' className='col-6'>
+		      	<LikeBanner />
+						<ProductImage />
+						<ProdDesc />
+					</div>
+					<div className='row' className='col-4'>
+						<PurchaseInfo />
+						<ShopSidebar />
+					</div>
 				</div>
 			</div>
     );

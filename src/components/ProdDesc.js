@@ -4,7 +4,7 @@ import "../styles/App.css";
 class ProdDesc extends Component {
   render() {
     return (
-      <div className="ProdDesc" className="col-6" className="bg-success">
+      <div className="ProdDesc" className="col-12" className="bg-success">
         <p>ProdDesc code needed.</p>
       </div>
     );
