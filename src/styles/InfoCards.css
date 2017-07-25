@@ -1,0 +1,22 @@
+.infocard {
+  border: none;
+  text-align: center;
+}
+
+.infoCardBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.infoCardIcon {
+  height:80px;
+  width:80px;
+}
+
+.infoCardCol-1 {
+}
+.infoCardCol-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
