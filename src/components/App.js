@@ -9,6 +9,20 @@ import ProdDesc from './ProdDesc'
 import ShopSidebar from './ShopSidebar'
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      results: {}
+    }
+  }
+  componentDidMount() {
+    fetch('https://openapi.etsy.com/v2/listings/175112598?includes=Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c').then(response => response.json()).then(response => {
+      this.state = {
+        results: response.results
+      }
+      console.log(this.state);
+    })
+  }
   render() {
     return (
       <div className="App">
