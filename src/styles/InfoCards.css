@@ -16,6 +16,7 @@
 
 .infoCardCol-1 {
 }
+
 .infoCardCol-2 {
   grid-column-start: 2;
   grid-column-end: 3;
