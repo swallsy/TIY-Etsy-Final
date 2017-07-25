@@ -1,55 +1,60 @@
 .carousel-item {
   height: 280px;
   font-family: serif;
-
 }
 
-button {
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.carousel-item h1 {
+  padding-left: 0;
+  margin-left: 0;
+  padding-bottom: 30px;
+  color: #323232;
+  font-weight: 100;
+  font-size: 52px;
+}
+
+.button {
   border-color: black;
   background-color: transparent;
   box-shadow: none;
   font-size: 14px;
-  padding: 5px 8px;
+  padding: 8px;
   border-radius: 3px;
+  border-style: solid;
+  font-family: sans-serif;
 }
 
-#screen_1 h1 {
-  padding-left: 0;
-  margin-left: 0;
-  padding-bottom: 20px;
-  color: #323232;
-  font-weight: 100;
-  font-size: 48px;
-}
-
-#screen_3 h1 {
-  padding-left: 0;
-  margin-left: 0;
-  padding-bottom: 20px;
-  color: #323232;
-  font-weight: 100;
-  font-size: 48px;
-}
-
-#screen_2 h1 {
-  padding-left: 0;
-  margin-left: 0;
-  padding-bottom: 20px;
-  color: white;
-  font-weight: 100;
-  font-size: 48px;
-}
-
-#screen_2 button {
+#screen_2 .button {
   border-color: white;
   color: white;
 }
 
-span {
-  background-color: #lelele;
+#screen_2 a:hover {
+  border-color: #F56400;
 }
+
+.button:hover {
+  background-color: #F56400;
+  border-color: #F56400;
+  border-style: solid;
+  color: white;
+  box-shadow: none;
+}
+
+
+#screen_2 h1 {
+  color: white;
+}
+
 .carousel-control-prev-icon {
-  background-color: #lelele;
+  color: #323232;
 }
 
 .carousel-control-prev {
