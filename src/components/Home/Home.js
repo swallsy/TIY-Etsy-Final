@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import '../../styles/Carousel.css';
 import Carousel from './Carousel.js'
 
+import InfoCards from './InfoCards.js';
+
 export default class Home extends Component {
   render() {
     return (
       <div className='Home'>
           <h1>You're good to go. Now make Etsy!</h1>
           {/* <Header /> */}
+          <InfoCards />
           <Carousel />
-          {/* <InfoCards /> */}
           {/* <ShopCards {category} /> */}
           {/* <BrowseCollections /> */}
           {/* <ShopCards {gifts} /> */}
