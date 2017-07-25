@@ -4,7 +4,7 @@ import "../styles/App.css";
 class LikeBanner extends Component {
   render() {
     return (
-      <div className="LikeBanner" className="col-12" className="bg-warning">
+      <div className="LikeBanner col-12 bg-warning">
         <p>LikeBanner code needed.</p>
       </div>
     );
