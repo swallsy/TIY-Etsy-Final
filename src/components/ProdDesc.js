@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import '../styles/App.css';
+import React, { Component } from "react";
+import "../styles/App.css";
 
 class ProdDesc extends Component {
   render() {
     return (
-      <div className="ProdDesc">
-        ProdDesc code needed.
+      <div className="ProdDesc" className="col-12" className="bg-success">
+        <p>ProdDesc code needed.</p>
       </div>
     );
   }

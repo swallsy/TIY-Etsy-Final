@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import '../styles/App.css';
+import React, { Component } from "react";
+import "../styles/App.css";
 
 class ProductImage extends Component {
   render() {
     return (
-      <div className="ProductImage">
-        ProductImage code needed.
+      <div className="ProductImage" className="col-12" className="bg-primary">
+        <p>ProductImage code needed.</p>
       </div>
     );
   }
