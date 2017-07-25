@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import '../../styles/Home.css';
 
+import InfoCards from './InfoCards.js';
+
 export default class Home extends Component {
   render() {
     return (
       <div className='Home'>
           {/* <Header /> */}
           {/* <Carousel /> */}
-          {/* <InfoCards /> */}
+          <InfoCards />
           {/* <ShopCards {category} /> */}
           {/* <BrowseCollections /> */}
           {/* <ShopCards {gifts} /> */}
