@@ -1,5 +1,6 @@
 .orange-bar {
     width: 100%;
-    height: auto;
+    height: 250px;
     background-color: #FF883E;
+    margin: 30px 0px;
 }
