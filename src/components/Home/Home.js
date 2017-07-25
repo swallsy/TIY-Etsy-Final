@@ -6,9 +6,6 @@ import Carousel from './Carousel.js'
 import InfoCards from './InfoCards.js';
 import Header from '../Header/Header.js';
 
-import '../../styles/Carousel.css';
-
-
 export default class Home extends Component {
   render() {
     return (
