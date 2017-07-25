@@ -24,7 +24,7 @@ export default class Home extends Component {
           <OrangeBar type="selling"/>
           {/* <FreshBlog /> */}
           <OrangeBar type="whatIs"/>
-          <h1>You're good to go. Now make Etsy!</h1>
+          
       </div>
     );
   }
