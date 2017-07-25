@@ -5,6 +5,7 @@ import OrangeBar from './OrangeBar/OrangeBar.js'
 import ShopCards from './ShopCards/ShopCards.js'
 import Carousel from './Carousel.js'
 import InfoCards from './InfoCards.js';
+import FreshBlog from './FreshBlog.js';
 import '../../styles/Carousel.css';
 
 
@@ -22,7 +23,7 @@ export default class Home extends Component {
           <OrangeBar type="safety" />
           {/* <RecentReviews /> */}
           <OrangeBar type="selling"/>
-          {/* <FreshBlog /> */}
+          <FreshBlog type="blog"/>
           <OrangeBar type="whatIs"/>
           <h1>You're good to go. Now make Etsy!</h1>
       </div>
