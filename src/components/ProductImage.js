@@ -4,7 +4,7 @@ import "../styles/App.css";
 class ProductImage extends Component {
   render() {
     return (
-      <div className="ProductImage" className="col-12" className="bg-primary">
+      <div className="ProductImage col-12 bg-primary">
         <p>ProductImage code needed.</p>
       </div>
     );
