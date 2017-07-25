@@ -7,17 +7,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
+  padding:0;
 }
 
 .infoCardIcon {
-  height:80px;
+
   width:80px;
 }
 
 .infoCardCol-1 {
+  height:80px;
 }
 
 .infoCardCol-2 {
   grid-column-start: 2;
   grid-column-end: 3;
+  height:80px;
 }
