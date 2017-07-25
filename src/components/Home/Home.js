@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../styles/Home.css';
 import Nav from '../Header/Nav.js'
 import OrangeBar from './OrangeBar/OrangeBar.js'
+import ShopCards from './ShopCards/ShopCards.js'
 
 export default class Home extends Component {
   render() {
@@ -10,9 +11,9 @@ export default class Home extends Component {
           {/* <Header /> */}
           {/* <Carousel /> */}
           {/* <InfoCards /> */}
-          {/* <ShopCards {category} /> */}
+          <ShopCards type="category" />
           {/* <BrowseCollections /> */}
-          {/* <ShopCards {gifts} /> */}
+          <ShopCards type="gifts"/>
           <OrangeBar type="safety" />
           {/* <RecentReviews /> */}
           <OrangeBar type="selling"/>
