@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import '../styles/App.css';
+import React, { Component } from "react";
+import "../styles/App.css";
 
 class LikeBanner extends Component {
   render() {
     return (
-      <div className="LikeBanner">
-        LikeBanner code needed.
+      <div className="LikeBanner" className="col-12" className="bg-warning">
+        <p>LikeBanner code needed.</p>
       </div>
     );
   }
