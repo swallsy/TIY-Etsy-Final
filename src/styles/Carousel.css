@@ -1,10 +1,48 @@
-#screen_1 {
+.carousel-item {
   height: 280px;
+  font-family: serif;
+
 }
 
-h1 {
+button {
+  border-color: black;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+#screen_1 h1 {
   padding-left: 0;
   margin-left: 0;
+  padding-bottom: 20px;
+  color: #323232;
+  font-weight: 100;
+  font-size: 48px;
+}
+
+#screen_3 h1 {
+  padding-left: 0;
+  margin-left: 0;
+  padding-bottom: 20px;
+  color: #323232;
+  font-weight: 100;
+  font-size: 48px;
+}
+
+#screen_2 h1 {
+  padding-left: 0;
+  margin-left: 0;
+  padding-bottom: 20px;
+  color: white;
+  font-weight: 100;
+  font-size: 48px;
+}
+
+#screen_2 button {
+  border-color: white;
+  color: white;
 }
 
 span {
@@ -20,6 +58,15 @@ span {
 }
 
 .carousel-caption {
-  width:  50%;
+  width: 40%;
   text-align: left;
+  left: 10%;
+}
+
+.img-fluid {
+  height: 280px;
+  max-width: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }

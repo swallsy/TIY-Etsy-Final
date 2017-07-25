@@ -8,20 +8,28 @@ class Carousel extends Component {
 
         <div className="carousel-inner" role="listbox">
 
-          <div className=" carousel-item active" id="screen_1">
-            <div className="carousel-caption d-none d-md-block">
-              <h1>You need these (almost) as much as sunscreen</h1>
-              <button>Shop for Summer</button>
+          <div className=" carousel-item active">
+            <div className="carousel-caption d-none d-md-block" id="screen_1">
+              <h1>You need these (almost) as much as sunscreen.</h1>
+              <button>Shop for summer</button>
             </div>
             <img className="d-block img-fluid" src="https://img1.etsystatic.com/site-assets/vesta-homepage-headers-v3/summer-2017/summer-evergreen/summer_ever_1_2020x335.3.jpg" alt="First slide" />
           </div>
 
-          <div className="carousel-item" id="screen_2">
-            <img className="d-block img-fluid" src="..." alt="Second slide" />
+          <div className="carousel-item">
+            <div className="carousel-caption d-none d-md-block" id="screen_2">
+              <h1>Get the perfect thing for your get-together.</h1>
+              <button>Celebrate summer</button>
+            </div>
+            <img className="d-block img-fluid" src="https://img1.etsystatic.com/site-assets/vesta-homepage-headers-v3/summer-2017/summer-occasion/summer_occasion_1_2020x335.3.jpg" alt="Second slide" />
           </div>
 
-          <div className="carousel-item" id="screen_3">
-            <img className="d-block img-fluid" src="..." alt="Third slide" />
+          <div className="carousel-item">
+            <div className="carousel-caption d-none d-md-block" id="screen_3">
+              <h1>Wear these for the next heat wave.</h1>
+              <button>Shop summer jewelry</button>
+            </div>
+            <img className="d-block img-fluid" src="https://img1.etsystatic.com/site-assets/vesta-homepage-headers-v3/summer-2017/summer-jewelry/summer_jewelry_2020x335.0.jpg" alt="Third slide" />
           </div>
 
         </div>
