@@ -4,6 +4,20 @@ body {
   font-family: sans-serif;
 }
 
+/*BEGIN ShopHeader styling*/
+
+
+
+/*END ShopHeader styling*/
+
+.shopheader-listings-thumb-pic {
+  width: 75px;
+}
+
+.shopheader-shop-pic {
+  width: 75px;
+}
+
 /*BEGIN ShopSidebar styling*/
 
 .shop-sidebar-shop-pic {
