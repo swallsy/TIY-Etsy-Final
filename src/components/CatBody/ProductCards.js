@@ -9,12 +9,12 @@ export default class ProductCards extends Component {
   }
 
   componentDidMount() {
-    fetch('https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&fields=title,url&limit=2&includes=Images,Shop').then(resp => resp.json())
+    fetch('https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&fields=title,url&limit=10&includes=Images,Shop').then(resp => resp.json())
     .then(resp => {
       let productCards = resp.results.map((product) => {
         return (
           <div className="card" key={product.Images.listing_image_id}>
-            <img src={product.Images.url_75x75} />
+            <img src={product.Images[0].url_75x75} />
             <div>{product.title}</div>
             <div>{product.Shop.shop_name}</div>
             <div>{product.Images.rank}</div>
