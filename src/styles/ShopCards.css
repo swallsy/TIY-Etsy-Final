@@ -4,14 +4,15 @@
 }
 
 .s-card-center-box {
-    margin-left: 20px;
+    width: 98%;
+    margin-left: 10px;
 }
 
 .card-box {
     box-shadow: 0px 0px 3px 0px #828282;
     border-radius: 2px;
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
 }
 
 .s-card-cat-name {
@@ -19,8 +20,8 @@
 }
 
 .s-card-image {
-    height: 165px;
-    width: 200px;
+    height: 155px;
+    width: 180px;
     background-repeat: no-repeat;
     background-position: top left;
     background-size: contain;

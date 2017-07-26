@@ -1,0 +1,38 @@
+.navbar-item {
+    height: auto;
+}
+
+.dropdown-display-top {
+    margin: 0px;
+    display: none;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    position: absolute;
+    left: 30px;
+    z-index: 99;
+    width: 95vw;
+    background-color: white;
+}
+
+.show-top{
+    margin: 0px;
+    display: inherit;
+}
+
+.dropdown-display-sub {
+    display: none;
+}
+
+.show-sub {
+    position: relative;
+    display: inline-block;
+    width: 75%;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+
+
+
+.drop-down-div {
+
+}
