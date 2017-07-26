@@ -29,7 +29,7 @@ class Search extends Component {
           </div>
         </div>
         <div className="row navRight">
-          <div>
+          <div className="navText">
             <a
               className="col-sm navLink"
               href="https://www.etsy.com/sell?ref=hdr&from_page=https%3A%2F%2Fwww.etsy.com%2F"
@@ -37,24 +37,31 @@ class Search extends Component {
               Sell on Etsy
             </a>
           </div>
-          <div>
+          <div className="navText">
             <a className="col-sm navLink" href="">
               Register
             </a>
           </div>
           <div className="">
             <button
-              className=" col-sm navLink navLinkButton"
+              className=" col-sm navLinkButton"
               type="btn"
               value="Sign in"
             >
               Sign in
             </button>
           </div>
-          <div>
+          <div className="shopCart">
+            <a href="https://www.etsy.com/cart?ref=hdr">
+            <img
+              className="shoppingCart"
+              src={require("./images/shopping-cart.png")}
+            />
+          <p className="shoppingCartText">Cart</p>
+          </a>
+          </div>
         </div>
       </div>
-    </div>
     );
   }
 }
