@@ -13,7 +13,7 @@ export default class ProductCards extends Component {
     .then(resp => {
       let productCards = resp.results.map((product) => {
         return (
-          <div className="card" key={product.Images.listing_image_id}>
+          <div className="card col-md-3" key={product.Images.listing_image_id}>
             <img src={product.Images[0].url_75x75} />
             <div>{product.title}</div>
             <div>{product.Shop.shop_name}</div>
@@ -29,7 +29,7 @@ export default class ProductCards extends Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="row">
         {this.state.products}
       </div>
     )
