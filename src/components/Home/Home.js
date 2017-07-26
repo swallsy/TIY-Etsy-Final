@@ -5,7 +5,9 @@ import OrangeBar from './OrangeBar/OrangeBar.js'
 import ShopCards from './ShopCards/ShopCards.js'
 import Carousel from './Carousel.js'
 import InfoCards from './InfoCards.js';
-import '../../styles/Carousel.css';
+import BrowseCollections from './Browse-Collections.js';
+
+
 
 
 export default class Home extends Component {
@@ -17,7 +19,7 @@ export default class Home extends Component {
           <Carousel />
           <InfoCards />
           <ShopCards type="category" />
-          {/* <BrowseCollections /> */}
+          <BrowseCollections />
           <ShopCards type="gifts"/>
           <OrangeBar type="safety" />
           {/* <RecentReviews /> */}
