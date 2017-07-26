@@ -9,6 +9,7 @@
 
 .card-block {
   padding: 0;
+  background-color: #FAF9F5;
 }
 
 .blogtitle {
@@ -24,4 +25,9 @@
 .bottomlinktoblog{
   text-align: center;
   margin: 4% 0 4% 0;
+
+}
+
+.bloglink {
+  color: #E55400;
 }

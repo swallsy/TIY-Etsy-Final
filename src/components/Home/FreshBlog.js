@@ -54,7 +54,7 @@ class FreshBlog extends Component {
           </div>
         </div>
       </div>
-      <div className="bottomlinktoblog"><a href="https://blog.etsy.com/en?ref=hpsm">Read the blog</a></div>
+      <div className="bottomlinktoblog"><a className="bloglink" href="https://blog.etsy.com/en?ref=hpsm" >Read the blog</a></div>
     </div>
     );
   }
