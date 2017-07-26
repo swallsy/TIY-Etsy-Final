@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../../styles/Nav.css';
+import '../../styles/OrangeBar.css';
 
 export default class OrangeBar extends Component {
     constructor(props){

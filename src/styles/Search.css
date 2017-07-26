@@ -1,0 +1,64 @@
+.etsyLogo {
+  width: auto;
+  height: 40px;
+}
+.navTop {
+  height: 80px;
+  padding-top: 15px;
+  padding-left: 30px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+ width: 7vw;
+}
+.bar {
+  width:40vw;
+  padding-top: 10px;
+}
+.searchBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 49vw;
+}
+.textArea {
+  width:30vw;
+  border-radius: 5px 0 0 5px;
+  border-style: solid;
+  border-width: thin;
+  background-color: #FBFBFA;
+  border-color: #CFCBC8;
+  height: 35px;
+  padding-left: 10px;
+  color:#CFCBC8;
+  margin-left: none;
+}
+.searchButton {
+  background-color: #F56400;
+  border-style: solid;
+  border-radius: 0 5px 5px 0;
+  border-width: thin;
+  color: white;
+  font-size: 14px;
+  height: 35px;
+  width:6vw;
+}
+.navRight {
+  width: 49vw;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.navLink {
+  color: #ED8D55;
+}
+.navLinkButton {
+  border-color: #ED8D55;
+  border-radius: 5px;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+}
