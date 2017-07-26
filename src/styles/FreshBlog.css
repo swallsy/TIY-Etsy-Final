@@ -1,6 +1,7 @@
 .wholeblog {
   width: 100vw;
   margin: 0;
+  padding: 0 3% 0 3%;
 }
 
 .card {
@@ -12,9 +13,16 @@
   background-color: #FAF9F5;
 }
 
+.blogsection {
+  padding: 0;
+
+}
+
 .blogtitle {
   text-align: center;
   margin: 7% 0 3% 0;
+  font-size: 26px;
+  font-weight: 500;
 }
 
 .blogimg {

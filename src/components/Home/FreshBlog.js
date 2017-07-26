@@ -5,7 +5,7 @@ class FreshBlog extends Component {
   render() {
     return (
       <div>
-      <h2 className="blogtitle">Fresh From The Blog</h2>
+      <h2 className="blogtitle"><a href="https://blog.etsy.com/en/?ref=hpsh">Fresh From The Blog</a></h2>
       <div className="row wholeblog">
         <div className="col-sm-4">
           <div className="card blogcard">
@@ -23,7 +23,7 @@ class FreshBlog extends Component {
         </div>
 
 
-        <div className="col-md-4">
+        <div className="col-md-4 blogsection">
           <div className="card blogcard">
             <div className="card-block">
               <a href="https://blog.etsy.com/en/are-you-pro-pineapple-or-team-watermelon/?ref=hp" alt="Shopping guides, are you pro pineapple or watermelon">
@@ -54,7 +54,7 @@ class FreshBlog extends Component {
           </div>
         </div>
       </div>
-      <div className="bottomlinktoblog"><a className="bloglink" href="https://blog.etsy.com/en?ref=hpsm" >Read the blog</a></div>
+      <div className="bottomlinktoblog"><a className="bloglink" href="https://blog.etsy.com/en?ref=hpsm">Read the blog</a></div>
     </div>
     );
   }
