@@ -7,6 +7,7 @@ import InfoCards from './InfoCards.js';
 import Header from '../Header/Header.js';
 import FreshBlog from './FreshBlog.js';
 import '../../styles/Carousel.css';
+
 export default class Home extends Component {
   render() {
     return (
@@ -14,7 +15,7 @@ export default class Home extends Component {
           <Header />
           <Carousel />
           <InfoCards />
-          <ShopCards type="category" />
+          <ShopCards type="category"/>
           {/* <BrowseCollections /> */}
           <ShopCards type="gifts"/>
           <OrangeBar type="safety" />
