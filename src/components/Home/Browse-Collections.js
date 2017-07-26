@@ -15,8 +15,8 @@ class BrowseCollections extends Component {
               <div className="browse-collection-item">
                 <img className="browse-collection-img" src={require("./images/leftimage.png")}></img>
                 <div className="browse-collections-text">
-                  <h1>Editor's pick</h1>
-                  <p>Personalized and custom jewlery</p>
+                  <h1 className="browse-collections-text-header">Editor's pick</h1>
+                  <p className="browse-collections-text-content">Personalized and custom jewlery</p>
                 </div>
               </div>
         </div>
@@ -25,13 +25,13 @@ class BrowseCollections extends Component {
             <div className="browse-collection-item">
               <img className="browse-collection-img" src={require("./images/rightimage.png")}></img>
                 <div className="browse-collections-text">
-                  <h1>Editor's pick</h1>
-                  <p>Dorm decor</p>
+                  <h1 className="browse-collections-text-header">Editor's pick</h1>
+                  <p className="browse-collections-text-content">Dorm decor</p>
                 </div>
             </div>
         </div>
     </div>
-    <div className="browse-collections-seemore">See More<i className="fa fa-chevron-right"></i></div>
+    <div className="browse-collections-seemore">See More <i className="fa fa-chevron-right"></i></div>
   </div>
 
   )
