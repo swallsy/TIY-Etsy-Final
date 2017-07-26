@@ -30,6 +30,10 @@
   height: 303px;
 }
 
+.card-title {
+  font-weight: bold;
+}
+
 .bottomlinktoblog{
   text-align: center;
   margin: 4% 0 4% 0;
