@@ -3,6 +3,9 @@
   font-family: serif;
 }
 
+.carousel {
+  margin-bottom: 60px;
+}
 
 a {
   color: black;
@@ -110,14 +113,13 @@ a:hover {
 }
 
 .carousel-indicators li {
-    border: 1px solid gray;
+    border: 1.25px solid gray;
     height: 11px;
     width: 11px;
     max-width: 11px;
     border-radius: 50%;
-    bottom: -70px;
+    bottom: -50px;
 }
-
 
 .carousel-indicators .active {
     background: gray;
