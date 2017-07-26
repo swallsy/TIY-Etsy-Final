@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import Cards from './Cards.js';
+import '../../../styles/ShopCards.css';
 
 export default class ShopCards extends Component {
-    constructor(props){
-        super(props)
-    }
-
-
     render() {
         return (
-            <div>
+            <div className="shop-cards">
                 <Cards type={this.props.type}/>
             </div>
         )
