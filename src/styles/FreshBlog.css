@@ -34,6 +34,10 @@
   font-weight: bold;
 }
 
+.blogtext {
+  padding: 3%;
+}
+
 .bottomlinktoblog{
   text-align: center;
   margin: 4% 0 4% 0;
