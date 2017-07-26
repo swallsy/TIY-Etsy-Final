@@ -12,8 +12,16 @@
 .browse-collections {
   margin: 20px;
 }
-
+.browse-collections-header{
+  text-align: center;
+}
+.browse-collections-text {
+  align-self: center;
+}
 .browse-collections-text h1{
   color: grey;
   font-size: 18px;
+}
+.browse-collections-seemore{
+  text-align: center;
 }
