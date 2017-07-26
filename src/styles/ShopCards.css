@@ -1,0 +1,79 @@
+.shop-cards {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.s-card-center-box {
+    margin-left: 20px;
+}
+
+.card-box {
+    box-shadow: 0px 0px 3px 0px #828282;
+    border-radius: 2px;
+    height: 200px;
+    width: 200px;
+}
+
+.s-card-cat-name {
+    margin-left: 10px;
+}
+
+.s-card-image {
+    height: 165px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+}
+
+#card-image1 {
+    background-image: url("https://img0.etsystatic.com/112/0/12739499/il_340x270.1064143222_skpc.jpg");
+}
+
+#card-image2 {
+    background-image: url("https://img1.etsystatic.com/126/0/8763581/il_340x270.855993811_jvgh.jpg");
+}
+
+#card-image3 {
+    background-image: url("https://img0.etsystatic.com/220/1/6770707/il_340x270.1219748638_m1oe.jpg");
+}
+
+#card-image4 {
+    background-image: url("https://img0.etsystatic.com/140/1/10557658/il_340x270.1009185038_1djf.jpg");
+}
+
+#card-image5 {
+    background-image: url("https://img0.etsystatic.com/112/0/6057851/il_340x270.938266502_58x1.jpg");
+}
+
+#card-image6 {
+    background-image: url("https://img0.etsystatic.com/063/1/8384145/il_340x270.799830916_jh04.jpg");
+}
+
+
+
+
+
+#sc-gc-1 {
+    background-image: url("https://img0.etsystatic.com/179/1/11499597/il_340x270.1193714076_7b7u.jpg");
+}
+
+#sc-gc-2 {
+    background-image: url("https://img0.etsystatic.com/068/0/5407252/il_340x270.795607534_c1qe.jpg");
+}
+
+#sc-gc-3 {
+    background-image: url("https://img1.etsystatic.com/205/0/11266858/il_340x270.1298965649_bz9o.jpg");
+}
+
+#sc-gc-4 {
+    background-image: url("https://img0.etsystatic.com/144/0/12540500/il_340x270.1176234406_cgfp.jpg");
+}
+
+#sc-gc-5 {
+    background-image: url("https://img0.etsystatic.com/156/1/7238361/il_340x270.1096132510_a7e4.jpg");
+}
+
+#sc-gc-6 {
+    background-image: url("https://img1.etsystatic.com/122/1/10083918/il_340x270.1028259963_gfoa.jpg");
+}

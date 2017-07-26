@@ -15,16 +15,17 @@ export default class Home extends Component {
           <Header />
           <Carousel />
           <InfoCards />
-          <ShopCards type="category"/>
+          <ShopCards type="category" />
+          <h1>Browse Collections Goes here</h1>
           {/* <BrowseCollections /> */}
           <ShopCards type="gifts"/>
           <OrangeBar type="safety" />
+          <h1>Recent Reviews goes here</h1>
           {/* <RecentReviews /> */}
           <OrangeBar type="selling"/>
           <FreshBlog type="blog"/>
           <OrangeBar type="whatIs"/>
-
       </div>
-    );
+    )
   }
 }
