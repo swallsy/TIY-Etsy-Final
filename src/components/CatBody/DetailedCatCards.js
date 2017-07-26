@@ -14,7 +14,7 @@ class DetailedCatCard extends Component {
         {
           category: {
             name: "Jewelry",
-            path: "jewelry"
+            path: "jewelry/"
           },
           subCategories: {
             cat1: {
@@ -38,7 +38,7 @@ class DetailedCatCard extends Component {
         {
           category: {
             name: "Craft Supplies & Tools",
-            path: "craft_supplies_and_tools"
+            path: "craft_supplies_and_tools/"
           },
           subCategories: {
             cat1: {
@@ -62,7 +62,7 @@ class DetailedCatCard extends Component {
         {
           category: {
             name: "Home & Living",
-            path: "home_and_living"
+            path: "home_and_living/"
           },
           subCategories: {
             cat1: {
@@ -86,7 +86,7 @@ class DetailedCatCard extends Component {
         {
           category: {
             name: "Art & Collectibles",
-            path: "art_and_collectibles"
+            path: "art_and_collectibles/"
           },
           subCategories: {
             cat1: {
@@ -154,23 +154,22 @@ class DetailedCatCard extends Component {
                         <a href={"https://www.etsy.com/c/" + listing.category.path}>{listing.category.name}</a>
                       </h2>
                       <p className="card-text">
-                        <a href={"https://www.etsy.com/c/" + {listing.category.name} +
+                        <a href={"https://www.etsy.com/c/" + listing.category.path +
                         listing.subCategories.cat1.path}>{listing.subCategories.cat1.name}</a>
                       </p>
                       <p className="card-text">
-                        <a href={"https://www.etsy.com/c/" + {listing.category.name} +
+                        <a href={"https://www.etsy.com/c/" + listing.category.path +
                         listing.subCategories.cat2.path}>{listing.subCategories.cat2.name}</a>
                       </p>
                       <p className="card-text">
-                        <a href={"https://www.etsy.com/c/" + {listing.category.name} +
+                        <a href={"https://www.etsy.com/c/" + listing.category.path +
                         listing.subCategories.cat3.path}>{listing.subCategories.cat3.name}</a>
                       </p>
                       <p className="card-text">
-                        <a href={"https://www.etsy.com/c/" + {listing.category.name} +
+                        <a href={"https://www.etsy.com/c/" + listing.category.path + 
                         listing.subCategories.cat4.path}>{listing.subCategories.cat4.name}</a>
                       </p>
-                        <a href={"https://www.etsy.com/c/" + {listing.category.name} +
-                        listing.subCategories.cat1.path}>Shop all  {listing.category.name}</a>
+                        <a href={"https://www.etsy.com/c/" + listing.category.path}>Shop all  {listing.category.name}</a>
                     </div>
                   </div>
                 </div>
