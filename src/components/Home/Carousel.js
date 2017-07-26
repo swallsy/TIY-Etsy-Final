@@ -6,7 +6,8 @@ import '../../styles/Carousel.css';
 class Carousel extends Component {
   render () {
     return (
-      <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+      <div id="carouselExampleControls carouselContainer" className="carousel slide" data-ride="carousel">
+
         <div className="carousel-inner" role="listbox">
 
           <div className=" carousel-item active">
@@ -53,7 +54,14 @@ class Carousel extends Component {
           <span className="carousel-control-next-icon" id="next-button" aria-hidden="true"></span>
           <span className="sr-only">Next</span>
         </a>
+        <ol className="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" className="active dot" ></li>
+          <li data-target="#myCarousel" className="dot" data-slide-to="1"></li>
+          <li data-target="#myCarousel" className="dot" data-slide-to="2"></li>
+        </ol>
+
       </div>
+
     )
   }
 }
