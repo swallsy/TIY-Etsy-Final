@@ -8,11 +8,8 @@ export default class Cards extends Component {
 
         this.state = {
             response: null,
-            randomCategories: null,
-            render: null,
             renderMe: null
         }
-
     }
 
     randomizer(response) {
@@ -25,37 +22,71 @@ export default class Cards extends Component {
                 let removed = tmp.splice(index, 1);
                 randomArray.push(removed[0]);
                 }
-            console.log(randomArray[0].category_id)
-            console.log(randomArray[0].category_name);
-            console.log(randomArray.map((category) => category.category_id));
-
+            let increment = 1
             let render = randomArray.map((category) => {
                 return(
                     <div key={category.category_id} className="col-2">
-                        <h4>image placeholder</h4>
-                        <p>{category.category_name}</p>
+                        <div className="card-box">
+                            <div id={"card-image" + (increment++)} className="s-card-image"></div>
+                            <p className="s-card-cat-name">{category.long_name}</p>
+                        </div>
                     </div>
                 )
             })
-            console.log(render);
 
             renderMe = (
-                <div className="row">{render}</div>
+                <div className="row s-card-center-box">{render}</div>
             )
         }
         else if(this.props.type === "gifts"){
             renderMe = (
-                <h1>Gifts!</h1>
+                <div className="row s-card-center-box">
+                    <div className="col-2">
+                        <div className="card-box">
+                            <div id="sc-gc-1" className="s-card-image"></div>
+                            <p className="s-card-cat-name">Best of summer: under $30</p>
+                        </div>
+                    </div>
+                    <div className="col-2">
+                        <div className="card-box">
+                            <div id="sc-gc-2" className="s-card-image"></div>
+                            <p className="s-card-cat-name">Zodiac gifts</p>
+                        </div>
+                    </div>
+                    <div className="col-2">
+                        <div className="card-box">
+                            <div id="sc-gc-3" className="s-card-image"></div>
+                            <p className="s-card-cat-name">Crowd favorites</p>
+                        </div>
+                    </div>
+                    <div className="col-2">
+                        <div className="card-box">
+                            <div id="sc-gc-4" className="s-card-image"></div>
+                            <p className="s-card-cat-name">A natural beauty</p>
+                        </div>
+                    </div>
+                    <div className="col-2">
+                        <div className="card-box">
+                            <div id="sc-gc-5" className="s-card-image"></div>
+                            <p className="s-card-cat-name">Personalized gifts</p>
+                        </div>
+                    </div>
+                    <div className="col-2">
+                        <div className="card-box">
+                            <div id="sc-gc-6" className="s-card-image"></div>
+                            <p className="s-card-cat-name">Wedding party gifts</p>
+                        </div>
+                    </div>
+                </div>
             )
         }
         this.setState({renderMe: renderMe})
     }
 
+
     componentWillMount() {
-        var resp;
-        console.log("ShopCards will mount");
-        let url = "https://openapi.etsy.com/v2/taxonomy/categories?api_key=085nft0q2j9pq6jojzkjqiso";
-        fetch(url)
+        let urlCategories = "https://openapi.etsy.com/v2/taxonomy/categories?api_key=085nft0q2j9pq6jojzkjqiso";
+        fetch(urlCategories)
             .then (response => response.json())
             .then (response => {
                 this.randomizer(response.results)
