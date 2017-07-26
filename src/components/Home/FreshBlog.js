@@ -4,8 +4,10 @@ import "../../styles/FreshBlog.css";
 class FreshBlog extends Component {
   render() {
     return (
-      <div className="row">
-        <div className="col-md-4">
+      <div>
+      <h2 className="blogtitle">Fresh From The Blog</h2>
+      <div className="row wholeblog">
+        <div className="col-sm-4">
           <div className="card blogcard">
             <div className="card-block">
               <a href="https://blog.etsy.com/en/featured-shop-emma-claire/?ref=hp" alt="featured shop by emma claire. Blog Post.">
@@ -52,6 +54,8 @@ class FreshBlog extends Component {
           </div>
         </div>
       </div>
+      <div className="bottomlinktoblog"><a href="https://blog.etsy.com/en?ref=hpsm">Read the blog</a></div>
+    </div>
     );
   }
 
