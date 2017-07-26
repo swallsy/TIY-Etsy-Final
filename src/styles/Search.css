@@ -62,15 +62,20 @@
   justify-content: flex-end;
   align-content: center;
   padding-right: 30px;
-  font-size: 12pt;
 }
 .navText{
-  font-family: Lato;
+  font-family: Arial;
   font-weight: 300;
   padding-top: 8px;
+  font-size: 14px;
 }
 .navLink {
   color: #ED8D55;
+  font-weight: 300;
+}
+.navLink:hover {
+  color: #ED8D55;
+  text-decoration: underline;
 }
 .navLinkButton {
   border-color: #ED8D55;
@@ -82,13 +87,19 @@
   color: #ED8D55;
   font-family: Lato;
   font-weight: 300;
-  font-size: 12pt;
+  font-size: 14px;
+}
+.navLinkButton:hover {
+  background-color: #FBFBFA;
 }
 .shopCart {
   border-left: solid thin #CFCBC8;
   height: 40px;
   margin-left: 15px;
   padding-left: 10px;
+}
+.shoppingCartText:hover {
+  font-weight: bold;
 }
 .shoppingCart {
   height: 30px;
