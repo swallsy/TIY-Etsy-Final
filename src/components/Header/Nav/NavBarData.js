@@ -4,7 +4,18 @@ const navBarData = [
         category: "Clothing & Accessories",
         sub_categories: [
             {
-                name: "Accessories"
+                name: "Accessories",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Belts & Suspenders",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Gloves & Mittens",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             },
             {
                 name: "Bags & Purses"
@@ -106,19 +117,19 @@ const navBarData = [
     },
 
     {
-        category: "Kids & Babies"
+        category: "Kids & Babies",
         sub_categories: [
             {
-                name: ""
+                name: "Baby & Child Care"
             },
             {
-                name: ""
+                name: "Baby & Toddler Toys"
             },
             {
-                name: ""
+                name: "Baby Accessories"
             },
             {
-                name: ""
+                name: "Baby Blankets"
             }
         ]
     },
@@ -127,17 +138,20 @@ const navBarData = [
         category: "Vintage",
         sub_categories: [
             {
-                name: ""
+                name: "Accessories"
             },
             {
-                name: ""
+                name: "Art & Collectibles"
             },
             {
-                name: ""
+                name: "Bags & Purses"
             },
             {
-                name: ""
+                name: "Clothing"
             }
         ]
     },
 ]
+
+
+export default navBarData
