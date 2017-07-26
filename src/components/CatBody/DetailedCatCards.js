@@ -166,7 +166,7 @@ class DetailedCatCard extends Component {
                         listing.subCategories.cat3.path}>{listing.subCategories.cat3.name}</a>
                       </p>
                       <p className="card-text">
-                        <a href={"https://www.etsy.com/c/" + listing.category.path + 
+                        <a href={"https://www.etsy.com/c/" + listing.category.path +
                         listing.subCategories.cat4.path}>{listing.subCategories.cat4.name}</a>
                       </p>
                         <a href={"https://www.etsy.com/c/" + listing.category.path}>Shop all  {listing.category.name}</a>
