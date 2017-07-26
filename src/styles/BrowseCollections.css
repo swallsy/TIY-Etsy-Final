@@ -1,0 +1,19 @@
+.browse-collection-img {
+  height: 245px;
+  width: 310px;
+}
+
+.browse-collection-item {
+  border: .5px solid lightgrey;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.browse-collections {
+  margin: 20px;
+}
+
+.browse-collections-text h1{
+  color: grey;
+  font-size: 18px;
+}

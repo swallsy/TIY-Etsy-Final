@@ -4,6 +4,7 @@ import OrangeBar from './OrangeBar.js'
 import ShopCards from './ShopCards/ShopCards.js'
 import Carousel from './Carousel.js'
 import InfoCards from './InfoCards.js';
+import BrowseCollections from './Browse-Collections.js';
 import Header from '../Header/Header.js';
 import FreshBlog from './FreshBlog.js';
 
@@ -15,8 +16,7 @@ export default class Home extends Component {
           <Carousel />
           <InfoCards />
           <ShopCards type="category" />
-          <h1>Browse Collections Goes here</h1>
-          {/* <BrowseCollections /> */}
+          <BrowseCollections />
           <ShopCards type="gifts"/>
           <OrangeBar type="safety" />
           <h1>Recent Reviews goes here</h1>
