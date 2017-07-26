@@ -15,15 +15,15 @@ export default class CatBar extends Component {
 
   render() {
     return(
-      <div className="card">
-        <AllCategories />
-        <Color />
-        <ItemType />
-        <OrderingOptions />
-        <Price />
-        <ShipTo />
-        <ShopLocation />
-      </div>
+        <div className="card col-md-2">
+          <AllCategories />
+          <Color />
+          <ItemType />
+          <OrderingOptions />
+          <Price />
+          <ShipTo />
+          <ShopLocation />
+        </div>
     )
   }
 

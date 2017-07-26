@@ -146,7 +146,7 @@ class DetailedCatCard extends Component {
               console.log("random Listing below");
               console.log(randomListing);
               return (
-                <div key={randomListing.id} className = "col-md-4">
+                <div key={randomListing.id} className = "col-md-3">
                   <div className="card" >
                     <img className="card-img-top" src={randomListing.MainImage.url_170x135} alt="random jewelry" />
                     <div className="card-block">
@@ -184,7 +184,7 @@ class DetailedCatCard extends Component {
 
       render() {
       return (
-        <div className="container">
+        <div className="row">
           {this.state.listing}
         </div>
       )

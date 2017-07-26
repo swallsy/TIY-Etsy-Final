@@ -18,9 +18,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <DetailedCatCards />
-        <CatBar />
-        <ProductCards />
+        <div className="container-fluid row">
+          <CatBar className="col-md-2"/>
+          <DetailedCatCards className="col-md-10"/>
+        </div>
+        <div className="row">
+          <ProductCards className="col-md-10"/>
+        </div>
       </div>
     );
   }
