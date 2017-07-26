@@ -32,7 +32,7 @@ class ShopHeader extends Component {
             <div className="shopheader-listings-thumb" key={listing.listing_id}>
               <a href={listing.url}>
                 <img
-                  src={listing.MainImage.url_fullxfull}
+                  src={listing.MainImage.url_75x75}
                   className="shopheader-listings-thumb-pic"
                 />
               </a>
@@ -53,7 +53,7 @@ class ShopHeader extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="ShopHeader col-12 bg-faded">
+      <div className="ShopHeader row bg-faded">
         <a href={this.state.shop_url}>
           <img src={this.state.shop_picurl} className="shopheader-shop-pic" />
         </a>

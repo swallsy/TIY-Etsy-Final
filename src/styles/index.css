@@ -3,20 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-
 /*BEGIN ShopHeader styling*/
-
-
-
-/*END ShopHeader styling*/
-
-.shopheader-listings-thumb-pic {
-  width: 75px;
-}
 
 .shopheader-shop-pic {
   width: 75px;
+  height: 75px;
 }
+
+/*END ShopHeader styling*/
 
 /*BEGIN ShopSidebar styling*/
 
