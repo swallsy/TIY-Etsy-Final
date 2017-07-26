@@ -15,14 +15,14 @@ class App extends Component {
       results: {}
     }
   }
-  componentDidMount() {
-    fetch('https://openapi.etsy.com/v2/listings/175112598?includes=Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c').then(response => response.json()).then(response => {
-      this.state = {
-        results: response.results
-      }
-      console.log(this.state);
-    })
-  }
+  // componentDidMount() {
+  //   fetch('https://openapi.etsy.com/v2/listings/175112598?includes=Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c').then(response => response.json()).then(response => {
+  //     this.setState({
+  //       results: response.results
+  //     });
+  //     console.log(this.state.results);
+  //   })
+  // }
   render() {
     return (
       <div className="App">
