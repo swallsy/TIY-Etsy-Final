@@ -6,7 +6,7 @@ import '../../styles/Carousel.css';
 class Carousel extends Component {
   render () {
     return (
-      <div id="carouselExampleControls carouselContainer" className="carousel slide" data-ride="carousel">
+      <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
 
         <div className="carousel-inner" role="listbox">
 
