@@ -1,34 +1,74 @@
 import React, { Component } from 'react';
-import '../../styles/Nav.css';
+import '../../../styles/NavBar.css';
 
 export default class Nav extends Component {
     constructor(props){
         super(props)
 
-        this.handleMouseEnter = this.handleMouseEnter.bind(this)
-        this.handleMouseLeave = this.handleMouseLeave.bind(this)
+        this.handleMouseEnterTop = this.handleMouseEnterTop.bind(this)
+        this.handleMouseLeaveTop = this.handleMouseLeaveTop.bind(this)
+        this.handleMouseEnterSub = this.handleMouseEnterSub.bind(this)
+        this.handleMouseLeaveSub = this.handleMouseLeaveSub.bind(this)
 
         this.state = {
-            isVisible: false
+            isVisibleTop: false,
+            isVisibleSub: false
         }
     }
 
-    handleMouseEnter(event) {
-        this.setState({isVisible: true})
+    handleMouseEnterTop(event) {
+        this.setState({isVisibleTop: true})
     }
 
-    handleMouseLeave(event) {
-        this.setState({isVisible: false})
+    handleMouseLeaveTop(event) {
+        this.setState({isVisibleTop: false})
+    }
+
+    handleMouseEnterSub(event) {
+        this.setState({isVisibleSub: true})
+    }
+
+    handleMouseLeaveSub(event) {
+        this.setState({isVisibleTop: false})
+    }
+
+    navCreator(){
+        
     }
 
     render() {
         return (
-            <div>
-                <h5 onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>v Dropdown v</h5>
-                <ul className={"dropdown-display" + (this.state.isVisible ? " show": "")}>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
+            <div className="navbar-item" onMouseEnter={this.handleMouseEnterTop} onMouseLeave={this.handleMouseLeaveTop}>
+
+                <span>v Category 1 v</span>
+
+                <ul className={"dropdown-display-top" + (this.state.isVisibleTop ? " show-top": "")}>
+
+                    <li onMouseEnter={this.handleMouseEnterSub} onMouseLeave={this.handleMouseLeaveSub}><span>Item 1</span>
+                        <ul className={"dropdown-display-sub " + (this.state.isVisibleSub ? " show-sub": "")}>
+                            <li>Subitem 1</li>
+                            <li>Subitem 2</li>
+                            <li>Subitem 3</li>
+                        </ul>
+                    </li>
+
+
+                    <li onMouseEnter={this.handleMouseEnterSub} onMouseLeave={this.handleMouseLeaveSub}><span>Item 2</span>
+
+                        <ul className={"dropdown-display-sub " + (this.state.isVisibleSub ? " show-sub": "")}>
+                            <li>Subitem 1</li>
+                            <li>Subitem 2</li>
+                            <li>Subitem 3</li>
+                        </ul>
+                    </li>
+
+                    <li onMouseEnter={this.handleMouseEnterSub} onMouseLeave={this.handleMouseLeaveSub}><span>Item 3</span>
+                        <ul className={"dropdown-display-sub " + (this.state.isVisibleSub ? " show-sub": "")}>
+                            <li>Subitem 1</li>
+                            <li>Subitem 2</li>
+                            <li>Subitem 3</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         )
