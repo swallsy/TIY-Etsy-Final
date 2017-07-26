@@ -9,7 +9,36 @@ class DetailedCatCard extends Component {
 
     this.state = {
       etsyListings: [],
-      detailedCategory: []
+      detailedCategories: [
+        {
+          category: "Jewelry"
+        },
+        {
+          category: "Craft Supplies & Tools"
+        },
+        {
+          category: "Home & Living"
+        },
+        {
+          category: "Art & Collectibles"
+        },
+        {
+          category: "Clothing"
+        },
+        {
+          category: "Accessories"
+        },
+        {
+          category: "Paper & Party Supplies"
+        },
+        {
+          category: "Weddings"
+        },
+        {
+          category: "Bags & Purses"
+        }
+      ]
+
     }
 
   }
@@ -22,10 +51,10 @@ class DetailedCatCard extends Component {
         this.setState({etsyListings: listings})
         // eslint-disable-next-line
         let listingCard = listings.map((listing) => {
-          if (listing.category_path.includes("Jewelry")) {
+          if (listing.taxonomy_path.includes("Jewelry")) {
             console.log(listings)
             let jewelryListings = listings.filter((jewelryListing) => {
-              return jewelryListing.category_path.includes("Jewelry");
+              return jewelryListing.taxonomy_path.includes("Jewelry");
             })
             console.log(jewelryListings);
             let jewelryListing = jewelryListings[Math.floor(Math.random() * jewelryListings.length)]
