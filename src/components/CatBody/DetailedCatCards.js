@@ -8,8 +8,10 @@ class DetailedCatCard extends Component {
     super(props);
 
     this.state = {
-      listings: []
+      etsyListings: [],
+      detailedCategory: []
     }
+
   }
   componentDidMount() {
     fetch('https://api.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=100&offset=0&page=1&categories=jewelry,craft_supplies_and_tools,home_and_living,art_and_collectibles,clothing,accessories,paper_and_party_supplies,weddings,bags_and_purses&includes=MainImage')
@@ -17,6 +19,7 @@ class DetailedCatCard extends Component {
       .then(resp => {
         console.log(resp)
         let listings = resp.results
+        this.setState({etsyListings: listings})
         // eslint-disable-next-line
         let listingCard = listings.map((listing) => {
           if (listing.category_path.includes("Jewelry")) {
