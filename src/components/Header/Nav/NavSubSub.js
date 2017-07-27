@@ -7,10 +7,9 @@ export default class NavSubSub extends Component {
 
         let subSubDrop;
         if(sub.name === this.props.clickedSub) {
-            console.log(sub.sub_sub_categories);
             subSubDrop = sub.sub_sub_categories.map(sub_sub => {
                 return (
-                    <li className="sub-sub-li"><a href={sub_sub.link}>
+                    <li key={sub_sub.name} className="sub-sub-li"><a href={sub_sub.link}>
                         {sub_sub.name}
                     </a></li>
                 )
