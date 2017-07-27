@@ -31,7 +31,9 @@ class BrowseCollections extends Component {
             </div>
         </div>
     </div>
+    <a href="https://www.etsy.com/featured?ref=hpsm">
     <div className="browse-collections-seemore">See More <i className="fa fa-chevron-right"></i></div>
+    </a>
   </div>
 
   )

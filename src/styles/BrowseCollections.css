@@ -17,7 +17,7 @@
 .browse-collections-header{
   text-align: center;
   margin: 3vw;
-  color: #FF883E;
+  color: black;
 }
 .browse-collections-header:hover, .browse-collections-text-header:hover, .browse-collections-text-content:hover, .browse-collections-seemore:hover {
   text-decoration: underline;
