@@ -28,7 +28,7 @@
 }
 
 .sub-sub-ul {
-
+    display: inline-block;
 }
 
 /*.dropdown-display-top {

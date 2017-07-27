@@ -14,7 +14,8 @@ export default class Nav extends Component {
         this.state = {
             navCategories: null,
             renderMe: null,
-            subTarget: null
+            subTarget: null,
+            subStore: []
         }
     }
 
@@ -23,43 +24,59 @@ export default class Nav extends Component {
     }
 
     handleClickSub(event) {
-        this.setState({subTarget: event.target.className})
+        this.setState({subStore: []})
+        this.createSubDrop(event.target.className)
     }
 
-    createSubDrop(target, sub) {
+    createSubDrop(target) {
         console.log("createSubDrop runs");
         console.log("and target is: " + target);
-        let renderSub = sub.map(sub_sub => {
-            if(((sub_sub.name) + " navbar-item") == target) {
+        let renderSub = this.state.subStore.map(sub => {
+            if(sub.name == target) {
+                console.log(sub.name + " was clicked!")
+                console.log(sub.sub_sub_categories);
                 return(
-                    <li key={sub_sub.name}><a href={sub_sub.link}>{sub_sub.name}</a></li>
+                    sub.sub_sub_categories.map(sub_sub => {
+                        console.log(sub_sub);
+                        return (
+                            <li key={sub_sub.name}><a href={sub_sub.link}>{sub_sub.name}</a></li>
+                        )
+                    })
+
                 )
             }
         })
-        return renderSub
+        this.setState({renderMeSub: renderSub})
     }
 
+    //currently createSubDrop works sort of.
+    // might have to consider moving all of createDrop in render...
+    // --- but really. now I need to figure out why belts & suspenders renders //for all the clothing & accessories sub categories when Accessories is pff
 
-    // need to find a way to get creaSubDrop to only run when clicked, but it needs info nested deep in the .map of createDrop...hmmmph
-
-    //        (category)
     createDrop(target) {
         let renderDrop;
         navBarData.map(cat => {
-            if(((cat.category) + " navbar-item") == target) {
+            if(cat.category == target) {
                 console.log("that equals other thing");
                 renderDrop = (
 
                 <ul key={cat.category}>
                     {cat.sub_categories.map(sub => {
+                        this.state.subStore.push(sub)
+                        console.log(sub);
+                        console.log(sub.sub_sub_category);
                         return (
 
-                            <li className={((sub.sub_sub_category) + " sub-cat")} key={sub.name} onClick={this.handleClickSub}>{sub.name}
-                                <ul className="sub-sub-ul" className={((sub.sub) + " navbar-item")}>
-                                    {this.createSubDrop(this.state.subTarget, sub.sub_sub_categories)}
-                                </ul>
-                            </li>
+                            <li className="sub-cat" key={sub.name}>
+                                <span className={sub.name} onClick={this.handleClickSub}>
+                                    {sub.name}
+                                </span>
 
+                                <ul className="sub-sub-ul">
+                                    {this.state.renderMeSub}
+                                </ul>
+
+                            </li>
                         )
                     })}
                 </ul>
@@ -76,8 +93,8 @@ export default class Nav extends Component {
     render() {
         let navCategories = navBarData.map(cat => {
             return (
-                <li key={cat.category} className={((cat.category) + " navbar-item")} onClick={this.handleClick}>
-                    {cat.category}
+                <li key={cat.category} className="navbar-item">
+                    <span  className={cat.category} onClick={this.handleClick}>{cat.category}</span>
                     <ul className="dropdown-ul">
                         {this.state.renderMe}
                     </ul>

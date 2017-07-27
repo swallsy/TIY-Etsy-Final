@@ -22,11 +22,11 @@ const navBarData = [
                 link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
                 sub_sub_categories: [
                     {
-                        name:"Belts & Suspenders",
+                        name:"Bags & Purses Sub 1",
                         link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
                     },
                     {
-                        name:"Gloves & Mittens",
+                        name:"Bags & Purses Sub 2",
                         link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
                     },
                 ]
@@ -36,11 +36,11 @@ const navBarData = [
                 link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
                 sub_sub_categories: [
                     {
-                        name:"Belts & Suspenders",
+                        name:"Clothing Sub 1",
                         link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
                     },
                     {
-                        name:"Gloves & Mittens",
+                        name:"Clothing Sub 2",
                         link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
                     },
                 ]
@@ -50,11 +50,11 @@ const navBarData = [
                 link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
                 sub_sub_categories: [
                     {
-                        name:"Belts & Suspenders",
+                        name:"Shoes Sub 1",
                         link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
                     },
                     {
-                        name:"Gloves & Mittens",
+                        name:"Shoes Sub 2",
                         link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
                     },
                 ]
@@ -70,11 +70,11 @@ const navBarData = [
                 link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
                 sub_sub_categories: [
                     {
-                        name:"Belts & Suspenders",
+                        name:"Body Jewelry Sub 1",
                         link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
                     },
                     {
-                        name:"Gloves & Mittens",
+                        name:"Body Jewelry Sub 2",
                         link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
                     },
                 ]
@@ -84,11 +84,11 @@ const navBarData = [
                 link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
                 sub_sub_categories: [
                     {
-                        name:"Belts & Suspenders",
+                        name:"Bracelets Sub 1",
                         link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
                     },
                     {
-                        name:"Gloves & Mittens",
+                        name:"Bracelets Sub 2",
                         link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
                     },
                 ]
@@ -98,11 +98,11 @@ const navBarData = [
                 link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
                 sub_sub_categories: [
                     {
-                        name:"Belts & Suspenders",
+                        name:"Cuff Tie Sub 1",
                         link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
                     },
                     {
-                        name:"Gloves & Mittens",
+                        name:"Cuff Tie Sub 2",
                         link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
                     },
                 ]
@@ -112,11 +112,11 @@ const navBarData = [
                 link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
                 sub_sub_categories: [
                     {
-                        name:"Belts & Suspenders",
+                        name:"Earrings Sub 1",
                         link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
                     },
                     {
-                        name:"Gloves & Mittens",
+                        name:"Earrings Sub 2",
                         link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
                     },
                 ]
