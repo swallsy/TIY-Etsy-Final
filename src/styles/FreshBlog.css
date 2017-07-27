@@ -44,11 +44,17 @@
 
 .blogtext {
   padding: 3%;
+  color: rgb(34 34 34);
+  font-weight: lighter;
 }
 
 
 .blogparagraph:hover {
   text-decoration: none;
+}
+
+.blogcategories {
+  font-weight: lighter;
 }
 
 .blogcategories:hover {
