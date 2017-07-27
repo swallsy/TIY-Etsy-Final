@@ -6,40 +6,40 @@ export default class NavBar extends Component {
     constructor(props) {
         super(props)
 
-        this.handleClickSub = this.handleClickSub.bind(this)
+        this.handleHoverSub = this.handleHoverSub.bind(this)
 
         this.state = {
-            isClickedSub: null
+            isHoveredSub: null
         }
 
     }
 
-    handleClickSub(event) {
-        if(event.target.className === this.state.isClickedSub) {
-            this.setState({isClickedSub: null})
+    handleHoverSub(event) {
+        if(event.target.className === this.state.isHoveredSub) {
+            this.setState({isHoveredSub: null})
         }
         else {
-            this.setState({isClickedSub: event.target.className})
+            this.setState({isHoveredSub: event.target.className})
         }
     }
 
 
     render() {
         let renderSubCat;
-        if(this.props.clicked) { // render only if there's a click
+        if(this.props.hovered) {
             renderSubCat = navBarData.map(cat => {
-                if(cat.category == this.props.clicked) { // for each category, if it's clicked display this:
+                if(cat.category == this.props.hovered) {
                     return (
 
                         <ul key={cat.category} className="sub-ul">
                             {cat.sub_categories.map(sub => {
                                 return (
                                     <li key={sub.name} className="sub-cat" >
-                                         <span className={sub.name} onClick={this.handleClickSub}>
+                                         <span className={sub.name} onMouseEnter={this.handleHoverSub}>
                                             {sub.name}
                                         </span>
                                         <ul className="sub-sub-ul">
-                                            <NavSubSub dataLoc={sub} ogClicked={this.props.clicked} clickedSub={this.state.isClickedSub}/>
+                                            <NavSubSub dataLoc={sub} ogHovered={this.props.hovered} hoveredSub={this.state.isHoveredSub}/>
                                         </ul>
                                     </li>
                                 )})}

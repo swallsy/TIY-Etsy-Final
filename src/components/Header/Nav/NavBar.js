@@ -7,20 +7,21 @@ export default class NavBar extends Component {
     constructor(props) {
         super(props)
 
-        this.handleClick = this.handleClick.bind(this)
+        this.handleHover = this.handleHover.bind(this)
 
         this.state = {
-            isClicked: null
+            isHovered: null
         }
 
     }
 
-    handleClick(event) {
-        if(event.target.className === this.state.isClicked) {
-            this.setState({isClicked: null})
+    handleHover(event) {
+        console.log("hovering over " + event.target.className);
+        if(event.target.className === this.state.isHovered) {
+            this.setState({isHovered: null})
         }
         else {
-            this.setState({isClicked: event.target.className})
+            this.setState({isHovered: event.target.className})
         }
     }
 
@@ -28,11 +29,11 @@ export default class NavBar extends Component {
         let navCategories = navBarData.map(cat => { // create main categories
             return (
                 <li key={cat.category} className="navbar-item">
-                    <span  className={cat.category} onClick={this.handleClick}>
+                    <span  className={cat.category} onMouseEnter={this.handleHover}>
                         {cat.category}
                     </span>
                     <ul className="dropdown-ul">
-                        <NavSub clicked={this.state.isClicked}/>
+                        <NavSub hovered={this.state.isHovered}/>
                     </ul>
                 </li>
             )
