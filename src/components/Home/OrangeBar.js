@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import '../../styles/OrangeBar.css';
+import '../../styles/OrangeBar/EtsyKeepsYouSafe.css';
+import '../../styles/OrangeBar/StartSellingOnEtsy.css';
+import '../../styles/OrangeBar/WhatIsEtsy.css';
 
 export default class OrangeBar extends Component {
     constructor(props){
