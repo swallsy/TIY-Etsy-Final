@@ -9,7 +9,7 @@ import ShopLocation from './CatBar/ShopLocation.js';
 import ProductCards from './CatBody/ProductCards.js';
 import DetailedCatCard from './CatBody/DetailedCatCards.js'
 import CatCards from './CatBody/CatCards.js';
-
+import CatBody from './CatBody.js';
 
 export default class CatBar extends Component {
   constructor() {
@@ -50,7 +50,7 @@ export default class CatBar extends Component {
             '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=weddings&includes=MainImage,Shop',
 
             bagsAndPursesFetch:
-            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=bags_and_purses&includes=MainImage,Shop'
+            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=bags_and_purses&includes=MainImage,Shop,User'
           },
           price: {
             under25: "&explicit=1&amp;min=&amp;max=25&amp;price_bucket=1&includes=MainImage,Shop",
@@ -62,7 +62,7 @@ export default class CatBar extends Component {
       }
   }
   componentDidMount() {
-    fetch(this.state.baseURL + "" + this.state.fetchUrl.categories.allCategoriesFetch)
+    fetch(this.state.baseURL + "" + this.state.fetchUrl.categories.bagsAndPursesFetch)
     .then(resp => resp.json())
       .then(resp => {
         let listing = resp.results;
@@ -85,15 +85,15 @@ export default class CatBar extends Component {
       <div className="row">
         <div className="card col-md-2">
           <AllCategories />
-          <Color />
-          <ItemType />
-          <OrderingOptions />
-          <Price getInitialState={this.getInitialState} />
-          <ShipTo />
           <ShopLocation />
+          <ItemType />
+          <Price getInitialState={this.getInitialState} />
+          <Color />
+          <OrderingOptions />
+          <ShipTo />
         </div>
         <div className="CatBodyCards-controller col-md-10">
-          <DetailedCatCard  />
+          <CatBody />
           <ProductCards className="col-md-10" listingFilter={this.state.listingFilter} />
         </div>
         <div className="productCards-controller">

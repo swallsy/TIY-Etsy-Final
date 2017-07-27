@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DetailedCatCard extends Component {
+export default class DetailedCatCard extends Component {
   render() {
     let detailedCategories = this.props.detailedCategories;
     let etsyListings = this.props.etsyListings;
@@ -45,5 +45,4 @@ class DetailedCatCard extends Component {
       </div>
     )
   }
-
-export default DetailedCatCard
+}
