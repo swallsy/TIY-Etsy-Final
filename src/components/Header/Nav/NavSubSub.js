@@ -10,7 +10,6 @@ export default class NavSubSub extends Component {
 
             }
         }
-        console.log(defaultSubCat);
         let sub = this.props.dataLoc
         let subSubDrop;
         if(sub.name === this.props.hoveredSub) {

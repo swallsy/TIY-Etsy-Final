@@ -16,7 +16,6 @@ export default class NavBar extends Component {
     }
 
     handleHover(event) {
-        console.log("hovering over " + event.target.className);
         if(event.target.className === this.state.isHovered) {
             this.setState({isHovered: null})
         }
