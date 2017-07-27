@@ -82,7 +82,7 @@ class ShopSidebar extends Component {
     console.log(this.state);
 
     return (
-      <div className="ShopSidebar col-12 bg-danger justify-content-center">
+      <div className="ShopSidebar col-12">
         <img
           alt="stuff"
           className="shop-sidebar-shop-pic"
