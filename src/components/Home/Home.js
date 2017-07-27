@@ -7,14 +7,12 @@ import InfoCards from './InfoCards.js';
 import BrowseCollections from './Browse-Collections.js';
 import Header from '../Header/Header.js';
 import FreshBlog from './FreshBlog.js';
-import NavBar from '../Header/Nav/NavBar.js';
 
 export default class Home extends Component {
   render() {
     return (
       <div className='Home'>
           <Header />
-          <NavBar />
           <Carousel />
           <InfoCards />
           <ShopCards type="category" />
