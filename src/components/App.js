@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-				<div className='row  justify-content-center'>
+				<div className='row justify-content-center'>
 					<div className='col-10'>
 						<ShopHeader />
 					</div>
