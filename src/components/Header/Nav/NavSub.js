@@ -37,7 +37,7 @@ export default class NavBar extends Component {
                                     <li key={sub.name} className="sub-cat" >
                                          <span className={sub.name} onMouseEnter={this.handleHoverSub}>
                                             {sub.name}
-                                        </span>
+                                        </span><i className="fa fa-chevron-right" />
                                         <ul className="sub-sub-ul">
                                             <NavSubSub dataLoc={sub} ogHovered={this.props.hovered} hoveredSub={this.state.isHoveredSub}/>
                                         </ul>

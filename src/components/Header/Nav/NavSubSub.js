@@ -29,7 +29,7 @@ export default class NavSubSub extends Component {
             )
         }
         return(
-            <div>
+            <div className="sub-sub-ul-div">
                 {subSubDrop}
             </div>
         )

@@ -39,9 +39,9 @@ export default class NavBar extends Component {
         })
 
         return(
-            <div>
+            <ul id="navbar">
                 {navCategories}
-            </div>
+            </ul>
         )
     }
 }
