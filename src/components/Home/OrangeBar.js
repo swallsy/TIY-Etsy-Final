@@ -1,50 +1,57 @@
-import React, { Component } from 'react';
-import '../../styles/OrangeBar/EtsyKeepsYouSafe.css';
-import '../../styles/OrangeBar/StartSellingOnEtsy.css';
-import '../../styles/OrangeBar/WhatIsEtsy.css';
+import React, { Component } from "react";
+import "../../styles/OrangeBar/EtsyKeepsYouSafe.css";
+import "../../styles/OrangeBar/StartSellingOnEtsy.css";
+import "../../styles/OrangeBar/WhatIsEtsy.css";
 
 export default class OrangeBar extends Component {
-    constructor(props){
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.chooseBar = this.chooseBar.bind(this)
+    this.chooseBar = this.chooseBar.bind(this);
 
-        this.state = {
+    this.state = {};
+  }
 
-        }
-    }
-
-    chooseBar(){
-        if(this.props.type === "safety") {
-            return (
-                <div className="row">
-                    <div className="col-2">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/trust_wide_left.20170228151449.png"/>
-                    </div>
-                    <div className="col-8 safety-text">
-                        <h1 className="row">Etsy keeps you safe</h1>
-                        <div className="row">
-                            <div className="col-4">
-                                <p>Trustworthy sellers</p>
-                                <p>You can read their reviews and policies, and contact them with any questions</p>
-                            </div>
-                            <div className="col-4">
-                                <p>World-class security</p>
-                                <p>Safeguarding your information is the top priority of our dedicated security experts</p>
-                            </div>
-                            <div className="col-4">
-                                <p>Purchase protection</p>
-                                <p>If anything goes wrong, our global support team has got your back</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-2">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/trust_wide_right.20170228151449.png" />
-                    </div>
-                </div>
-            )
-        }
-        else if(this.props.type === "selling") {
+   chooseBar() {
+    if (this.props.type === "safety") {
+      return (
+        <div className=" row safeContainer">
+          <div className="col-2 safeImage">
+            <img className="safeImage" src="https://www.etsy.com/assets/dist/images/homepage/vesta/trust_wide_left.20170228151449.png" />
+          </div>
+          <div className="col-8 safety-text">
+            <div>
+            <h1 className="row safety-heading">Etsy keeps you safe</h1>
+            </div>
+            <div className="row">
+              <div className="col-4">
+                <p className="safety-sub-heading">Trustworthy sellers</p>
+                <p>
+                  You can read their reviews and policies, and contact them with any questions
+                </p>
+              </div>
+              <div className="col-4">
+                <p className="safety-sub-heading">World-class security</p>
+                <p>
+                  Safeguarding your information is the top priority of our
+                  dedicated security experts
+                </p>
+              </div>
+              <div className="col-4">
+                <p className="safety-sub-heading">Purchase protection</p>
+                <p>
+                  If anything goes wrong, our global support team has got your
+                  back
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-2 keyImage">
+            <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/trust_wide_right.20170228151449.png" />
+          </div>
+        </div>
+      );
+    } else if(this.props.type === "selling") {
             return (
                 <div className="row">
                     <div className="col-4">
@@ -84,7 +91,7 @@ export default class OrangeBar extends Component {
         return (
             <div className="container">
                 {this.chooseBar()}
-            </div>
-        )
-    }
+      </div>
+    );
+  }
 }
