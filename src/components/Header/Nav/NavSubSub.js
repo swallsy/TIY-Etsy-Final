@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import navBarData from './NavBarData.js'
 
 export default class NavSubSub extends Component {
     constructor(props){
