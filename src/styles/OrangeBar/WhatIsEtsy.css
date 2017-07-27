@@ -6,6 +6,8 @@
   padding-top: -50px;
   padding-left: 70px;
   text-align: center;
+  font-family: 'Lato';
+  font-weight: 300;
 }
 
 .whatisimg1 {
@@ -30,4 +32,8 @@
 
 .whatisimg2 {
   margin-top: -30px;
+}
+.whatTitle {
+  font-family: 'Lato';
+  font-weight: 300;
 }
