@@ -4,7 +4,7 @@ import "../styles/App.css";
 class PurchaseInfo extends Component {
   render() {
     return (
-      <div className="PurchaseInfo col-12 bg-info">
+      <div className="PurchaseInfo">
         <p>PurchaseInfo code needed.</p>
       </div>
     );
