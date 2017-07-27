@@ -30,21 +30,23 @@ export default class NavBar extends Component {
             renderSubCat = navBarData.map(cat => {
                 if(cat.category === this.props.hovered) {
                     return (
-
-                        <ul key={cat.category} className="sub-ul">
-                            {cat.sub_categories.map(sub => {
-                                return (
-                                    <li key={sub.name} className="sub-cat" >
-                                         <span className={sub.name} onMouseEnter={this.handleHoverSub}>
-                                            {sub.name}
-                                        </span><i className="fa fa-chevron-right" />
-                                        <ul className="sub-sub-ul">
-                                            <NavSubSub dataLoc={sub} ogHovered={this.props.hovered} hoveredSub={this.state.isHoveredSub}/>
-                                        </ul>
-                                    </li>
-                                )})}
-                        </ul>
-
+                    <ul className="dropdown-ul">
+                        <div className="nav-bar-outer">
+                            <ul key={cat.category} className="sub-ul">
+                                {cat.sub_categories.map(sub => {
+                                    return (
+                                        <li key={sub.name} className="sub-cat" >
+                                             <span className={sub.name} onMouseEnter={this.handleHoverSub}>
+                                                {sub.name}
+                                            </span><i className="fa fa-chevron-right" />
+                                            <ul className="sub-sub-ul">
+                                                <NavSubSub dataLoc={sub} ogHovered={this.props.hovered} hoveredSub={this.state.isHoveredSub}/>
+                                            </ul>
+                                        </li>
+                                    )})}
+                            </ul>
+                        </div>
+                    </ul>
                     )
                 }
                 return renderSubCat
@@ -53,9 +55,9 @@ export default class NavBar extends Component {
         }
 
         return (
-            <div className="nav-bar-outer">
-                {renderSubCat}
-            </div>
+                <div>
+                    {renderSubCat}
+                </div>
         )
     }
 }

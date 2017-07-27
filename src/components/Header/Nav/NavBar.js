@@ -31,9 +31,7 @@ export default class NavBar extends Component {
                     <span  className={cat.category} onMouseEnter={this.handleHover}>
                         {cat.category}
                     </span>
-                    <ul className="dropdown-ul">
-                        <NavSub hovered={this.state.isHovered}/>
-                    </ul>
+                    <NavSub hovered={this.state.isHovered}/>
                 </li>
             )
         })
