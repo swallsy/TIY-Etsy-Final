@@ -3,10 +3,26 @@
 // import CatCards from './CatBody/CatCards.js';
 // import DetailedCatCard from './CatBody/DetailedCatCards.js';
 // import ProductCards from './CatBody/ProductCards.js';
-//
+
 // class CatBody extends Component {
 //   constructor(props) {
 //     super(props);
+//
+//     this.state = {
+//       listings: []
+//     }
+//
+// }
+//   componentDidMount() {
+//     fetch('https://api.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&categories=jewelry,craft_supplies_and_tools,home_and_living,art_and_collectibles,clothing,accessories,paper_and_party_supplies,weddings,bags_and_purses&includes=MainImage')
+//     .then(results => {
+//       return results.json();
+//     })
+//       .then(data => {
+//         this.setState({listings: data});
+//         console.log("state", this.state.listings);
+//       })
+//   }
 //
 //   render() {
 //     return (
@@ -18,9 +34,9 @@
 // }
 //
 // export default CatBody
-//
-//
-//
+
+
+
 
 
 
