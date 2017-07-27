@@ -6,8 +6,8 @@ export default class ProductCards extends Component {
     this.state= {
     feedback_score: '',
     feedbackstar: '',
-    starfilled: <img src={'star_full.png'}/>,
-  starunfilled: <img src={'star_empty'}/>
+    starfilled: <i className="fa fa-star" aria-hidden="true"></i>,
+    starunfilled: <i className="fa fa-star-o" aria-hidden="true"></i>
   }
 }
 
