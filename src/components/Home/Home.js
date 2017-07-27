@@ -7,25 +7,23 @@ import InfoCards from './InfoCards.js';
 import BrowseCollections from './Browse-Collections.js';
 import Header from '../Header/Header.js';
 import FreshBlog from './FreshBlog.js';
-import NavBar from '../Header/Nav/NavBar.js';
 
 export default class Home extends Component {
   render() {
     return (
       <div className='Home'>
           <Header />
-          <NavBar />
           <Carousel />
-          {/* <InfoCards />
+          <InfoCards />
           <ShopCards type="category" />
           <BrowseCollections />
           <ShopCards type="gifts"/>
           <OrangeBar type="safety" />
-          <h1>Recent Reviews goes here</h1> */}
+          <h1>Recent Reviews goes here</h1>
           {/* <RecentReviews /> */}
-          {/* <OrangeBar type="selling"/>
+          <OrangeBar type="selling"/>
           <FreshBlog type="blog"/>
-          <OrangeBar type="whatIs"/> */}
+          <OrangeBar type="whatIs"/>
       </div>
     )
   }
