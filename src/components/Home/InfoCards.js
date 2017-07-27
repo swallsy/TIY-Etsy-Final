@@ -4,7 +4,7 @@ import "../../styles/InfoCards.css";
 class InfoCards extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="row infoCardContainer">
         <div className="col-sm-4">
           <div className="card infocard">
             <div className="card-block">
@@ -17,10 +17,9 @@ class InfoCards extends Component {
                 </div>
 
                 <div className="infoCardCol-2" colspan="2">
-                  <h5 className="card-title">Unique Everything</h5>
+                  <h5 className="card-title">Get something you love</h5>
                   <p className="card-text">
-                    We have millions of one-of-a-kind items, so you can find
-                    whatever you need (or really, really want).
+                    Our marketplace is a world of vintage and handmade goods
                   </p>
                 </div>
               </div>
@@ -39,10 +38,9 @@ class InfoCards extends Component {
                   />
                 </div>
                 <div className="infoCardCol-2">
-                  <h5 className="card-title">Independent Sellers</h5>
+                  <h5 className="card-title">Find your new favorite shop</h5>
                   <p className="card-text">
-                    Buy directly from someone who put their heart and soul into
-                    making something special.
+                    More than a million independent sellers from everywhere are right here
                   </p>
                 </div>
               </div>
@@ -61,10 +59,9 @@ class InfoCards extends Component {
                   />
                 </div>
                 <div className="infoCardCol-2">
-                  <h5 className="card-title">Secure Shopping</h5>
+                  <h5 className="card-title">Buy safely and securely</h5>
                   <p className="card-text">
-                    We use best-in-class technology to protect your
-                    transactions.
+                    Etsy protects every transaction, so shop with confidence
                   </p>
                 </div>
               </div>
