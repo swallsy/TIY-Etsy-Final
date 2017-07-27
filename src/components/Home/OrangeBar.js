@@ -53,17 +53,17 @@ export default class OrangeBar extends Component {
       );
     } else if(this.props.type === "selling") {
             return (
-                <div className="row">
+                <div className="row sellContainer">
                     <div className="col-4">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_left.20170228151449.png" />
+                        <img className="catImage" src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_left.20170228151449.png" />
                     </div>
-                    <div className="col-4">
-                        <h1 className="">Start selling on Etsy</h1>
+                    <div className="col-4 sellText">
+                        <h1 className="sellTitle">Start selling on Etsy</h1>
                         <p>Millions of shoppers can't wait to see what you have in store.</p>
-                        <p><a href="https://www.etsy.com/sell?ref=hp" target="_blank">Open a shop today</a> ></p>
+                        <p><a className="sellLink" href="https://www.etsy.com/sell?ref=hp" target="_blank">Open a shop today</a> ></p>
                     </div>
                     <div className="col-4">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_right.20170228151449.png" />
+                        <img className="manImage" src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_right.20170228151449.png" />
                     </div>
                 </div>
             )
@@ -75,7 +75,7 @@ export default class OrangeBar extends Component {
                         <img className="whatisimg1"  src="https://www.etsy.com/assets/dist/images/homepage/vesta/about_etsy_wide_left.20170228151449.png" />
                     </div>
                     <div className="col-3 whatistext">
-                        <h1>What is Etsy?</h1>
+                        <h1 className="whatTitle">What is Etsy?</h1>
                         <p>We're more than a marketplace.</p>
                         <p><a className="whatislink" href="https://www.etsy.com/mission?ref=hp&from=homepage.about_etsy" target="_blank">Read all about it <i className="fa fa-chevron-right"></i></a></p>
                     </div>
