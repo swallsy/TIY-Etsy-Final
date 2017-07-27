@@ -1,0 +1,133 @@
+#main-wrapper {
+  padding-bottom: 50px;
+}
+
+#title {
+  padding-top: 20px;
+  text-align: center;
+  font-family: arial;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 500;
+  color: rgb(68, 68, 68);
+  font-family: 'Lato';
+}
+
+#main-wrapper a {
+  font-size: 12px;
+  color: rgb(68, 68, 68);
+  font-weight: 300;
+  font-family: 'Lato';
+}
+
+
+.individual-card {
+  width: 20vw;
+  background-color: white;
+  text-align: center;
+  padding-bottom: 7px;
+}
+
+span {
+  font-size: 14px;
+  font-family: 'Lato';
+}
+
+.user-info p {
+  font-size: 14px;
+  color: rgb(68, 68, 68);
+  font-weight: 300;
+  font-family: 'Lato';
+}
+
+.user-info span {
+  color: rgb(41, 43, 44);
+  font-weight: bold;
+}
+
+.user-info {
+  height: 100px;
+}
+
+.info-container {
+  padding: 10px;
+  padding-top: 60px;
+}
+
+#light-gray {
+  color: #777;
+  font-weight: 200;
+}
+
+
+.all-cards {
+  margin-top: 100px;
+  width: 100vw;
+}
+
+#card-2 {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#card-3 {
+  margin-right: 60px;
+}
+
+#card-1 {
+  margin-left: 60px;
+}
+
+.profile-pics {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+}
+
+#profile-pic-1  {
+  background-image: url('https://img1.etsystatic.com/000/0/5434216/iusa_75x75.5208597.jpg');
+}
+
+#profile-pic-2  {
+  background-image: url('https://img0.etsystatic.com/030/0/18656013/iusa_75x75.27053850_gz25.jpg');
+
+}
+
+#profile-pic-3  {
+  background-image: url('https://img1.etsystatic.com/185/0/90271381/iusa_75x75.52484889_8cwt.jpg');
+}
+
+.product-picture {
+  width: 250px;
+  height: 250px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#product-picture-1 {
+  background-image: url('https://img1.etsystatic.com/005/1/6556719/il_300x300.392033141_oomr.jpg');
+}
+
+
+#product-picture-2 {
+  background-image: url('https://img1.etsystatic.com/000/0/5530342/il_300x300.185259095.jpg');
+}
+
+#product-picture-3 {
+  background-image: url('https://img0.etsystatic.com/063/1/8384145/il_300x300.799830916_jh04.jpg');
+}
