@@ -33,29 +33,47 @@ class ShopSidebar extends Component {
         // now let's iterate through the tempListings array and make some renderable array entries for the main render below
         let shopListingsCards = tempListings.map(listing => {
           return (
-            <div className="col-6 shop-listings-card" key={listing.listing_id}>
+            <div
+              className="col-6 card-sm shop-listings-card"
+              key={listing.listing_id}
+            >
               <a href={listing.url}>
                 <div>
                   <img
+                    alt="stuff"
                     src={listing.MainImage.url_fullxfull}
                     className="shop-listings-card-pic"
                   />
                 </div>
                 <div>
-                  <p>{listing.title}</p>
-                  <p>${listing.price}</p>
+                  <p>
+                    {listing.title}
+                  </p>
+                  <p>
+                    ${listing.price}
+                  </p>
                 </div>
               </a>
             </div>
           );
         });
 
+        let shopListingsGroups = [];
+        for (let i = 0; shopListingsGroups.length < 4; i += 2) {
+          shopListingsGroups.push(
+            <div className="row">
+              {shopListingsCards[i]}
+              {shopListingsCards[i + 1]}
+            </div>
+          );
+        }
+
         this.setState({
           results: response.results,
           shop_name: response.results[0].Shop.shop_name,
           shop_url: response.results[0].Shop.url,
           shop_picurl: response.results[0].Shop.icon_url_fullxfull,
-          shop_listings: shopListingsCards
+          shop_listings: shopListingsGroups
         });
       });
   }
@@ -65,7 +83,11 @@ class ShopSidebar extends Component {
 
     return (
       <div className="ShopSidebar col-12 bg-danger justify-content-center">
-        <img className="shop-sidebar-shop-pic" src={this.state.shop_picurl} />
+        <img
+          alt="stuff"
+          className="shop-sidebar-shop-pic"
+          src={this.state.shop_picurl}
+        />
         <a href={this.state.shop_url}>
           <h3>
             {this.state.shop_name}
