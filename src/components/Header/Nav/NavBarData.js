@@ -4,16 +4,60 @@ const navBarData = [
         category: "Clothing & Accessories",
         sub_categories: [
             {
-                name: "Accessories"
+                name: "Accessories",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Belts & Suspenders",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Gloves & Mittens",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             },
             {
-                name: "Bags & Purses"
+                name: "Bags & Purses",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Bags & Purses Sub 1",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Bags & Purses Sub 2",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             },
             {
-                name: "Clothing"
+                name: "Clothing",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Clothing Sub 1",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Clothing Sub 2",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             },
             {
-                name: "Shoes"
+                name: "Shoes",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Shoes Sub 1",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Shoes Sub 2",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             }
         ]
     },
@@ -22,16 +66,60 @@ const navBarData = [
         category: "Jewelry",
         sub_categories: [
             {
-                name: "Body Jewelry"
+                name: "Body Jewelry",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Body Jewelry Sub 1",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Body Jewelry Sub 2",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             },
             {
-                name: "Bracelets"
+                name: "Bracelets",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Bracelets Sub 1",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Bracelets Sub 2",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             },
             {
-                name: "Cuff Links & Tie Clips"
+                name: "Cuff Links & Tie Clips",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Cuff Tie Sub 1",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Cuff Tie Sub 2",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             },
             {
-                name: "Earrings"
+                name: "Earrings",
+                link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
+                sub_sub_categories: [
+                    {
+                        name:"Earrings Sub 1",
+                        link: "https://www.etsy.com/c/accessories/belts-and-suspenders?ref=catnav-2938"
+                    },
+                    {
+                        name:"Earrings Sub 2",
+                        link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
+                    },
+                ]
             }
         ]
     },
@@ -106,19 +194,19 @@ const navBarData = [
     },
 
     {
-        category: "Kids & Babies"
+        category: "Kids & Babies",
         sub_categories: [
             {
-                name: ""
+                name: "Baby & Child Care"
             },
             {
-                name: ""
+                name: "Baby & Toddler Toys"
             },
             {
-                name: ""
+                name: "Baby Accessories"
             },
             {
-                name: ""
+                name: "Baby Blankets"
             }
         ]
     },
@@ -127,17 +215,20 @@ const navBarData = [
         category: "Vintage",
         sub_categories: [
             {
-                name: ""
+                name: "Accessories"
             },
             {
-                name: ""
+                name: "Art & Collectibles"
             },
             {
-                name: ""
+                name: "Bags & Purses"
             },
             {
-                name: ""
+                name: "Clothing"
             }
         ]
     },
 ]
+
+
+export default navBarData

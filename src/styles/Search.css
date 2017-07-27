@@ -9,11 +9,13 @@
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: white;
 }
 
 .logo {
  width: 7vw;
 }
+
 .bar {
   width:40vw;
   padding-top: 10px;
@@ -25,9 +27,12 @@
 }
 .textArea {
   width:30vw;
-  border-radius: 5px 0 0 5px;
+  font-family: Lato;
+  font-weight: 300;
+  border-radius: 3px 0 0 3px;
   border-style: solid;
   border-width: thin;
+  border-right: none;
   background-color: #FBFBFA;
   border-color: #CFCBC8;
   height: 35px;
@@ -38,12 +43,16 @@
 .searchButton {
   background-color: #F56400;
   border-style: solid;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   border-width: thin;
+  border-right: none;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   height: 35px;
   width:6vw;
+  font-family: Lato;
+  font-weight: 300;
+
 }
 .navRight {
   width: 49vw;
@@ -54,17 +63,34 @@
   align-content: center;
   padding-right: 30px;
 }
+.navText{
+  font-family: Arial;
+  font-weight: 300;
+  padding-top: 8px;
+  font-size: 14px;
+}
 .navLink {
   color: #ED8D55;
+  font-weight: 300;
+}
+.navLink:hover {
+  color: #ED8D55;
+  text-decoration: underline;
 }
 .navLinkButton {
   border-color: #ED8D55;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: white;
   border-style: solid;
   border-width: thin;
   margin-top: 5px;
   color: #ED8D55;
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 14px;
+}
+.navLinkButton:hover {
+  background-color: #FBFBFA;
 }
 .shopCart {
   border-left: solid thin #CFCBC8;
@@ -72,16 +98,17 @@
   margin-left: 15px;
   padding-left: 10px;
 }
+.shoppingCartText:hover {
+  font-weight: bold;
+}
 .shoppingCart {
   height: 30px;
   width: 30px;
 }
 .shoppingCartText {
   padding-left: 5px;
-  font-size: 8pt;
+  font-size: 9pt;
   color: #9C9C9C;
-}
-
-.navText{
-  padding-top: 8px;
+  font-family: Lato;
+  font-weight: 300;
 }
