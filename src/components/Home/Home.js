@@ -7,6 +7,8 @@ import InfoCards from './InfoCards.js';
 import BrowseCollections from './Browse-Collections.js';
 import Header from '../Header/Header.js';
 import FreshBlog from './FreshBlog.js';
+import RecentReviews from './RecentReviews.js';
+
 
 export default class Home extends Component {
   render() {
@@ -19,8 +21,7 @@ export default class Home extends Component {
           <BrowseCollections />
           <ShopCards type="gifts"/>
           <OrangeBar type="safety" />
-          <h1>Recent Reviews goes here</h1>
-          {/* <RecentReviews /> */}
+          <RecentReviews />
           <OrangeBar type="selling"/>
           <FreshBlog type="blog"/>
           <OrangeBar type="whatIs"/>
