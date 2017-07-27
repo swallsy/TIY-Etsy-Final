@@ -7,7 +7,6 @@
   text-align: left;
   background-color: #FAF9F5;
 }
-
 .infoCardBlock {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -21,16 +20,13 @@
 .card-text {
   font-size: 14px;
 }
-
 .infoCardIcon {
   width:80px;
 }
-
 .infoCardCol-1 {
   height:80px;
   width:5vw;
 }
-
 .infoCardCol-2 {
   height:80px;
   font-family: Lato;
