@@ -3,8 +3,15 @@ import navBarData from './NavBarData.js'
 
 export default class NavSubSub extends Component {
     render() {
-        let sub = this.props.dataLoc
+        let defaultSubCat;
+        for(var i=0; i < navBarData.length; i++){
+            if(this.props.ogHovered === navBarData[i].category) {
+                defaultSubCat = navBarData[i].sub_categories[0]
 
+            }
+        }
+        console.log(defaultSubCat);
+        let sub = this.props.dataLoc
         let subSubDrop;
         if(sub.name === this.props.hoveredSub) {
             subSubDrop = sub.sub_sub_categories.map(sub_sub => {
@@ -15,10 +22,10 @@ export default class NavSubSub extends Component {
                 )
             })
         }
-        else {
+        else if (!this.props.hoveredSub && defaultSubCat.sub_sub_categories[0]){
             subSubDrop = (
-                <li key={sub_sub.name} className="sub-sub-li"><a href={sub.sub_sub_categories[0].link}>
-                    {sub.sub_sub_categories[0].name}
+                <li className="sub-sub-li"><a href={defaultSubCat.sub_sub_categories[0].link}>
+                    {defaultSubCat.sub_sub_categories[0].name}
                 </a></li>
             )
         }

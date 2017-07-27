@@ -17,7 +17,7 @@ export default class OrangeBar extends Component {
             return (
                 <div className="container row">
                     <div className="col-2">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/trust_wide_left.20170228151449.png"/>
+                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/trust_wide_left.20170228151449.png" alt="a safe"/>
                     </div>
                     <div className="col-8 safety-text">
                         <h1 className="row orange-bar-heading">Etsy keeps you safe</h1>
@@ -37,7 +37,7 @@ export default class OrangeBar extends Component {
                         </div>
                     </div>
                     <div className="col-2">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/trust_wide_right.20170228151449.png" />
+                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/trust_wide_right.20170228151449.png" alt="some keys"/>
                     </div>
                 </div>
             )
@@ -46,15 +46,15 @@ export default class OrangeBar extends Component {
             return (
                 <div className="container row">
                     <div className="col-4">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_left.20170228151449.png" />
+                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_left.20170228151449.png" alt="a lady and a cat and some stuff"/>
                     </div>
                     <div className="col-4">
                         <h1 className="orange-bar-heading">Start selling on Etsy</h1>
                         <p>Millions of shoppers can't wait to see what you have in store.</p>
-                        <p><a href="https://www.etsy.com/sell?ref=hp" target="_blank">Open a shop today</a> ></p>
+                        <p><a href="https://www.etsy.com/sell?ref=hp" target="_blank" rel="noopener noreferrer">Open a shop today</a> ></p>
                     </div>
                     <div className="col-4">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_right.20170228151449.png" />
+                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_right.20170228151449.png" alt="dude and a plant and maybe a wall or something"/>
                     </div>
                 </div>
             )
@@ -63,15 +63,15 @@ export default class OrangeBar extends Component {
             return (
                 <div className="container row">
                     <div className="col-5">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/about_etsy_wide_left.20170228151449.png" />
+                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/about_etsy_wide_left.20170228151449.png" alt="a lady walking her dog in the city"/>
                     </div>
                     <div className="col-2">
                         <h1 className="orange-bar-heading">What is Etsy?</h1>
                         <p>We're more than a marketplace.</p>
-                        <p><a href="https://www.etsy.com/mission?ref=hp&from=homepage.about_etsy" target="_blank">Read all about it</a> ></p>
+                        <p><a href="https://www.etsy.com/mission?ref=hp&from=homepage.about_etsy" target="_blank" rel="noopener noreferrer">Read all about it</a> ></p>
                     </div>
                     <div className="col-5">
-                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/about_etsy_wide_right.20170228151449.png" />
+                        <img src="https://www.etsy.com/assets/dist/images/homepage/vesta/about_etsy_wide_right.20170228151449.png" alt="a lady carrying some packages in the city"/>
                     </div>
                 </div>
             )

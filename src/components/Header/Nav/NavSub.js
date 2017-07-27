@@ -28,7 +28,7 @@ export default class NavBar extends Component {
         let renderSubCat;
         if(this.props.hovered) {
             renderSubCat = navBarData.map(cat => {
-                if(cat.category == this.props.hovered) {
+                if(cat.category === this.props.hovered) {
                     return (
 
                         <ul key={cat.category} className="sub-ul">
@@ -47,7 +47,9 @@ export default class NavBar extends Component {
 
                     )
                 }
+                return renderSubCat
             })
+
         }
 
         return (
