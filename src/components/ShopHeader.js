@@ -34,6 +34,7 @@ class ShopHeader extends Component {
                 <img
                   src={listing.MainImage.url_75x75}
                   className="shopheader-listings-thumb-pic"
+                  alt="stuff"
                 />
               </a>
             </div>
@@ -53,17 +54,25 @@ class ShopHeader extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="ShopHeader row bg-faded">
-        <a href={this.state.shop_url}>
-          <img src={this.state.shop_picurl} className="shopheader-shop-pic" />
+      <div className="ShopHeader row bg-faded col-10">
+        <a href={this.state.shop_url} className="col-1">
+          <img
+            src={this.state.shop_picurl}
+            alt="stuff"
+            className="shopheader-shop-pic"
+          />
         </a>
-        <a href={this.state.shop_url}>
-          {this.state.shop_name}
-        </a>
+        <div className="col-1">
+          <a href={this.state.shop_url}>
+            {this.state.shop_name}
+          </a>
+          <button>Favorite shop</button>
+        </div>
+        <div className="col-5" />
         {this.state.shop_listings}
         <a href={this.state.shop_url}>
           <div className="shopheader-listings-thumb">
-            {this.state.shop_listings_count} items
+            <h2>{this.state.shop_listings_count}</h2> items
           </div>
         </a>
       </div>
