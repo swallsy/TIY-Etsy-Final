@@ -178,6 +178,7 @@ const navBarData = [
               {
                 name: "All Weddings",
                 link: "https://www.etsy.com/c/weddings?ref=catnav-1633",
+                sub_sub_categories: []
                 },
                 {
                 name: "Accessories",
