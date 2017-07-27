@@ -45,8 +45,5 @@ class DetailedCatCard extends Component {
       </div>
     )
   }
-};
-
-
 
 export default DetailedCatCard

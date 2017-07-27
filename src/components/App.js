@@ -20,10 +20,6 @@ class App extends Component {
       <div className="App">
         <div className="container-fluid row">
           <CatBar className="col-md-2"/>
-          <DetailedCatCards className="col-md-10"/>
-        </div>
-        <div className="row">
-          <ProductCards className="col-md-10"/>
         </div>
       </div>
     );
@@ -31,3 +27,7 @@ class App extends Component {
 }
 
 export default App;
+
+{/* <div className="row">
+  <ProductCards className="col-md-10"/>
+</div> */}
