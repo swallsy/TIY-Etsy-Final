@@ -58,6 +58,7 @@ export default class NavBar extends Component {
                 <div>
                     {renderSubCat}
                 </div>
+                
         )
     }
 }
