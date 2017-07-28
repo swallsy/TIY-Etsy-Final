@@ -7,53 +7,80 @@ export default class ProductCards extends Component {
     this.state= {
     feedback_score: '',
     feedbackstar: '',
-    starfilled: <i className="fa fa-star" aria-hidden="true"></i>,
-    starunfilled: <i className="fa fa-star-o" aria-hidden="true"></i>
+    product: []
   }
 }
 
-
-  render() {
+  componentDidMount() {
       let productCards = this.props.listingFilter.map((product) => {
         this.setState({feedback_score: product.User.feedback_info.score});
         if (this.state.feedback_score > 89) {
             this.setState({
-                feedbackstar: <div>
-                        {this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}
-                    </div>
+                feedbackstar:
+                  <div>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                  </div>
             })
         } else if (this.state.feedback_score  > 69) {
             this.setState({
-                feedbackstar: <div>
-                        {this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}
-                    </div>
+                feedbackstar:
+                  <div>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star-o" aria-hidden="true"></i>
+                  </div>
             })
         } else if (this.state.feedback_score  > 49) {
             this.setState({
-                feedbackstar: <div>
-                        {this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}
-                    </div>
+                feedbackstar:
+                  <div>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star-o" aria-hidden="true"></i>
+                    <i className="fa fa-star-o" aria-hidden="true"></i>
+                  </div>
             })
         } else if (this.state.feedback_score  > 29) {
-                this.setState({
-                    feedbackstar: <div>
-                            {this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
-                        </div>
-                })
-            } else if (this.state.feedback_score  > 9) {
-                this.setState({
-                    feedbackstar: <div>
-                            {this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
-                        </div>
-                })
-            } else {
-                this.setState({
-                    feedbackstar: <div>
-                            {this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
-                        </div>
+            this.setState({
+                feedbackstar:
+                    <div>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star-o" aria-hidden="true"></i>
+                      <i className="fa fa-star-o" aria-hidden="true"></i>
+                      <i className="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+            })
+        } else if (this.state.feedback_score  > 9) {
+            this.setState({
+              feedbackstar:
+                <div>
+                  <i className="fa fa-star" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+            })
+        } else {
+            this.setState({
+              feedbackstar:
+                <div>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                </div>
                 })
             }
-
         return (
           <div className="card col-md-2 product-card" key={product.listing_image_id}>
             <a href={product.url}>
@@ -65,10 +92,13 @@ export default class ProductCards extends Component {
             </a>
           </div>
         )
+        this.setState({product: productCards})
       })
+    }
+  render() {
     return (
       <div className="row">
-        {productCards}
+        {this.state.product}
       </div>
     )
   }

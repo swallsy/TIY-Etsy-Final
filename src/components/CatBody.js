@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
-import CatCard from './CatBody/CatCards.js';
-import DetailedCatCard from './CatBody/DetailedCatCards.js';
+
 
 
 class CatBody extends Component {
@@ -29,11 +28,12 @@ class CatBody extends Component {
 
   render() {
     if (this.state.listings) {
-    const detailedCategories = [
+      const detailedCategories = [
         {
           category: {
             name: "Jewelry",
-            path: "jewelry/"
+            path: "jewelry/",
+            id: 68887482
           },
           subCategories: {
             cat1: {
@@ -57,7 +57,8 @@ class CatBody extends Component {
         {
           category: {
             name: "Craft Supplies & Tools",
-            path: "craft_supplies_and_tools/"
+            path: "craft_supplies_and_tools/",
+            id: 69150433
           },
           subCategories: {
             cat1: {
@@ -81,7 +82,8 @@ class CatBody extends Component {
         {
           category: {
             name: "Home & Living",
-            path: "home_and_living/"
+            path: "home_and_living/",
+            id: 69150425
           },
           subCategories: {
             cat1: {
@@ -105,7 +107,8 @@ class CatBody extends Component {
         {
           category: {
             name: "Art & Collectibles",
-            path: "art_and_collectibles/"
+            path: "art_and_collectibles/",
+            id: 68887312
           },
           subCategories: {
             cat1: {
@@ -130,11 +133,13 @@ class CatBody extends Component {
       const categories = [
           {category: {
             name: "Clothing",
-            path: "clothing"
+            path: "clothing",
+            id: 69150353
           }},
           {category: {
             name: "Accessories",
-            path: "accessories"
+            path: "accessories",
+            id: 69150467
           }},
           {category: {
             name: "Paper & Party Supplies",
@@ -142,22 +147,24 @@ class CatBody extends Component {
           }},
           {category: {
             name: "Weddings",
-            path: "weddings"
+            path: "weddings",
+            id: 68887494
           }},
           {category: {
             name: "Bags & Purses",
-            path: "bags_and_purses"
+            path: "bags_and_purses",
+            id: 69150455
           }}
         ];
           return (
             <div className = "container" >
               {this.state.listings.length > 0 ? (
-              <div>
+              {/*}<div>
                 <DetailedCatCard detailedCategories={detailedCategories}
                          etsyListings={this.state.listings} />
                 <CatCard categories={categories}
-                         etsyListings={this.state.listings} />
-              </div>
+                        etsyListings={this.state.listings} />
+              </div>*/}
               ) : (
               <div>Loading</div>
               )}
@@ -166,6 +173,3 @@ class CatBody extends Component {
     }
   }
 }
-
-export default CatBody
-

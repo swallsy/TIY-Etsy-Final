@@ -30,5 +30,3 @@ class CatCard extends Component {
     )
   }
 }
-
-export default CatCard
