@@ -2,6 +2,10 @@
 - set up Trello
 - feature cards
 ### Tuesday: Michael
+- Reassign components
+- Guided API research
+- Helped organize code
+- Began work on NavBar
 ### Wednesday: Matt
 - Assign remaining tasks
 - Oversaw git merge requests and conflicts
