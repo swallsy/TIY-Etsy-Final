@@ -1,13 +1,26 @@
 .browse-collection-img {
-  height: 245px;
-  width: 310px;
-}
 
+  width: 80%;
+}
+.overflowFix{
+  overflow: hidden;
+}
+.imgFix {
+  width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  box-sizing: border-box;
+}
 .browse-collection-item {
+  margin: -.5vw;
   background-color: white;
   border: .5px solid lightgrey;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+}
+.browse-collection-item:hover .browse-collections-text-content{
+  text-decoration: underline;
 
 }
 
@@ -15,6 +28,7 @@
   margin: 20px;
 }
 .browse-collections-header{
+  font-size: 26px;
   text-align: center;
   margin: 3vw;
   color: black;
@@ -23,16 +37,18 @@
   text-decoration: underline;
 }
 .browse-collections-text {
+  margin: 2vw;
   align-self: center;
-  font-size: 23px;
+  font-size: 20px;
+  font-weight:500;
 }
-
 .browse-collections-text-header{
   color: grey;
-  font-size: 18px;
+  font-size: 12px;
 }
 .browse-collections-seemore{
-  margin: 3vw;
+  font-size: 14px;
+  margin: 2vw;
   text-align: center;
   color: #FF883E;
 }
