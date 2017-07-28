@@ -39,6 +39,11 @@
   padding-left: 10px;
   color:#CFCBC8;
   margin-left: none;
+  outline: none;
+}
+.textArea:focus {
+  border-color: black;
+  color: black;
 }
 .searchButton {
   background-color: #F56400;
