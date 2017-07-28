@@ -12,15 +12,15 @@ export default class Cards extends Component {
         }
     }
 
+
     cards(response) {
         let renderMe;
         if(this.props.type === "category"){
-
 // need to fill this with things
 // each thing needs a unique category
         var categoryCards = [];
         var uniqueCats = []; // keep track of the different categories separately as a convenience
-
+        console.log(response);
         categoryCards = response.reduce(function(newArray, response) {
         // we'll assume this isn't unique to start with
         let itemHasUniqueCategory = false;
@@ -29,6 +29,7 @@ export default class Cards extends Component {
         // response.category_path.forEach(function(cat) {
 
           // if we haven't already found a unique category for this item...
+
           if (!itemHasUniqueCategory && uniqueCats.indexOf(response.category_path[0]) === -1) {
             itemHasUniqueCategory = true;
             uniqueCats.push(response.category_path[0]);
@@ -144,7 +145,13 @@ export default class Cards extends Component {
         fetch(categoryImages)
             .then (response => response.json())
             .then (response => {
-                this.cards(response.results)
+              let tempArr = [];
+              for (let i = 0; i < response.results.length; i++) {
+                if (response.results[i].MainImage) {
+                  tempArr.push(response.results[i])
+                }
+              }
+                this.cards(tempArr);
             })
     }
 
