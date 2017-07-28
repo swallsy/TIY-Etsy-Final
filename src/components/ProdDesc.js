@@ -19,8 +19,6 @@ class ProdDesc extends Component {
 			tab2: 'nav-link',
 			tab3: 'nav-link',
 			reviewstab: "Reviews",
-			starfilled: <img className="star" src={'star.png'}/>,
-			starunfilled: <img className="star" src={'nostar.png'}/>,
 			feedbackstar: '',
 			feedback_score: ''
 		};
@@ -107,37 +105,61 @@ class ProdDesc extends Component {
 			if (this.state.feedback_score > 89) {
 				this.setState({
 					feedbackstar: <div>
-							{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
 						</div>
 				})
 			} else if (this.state.feedback_score  > 69) {
 				this.setState({
 					feedbackstar: <div>
-							{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star-o'></i>
 						</div>
 				})
 			} else if (this.state.feedback_score  > 49) {
 				this.setState({
 					feedbackstar: <div>
-							{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star'></i>
+							<i className='fa fa-star-o'></i>
+							<i className='fa fa-star-o'></i>
 						</div>
 				})
 			} else if (this.state.feedback_score  > 29) {
 					this.setState({
 						feedbackstar: <div>
-								{this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
+								<i className='fa fa-star'></i>
+								<i className='fa fa-star'></i>
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
 							</div>
 					})
 				} else if (this.state.feedback_score  > 9) {
 					this.setState({
 						feedbackstar: <div>
-								{this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
+								<i className='fa fa-star'></i>
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
 							</div>
 					})
 				} else {
 					this.setState({
 						feedbackstar: <div>
-								{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
+								<i className='fa fa-star-o'></i>
 							</div>
 					})
 				}
