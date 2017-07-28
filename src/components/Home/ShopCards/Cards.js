@@ -101,7 +101,7 @@ export default class Cards extends Component {
                       </a>
                     </div>
                     <div className="col-md-2 items padding">
-                      <a href="https://www.etsy.com/featured/etsy-top-sellers?ref=hp_g">
+                      <a href="https://img0.etsystatic.com/142/1/13994634/il_340x270.1160732882_6na4.jpg">
                         <div className="card-box">
                             <div id="sc-gc-3" className="s-card-image"></div>
                             <p className="s-card-cat-name">Crowd favorites</p>
