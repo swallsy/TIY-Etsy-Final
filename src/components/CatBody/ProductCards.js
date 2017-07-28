@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../styles/ProductCards.css';
 
 export default class ProductCards extends Component {
   constructor(props) {
@@ -54,12 +55,14 @@ export default class ProductCards extends Component {
             }
 
         return (
-          <div className="card col-md-2" key={product.listing_image_id}>
-            <img src={product.MainImage.url_170x135} />
-              <div>{product.title.substring(0, 36)}...</div>
-              <div>{product.Shop.shop_name}</div>
-              <div>{this.state.feedbackstar}({product.num_favorers})</div>
-              <div>${product.price}</div>
+          <div className="card col-md-2 product-card" key={product.listing_image_id}>
+            <a href={product.url}>
+              <img className="product-image" src={product.MainImage.url_170x135} />
+              <div className="product-title">{product.title.substring(0, 36)}...</div>
+              <div className="shop-name">{product.Shop.shop_name}</div>
+              <div className="reviews">{this.state.feedbackstar}({product.num_favorers})</div>
+              <div className="price">${product.price}</div>
+            </a>
           </div>
         )
       })
