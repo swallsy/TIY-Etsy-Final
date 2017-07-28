@@ -1,79 +1,64 @@
 import React , {Component} from 'react'
 import navBarData from './NavBarData.js'
+import NavSubSub from './NavSubSub.js'
 
 export default class NavBar extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
-        this.handleClick = this.handleClick.bind(this)
-        this.createDrop = this.createDrop.bind(this)
-
+        this.handleHoverSub = this.handleHoverSub.bind(this)
 
         this.state = {
-            navCategories: null,
-            renderMe: null,
-            subTarget: null,
-            subStore: []
+            isHoveredSub: null
+        }
+
+    }
+
+    handleHoverSub(event) {
+        if(event.target.className === this.state.isHoveredSub) {
+            this.setState({isHoveredSub: null})
+        }
+        else {
+            this.setState({isHoveredSub: event.target.className})
         }
     }
 
-    handleClick(event) {
-        this.createDrop(event.target.className)
-    }
-
-
-
-    //currently createSubDrop works sort of.
-    // might have to consider moving all of createDrop in render...
-    // --- but really. now I need to figure out why belts & suspenders renders //for all the clothing & accessories sub categories when Accessories is pfflegg
-
-    createDrop(target) {
-        let renderDrop;
-        navBarData.map(cat => {
-            if(cat.category == target) {
-                console.log("that equals other thing");
-                renderDrop = (
-
-                <ul key={cat.category}>
-                    {cat.sub_categories.map(sub => {
-                        this.state.subStore.push(sub)
-                        console.log(sub);
-                        console.log(sub.sub_sub_category);
-                        return (
-                                <div className="sub-cat" key={sub.name}>
-                                    <span className={sub.name} onClick={this.handleClickSub}>
-                                        {sub.name}
-                                    </span>
-                                </div>
-                                )
-                    })}
-                </ul>
-                )
-            }
-            console.log(renderDrop);
-            return (renderDrop)
-        })
-        console.log(renderDrop);
-        this.setState({renderMe: renderDrop})
-    }
 
     render() {
-        let navCategories = navBarData.map(cat => {
-            return (
-                <li key={cat.category} className="navbar-item">
-                    <span  className={cat.category} onClick={this.handleClick}>{cat.category}</span>
+        let renderSubCat;
+        if(this.props.hovered) {
+            renderSubCat = navBarData.map(cat => {
+                if(cat.category === this.props.hovered) {
+                    return (
                     <ul className="dropdown-ul">
-                        {this.state.renderMe}
+                        <div className="nav-bar-outer">
+                            <ul key={cat.category} className="sub-ul">
+                                {cat.sub_categories.map(sub => {
+                                    return (
+                                        <li key={sub.name} className="sub-cat" >
+                                             <span className={sub.name} onMouseEnter={this.handleHoverSub}>
+                                                {sub.name}
+                                            </span><i className="fa fa-chevron-right" />
+                                            <ul className="sub-sub-ul">
+                                                <NavSubSub dataLoc={sub} ogHovered={this.props.hovered} hoveredSub={this.state.isHoveredSub}/>
+                                            </ul>
+                                        </li>
+                                    )})}
+                            </ul>
+                        </div>
                     </ul>
-                </li>
-            )
-        })
+                    )
+                }
+                return renderSubCat
+            })
+
+        }
 
         return (
-            <div className="nav-bar-outer">
-                <ul className="nav-bar">{navCategories}
-                </ul>
-            </div>
+                <div>
+                    {renderSubCat}
+                </div>
+                
         )
     }
 }

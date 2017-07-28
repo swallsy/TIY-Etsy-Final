@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import Search from './Search.js';
 import NavBar from './Nav/NavBar.js'
+import '../../styles/NavBar.css';
 
-class Header extends Component {
+export default class Header extends Component {
   render() {
     return (
-      <div className="Header">
+      <div id="header">
         <Search />
         <NavBar />
       </div>
     )
   }
 }
-
-export default Header;
