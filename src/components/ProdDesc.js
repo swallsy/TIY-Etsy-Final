@@ -208,7 +208,9 @@ class ProdDesc extends Component {
 							<button className={this.state.tab1} href="#" onClick={this.onClick} value='1'>Item details</button>
 						</li>
 						<li className="nav-item">
-							<button className={this.state.tab2} href="#" onClick={this.onClick} value='2'>{this.state.feedbackstar} ({this.state.feedback_count})</button>
+							<button className={this.state.tab2} href="#" onClick={this.onClick} value='2'>
+								<span>{this.state.feedbackstar} ({this.state.feedback_count})</span>
+								</button>
 						</li>
 						<li className="nav-item">
 							<button className={this.state.tab3} href="#" onClick={this.onClick} value='3'>Shipping</button>
