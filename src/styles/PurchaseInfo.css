@@ -963,7 +963,7 @@
     caret-color: rgb(102, 102, 102);
     border: 0px none rgb(102, 102, 102);
     font: normal normal normal normal 14px / 20px "Graphik Webfont", Arial, Helvetica, sans-serif;
-    list-style: none outside none;
+    list-style: inherit;
     outline: rgb(102, 102, 102) none 0px;
     padding: 0px 0px 0px 1px;
 }/*#LI_76, #LI_79, #LI_81, #LI_83*/
@@ -1008,7 +1008,7 @@
     caret-color: rgb(102, 102, 102);
     border: 0px none rgb(102, 102, 102);
     font: normal normal normal normal 14px / 20px "Graphik Webfont", Arial, Helvetica, sans-serif;
-    list-style: none outside none;
+    list-style: inherit;
     outline: rgb(102, 102, 102) none 0px;
     padding: 0px 0px 0px 1px;
 }/*#LI_77*/
@@ -1016,7 +1016,6 @@
 #LI_77:before {
     bottom: 20px;
     color: rgb(119, 119, 119);
-    content: '"•"';
     display: block;
     height: 20px;
     left: -15px;
@@ -1076,7 +1075,7 @@
 }/*#UL_85*/
 
 #LI_86 {
-    height: 18px;
+    height: 16px;
     text-rendering: optimizeLegibility;
     width: 392px;
     perspective-origin: 196px 9px;
@@ -1144,7 +1143,7 @@
 }/*#path_92*/
 
 #LABEL_93 {
-    bottom: -1px;
+    bottom: -5px;
     color: rgb(102, 102, 102);
     left: 0px;
     position: relative;
@@ -1475,15 +1474,17 @@
     perspective-origin: 10px 10px;
     transform-origin: 10px 10px;
     font: normal normal normal normal 20px / 20px SSEtsy;
+    color: #000000;
 }/*#SPAN_110*/
 
 #SPAN_110:before {
     box-sizing: border-box;
-    content: '""';
+    content: '';
     text-align: left;
     text-rendering: optimizeLegibility;
     white-space: nowrap;
     font: normal normal normal normal 20px / 20px SSEtsy;
+    color: #000000;
 }/*#SPAN_110:before*/
 
 #SPAN_111 {
@@ -1498,6 +1499,7 @@
     transform-origin: 19.2812px 9.5px;
     font: normal normal normal normal 14px / 19.6px "Graphik Webfont", Arial, Helvetica, sans-serif;
     margin: 0px 0px 0px 6px;
+    color: #000000;
 }/*#SPAN_111*/
 
 #SPAN_114 {
@@ -1516,11 +1518,12 @@
 
 #SPAN_114:before {
     box-sizing: border-box;
-    content: '""';
+    content: '';
     text-align: left;
     text-rendering: optimizeLegibility;
     white-space: nowrap;
     font: normal normal normal normal 20px / 20px SSEtsy;
+    color: #000000;
 }/*#SPAN_114:before*/
 
 #SPAN_115 {
@@ -1535,6 +1538,7 @@
     transform-origin: 16.0156px 9.5px;
     font: normal normal normal normal 14px / 19.6px "Graphik Webfont", Arial, Helvetica, sans-serif;
     margin: 0px 0px 0px 6px;
+    color: #000000;
 }/*#SPAN_115*/
 
 #SPAN_118 {
@@ -1553,11 +1557,12 @@
 
 #SPAN_118:before {
     box-sizing: border-box;
-    content: '""';
+    content: '';
     text-align: left;
     text-rendering: optimizeLegibility;
     white-space: nowrap;
     font: normal normal normal normal 20px / 20px SSEtsy;
+    color: #000000;
 }/*#SPAN_118:before*/
 
 #SPAN_119 {
@@ -1572,4 +1577,5 @@
     transform-origin: 19.8594px 9.5px;
     font: normal normal normal normal 14px / 19.6px "Graphik Webfont", Arial, Helvetica, sans-serif;
     margin: 0px 0px 0px 6px;
+    color: #000000;
 }/*#SPAN_119*/
