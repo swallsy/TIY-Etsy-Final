@@ -197,8 +197,6 @@ class PurchaseInfo extends Component {
     </div>
     <hr id="HR_70" />
     <div id="DIV_71">
-      <h3>Item Overview</h3>
-
       <ul id="UL_72">
       </ul>
     </div>
@@ -226,17 +224,6 @@ class PurchaseInfo extends Component {
     </div>
     <ul id="UL_85">
       <li id="LI_86">
-        <span id="SPAN_87"></span>
-        <svg id="svg_88">
-          <path id="path_89">
-          </path>
-          <path id="path_90">
-          </path>
-          <path id="path_91">
-          </path>
-          <path id="path_92">
-          </path>
-        </svg>
         <label id="LABEL_93">
           This shop accepts Etsy gift cards
         </label>
