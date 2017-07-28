@@ -23,9 +23,10 @@ class RecentReviews extends Component {
                     </div>
                     <p>Excellent quality and fast shipping. Thank you!</p>
                   </div>
-
-                  <div className="product-picture" id="product-picture-1"></div>
-                  <a className="product-description" href="https://www.etsy.com/listing/114099821/antique-key-pattern-black?ref=hp_sr">Antique Key Pattern - Black</a>
+                  <a className="product-description" href="https://www.etsy.com/listing/114099821/antique-key-pattern-black?ref=hp_sr">
+                    <div className="product-picture" id="product-picture-1"></div>
+                    <p>Antique Key Pattern - Black</p>
+                  </a>
                 </div>
               </div>
 
@@ -43,8 +44,11 @@ class RecentReviews extends Component {
                       </div>
                       <p>Beautifully crafted, really nice piece!</p>
                     </div>
-                    <div className="product-picture" id="product-picture-2"></div>
-                    <a className="product-description" href="https://www.etsy.com/listing/59551251/strange?ref=hp_sr">Strange</a>
+
+                    <a className="product-description" href="https://www.etsy.com/listing/59551251/strange?ref=hp_sr">
+                      <div className="product-picture" id="product-picture-2"></div>
+                      <p>Strange</p>
+                    </a>
                   </div>
               </div>
 
@@ -62,8 +66,11 @@ class RecentReviews extends Component {
                       </div>
                       <p>Really easy mask to make just have to remember there is 4 fins to glue on the body of it.</p>
                     </div>
-                    <div className="product-picture" id="product-picture-3"></div>
-                    <a className="product-description" href="https://www.etsy.com/listing/239893495/fish-head-mask-complete-with-fish-body?ref=hp_sr">Fish Head Mask Complete with Fish Body</a>
+
+                    <a className="product-description" href="https://www.etsy.com/listing/239893495/fish-head-mask-complete-with-fish-body?ref=hp_sr">
+                      <div className="product-picture" id="product-picture-3"></div>
+                      <p>Fish Head Mask Complete with Fish Body</p>
+                    </a>
                   </div>
 
               </div>
