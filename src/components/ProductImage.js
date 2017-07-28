@@ -3,7 +3,7 @@ import 'react-bootstrap-carousel/dist/bootstrap.min.css';
 import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
 import {React_Bootstrap_Carousel} from 'react-bootstrap-carousel';
 import "../styles/App.css";
-import "../styles/ProductImage.css";
+
 
 class ProductImage extends Component {
   constructor() {
