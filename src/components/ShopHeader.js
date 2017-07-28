@@ -54,7 +54,7 @@ class ShopHeader extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="ShopHeader row bg-faded col-10">
+      <div className="ShopHeader row col-10">
         <a href={this.state.shop_url} className="col-1">
           <img
             src={this.state.shop_picurl}

@@ -153,7 +153,7 @@ class ProdDesc extends Component {
 				let reviewCards = response.results.map(reviewCard => {
 					return (
 						<div className="card" key={reviewCard.feedback_id}>
-							<img src={'useravatar.png'}/>
+							<img className='useravatar' src={'useravatar.png'}/>
 							{reviewCard.message}
 						</div>
 					)
