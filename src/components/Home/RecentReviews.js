@@ -16,7 +16,7 @@ class RecentReviews extends Component {
                     <span>VinylDolly </span><span id="light-gray">wrote on July 22</span>
                     <p>Excellent quality and fast shipping. Thank you!</p>
                   </div>
-            
+
                   <div className="product-picture" id="product-picture-1"></div>
                   <a className="product-description" href="https://www.etsy.com/listing/114099821/antique-key-pattern-black?ref=hp_sr">Antique Key Pattern - Black</a>
                 </div>
