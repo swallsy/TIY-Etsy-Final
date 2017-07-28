@@ -5,15 +5,9 @@
 #title {
   padding-top: 20px;
   text-align: center;
-  font-family: arial;
-}
-
-h2 {
-  font-size: 26px;
-  font-weight: 500;
-  color: rgb(68, 68, 68);
   font-family: 'Lato';
 }
+
 
 #main-wrapper a {
   font-size: 12px;
@@ -22,12 +16,16 @@ h2 {
   font-family: 'Lato';
 }
 
+#main-wrapper a:hover {
+  text-decoration: underline;
+}
 
 .individual-card {
   width: 20vw;
   background-color: white;
   text-align: center;
   padding-bottom: 7px;
+  border-radius: 3px;
 }
 
 span {
@@ -51,6 +49,10 @@ span {
   height: 100px;
 }
 
+.star {
+  color: orange;
+}
+
 .info-container {
   padding: 10px;
   padding-top: 60px;
@@ -63,7 +65,7 @@ span {
 
 
 .all-cards {
-  margin-top: 100px;
+  margin-top: 80px;
   width: 100vw;
 }
 
