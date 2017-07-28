@@ -1,0 +1,41 @@
+/*.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}*/
+
+.product-card {
+  width: 222px;
+  border: none;
+  font-family: arial;
+  font-weight: 300;
+}
+
+.product-image {
+  width: 220px;
+  height: 180px;
+}
+
+.product-title {
+  color: #666666;
+}
+
+.shop-name {
+  color: #aaaaaa;
+  font-weight: 100;
+  /*align-items: left;*/
+}
+
+.fa-star {
+  font-size: 12pt;
+  color: #FFA301;
+  padding: 1px;
+}
+
+.reviews {
+  color: #aaaaaa;
+}
+
+.price {
+  color: #666666;
+  font-weight: bold;
+}
