@@ -38,7 +38,7 @@ class ProductImage extends Component {
     return (
       <div style={{
         height: 570,
-        
+
       }} >
         <React_Bootstrap_Carousel animation={true} onSelect={this.onSelect} className="carousel-fade">
           {this.state.pictures}
