@@ -13,22 +13,55 @@ class PurchaseInfo extends Component {
       Inventory: [],
       Products:[]
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
     fetch('https://openapi.etsy.com/v2/listings/175112598?includes=Inventory,ShippingInfo&api_key=nrfza0h31bu4g5biq6bq6g4c')
       .then(response => response.json())
       .then(response => {
+
+        let products = response.results[0].Inventory[0].products;
+
+        let mapInventory = products.map(product => {
+          return (
+            <option value={product.offerings[0].price.currency_formatted_short}
+              key={product.product_id}>{product.property_values[0].values}
+              - {product.offerings[0].price.currency_formatted_short}</option>
+          )
+        });
+
         this.setState({
           results: response.results,
           title: response.results[0].title,
           price: response.results[0].price,
           materials: response.results[0].materials,
           Inventory: response.results[0].Inventory,
-          products: response.results[0].Inventory[0].products
+          products: response.results[0].Inventory[0].products,
+          propertyValues: response.results[0].Inventory[0].products[0].property_values,
+          propertyName: response.results[0].Inventory[0].products[0].property_values[0].property_name,
+          mapInventory: mapInventory
+
         });
       });
   }
+
+
+  handleSubmit(e) {
+    console.log(e);
+    console.log("handleSubmit!");
+  }
+
+  handleChange(e) {
+    console.log(e);
+    console.log("handleChange!");
+    console.log(this.value);
+    this.setState({price: e.target.value});
+  }
+
+
   render() {
     console.log(this.state);
     return (
@@ -43,7 +76,7 @@ class PurchaseInfo extends Component {
       </button>
       <div id="DIV_7">
         <div id="DIV_8">
-          <span id="SPAN_9">$600.00+</span>
+          <span id="SPAN_9">{this.state.price}</span>
           <meta content="USD" id="META_10" />
           <meta content="600.00" id="META_11" />
           <meta content="in_stock" id="META_12" /><span id="SPAN_13"></span>
@@ -56,19 +89,14 @@ class PurchaseInfo extends Component {
           <div id="DIV_17">
 
             <label for="inventory-variation-select-0" id="LABEL_18">
-              D-ring for leash
+              {this.state.propertyName}
             </label> <span id="SPAN_19">
-							<select id="SELECT_20" name="listing_variation_id">
+							<select id="SELECT_20" name="listing_variation_id" onChange={this.handleChange}>
 
 								<option id="OPTION_21">
 									Select an option
 								</option>
-								<option value="624317441" id="OPTION_22">
-									w. d-ring for leash ($620.00)
-								</option>
-								<option value="604432384" id="OPTION_23">
-									w/o d-ring for leash ($600.00)
-								</option>
+								{this.state.mapInventory}
 							</select></span>
             <div id="DIV_24">
               Please select an option
