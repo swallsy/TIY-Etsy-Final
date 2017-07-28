@@ -14,7 +14,7 @@ class ProductImage extends Component {
   componentDidMount() {
     // here's the fetch we need for this section
     fetch(
-      'https://openapi.etsy.com/v2/listings/528404732/images?fields=url_fullxfull,listing_image_id&api_key=nrfza0h31bu4g5biq6bq6g4c'
+      'https://openapi.etsy.com/v2/listings/' + this.props.listingId + '/images?fields=url_fullxfull,listing_image_id&api_key=nrfza0h31bu4g5biq6bq6g4c'
     )
       .then(response => { return response.json();
       })

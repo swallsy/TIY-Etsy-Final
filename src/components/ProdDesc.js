@@ -30,7 +30,7 @@ class ProdDesc extends Component {
 	}
 	componentDidMount() {
 		console.log("now doing the didmount.");
-		fetch("https://openapi.etsy.com/v2/listings/175112598?includes=Shop/User/Feedback,Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c").then(response => response.json()).then(response => {
+		fetch("https://openapi.etsy.com/v2/listings/" + this.props.listingId + "?includes=Shop/User/Feedback,Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c").then(response => response.json()).then(response => {
 			this.setState({results: response.results});
 
 			this.setState({prod_desc: response.results[0].description});
