@@ -4,3 +4,20 @@ body {
   width: 100%;
   background-color: #FAF9F5;
 }
+
+h2 {
+  font-size: 26px;
+  font-weight: 500;
+  color: rgb(68, 68, 68);
+  font-family: 'Lato';
+  text-align: center;
+}
+
+#shop-by-category {
+  padding-top: 60px;
+}
+
+
+#shop-by-category-cards {
+  margin: 0;
+}
