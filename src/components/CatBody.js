@@ -21,7 +21,6 @@ class CatBody extends Component {
       .then(resp => {
         let listings = resp.results;
         this.setState({listings: listings});
-        console.log("state", this.state.listings);
       })
     }
 

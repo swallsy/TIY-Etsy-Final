@@ -9,13 +9,10 @@ export default class ProductCards extends Component {
     feedbackstar: '',
     product: []
   }
-  console.log(this.props)
 }
 
   componentDidMount() {
       let productCards = this.props.listingFilter.map((oneProduct) => {
-        console.log(oneProduct);
-        console.log(oneProduct.User.feedback_info.score)
         if (oneProduct.state == "active") {
         this.setState({feedback_score: oneProduct.User.feedback_info.score});
          if (this.state.feedback_score > 89) {
@@ -29,6 +26,7 @@ export default class ProductCards extends Component {
                     <i className="fa fa-star" aria-hidden="true"></i>
                   </div>
             })
+            console.log(this.state.feedbackstar);
           } else if (this.state.feedback_score  > 69) {
             this.setState({
                 feedbackstar:
@@ -85,6 +83,7 @@ export default class ProductCards extends Component {
                 </div>
                 })
             }
+        console.log(this.state.feedbackstar);
         return (
           <div className="card col-md-2 product-card" key={oneProduct.listing_id}>
             <a href={oneProduct.url}>
@@ -98,9 +97,7 @@ export default class ProductCards extends Component {
         )
       }
     })
-    console.log(productCards);
     this.setState({product: productCards})
-    console.log(this.state.product);
   }
   render() {
     return (
