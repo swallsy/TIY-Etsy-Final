@@ -31,7 +31,16 @@ class PurchaseInfo extends Component {
               key={product.product_id}>{product.property_values[0].values}
               - {product.offerings[0].price.currency_formatted_short}</option>
           )
-        });
+					});
+				let mapMaterials = response.results[0].materials.map(material => {
+					return (
+						<div key={response.results.materials}>
+						<li>
+							{material}
+						</li>
+					</div>
+					)
+				});
 
         this.setState({
           results: response.results,
@@ -42,7 +51,8 @@ class PurchaseInfo extends Component {
           products: response.results[0].Inventory[0].products,
           propertyValues: response.results[0].Inventory[0].products[0].property_values,
           propertyName: response.results[0].Inventory[0].products[0].property_values[0].property_name,
-          mapInventory: mapInventory
+          mapInventory: mapInventory,
+					mapMaterials: mapMaterials
 
         });
       });
@@ -69,7 +79,7 @@ class PurchaseInfo extends Component {
   <div id="DIV_2">
     <div id="DIV_3">
       <h1 id="H1_4">
-				<span id="SPAN_5">Cat Battle Armor</span>
+				<span id="SPAN_5">{this.state.title}</span>
 			</h1>
       <button id="BUTTON_6">
         Ask a question
@@ -209,7 +219,12 @@ class PurchaseInfo extends Component {
           Handmade item
         </li>
         <li id="LI_77">
-          Materials: <span id="SPAN_78">leather, waxed cord, nickel silver hardware, elastic</span>
+          Materials: <span id="SPAN_78"></span>
+						<ul>
+							<li>
+								{this.state.mapMaterials}
+							</li>
+					</ul>
         </li>
         <li id="LI_79">
           Only ships within <span id="SPAN_80">United States</span>.

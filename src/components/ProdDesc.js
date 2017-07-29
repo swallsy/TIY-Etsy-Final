@@ -203,7 +203,7 @@ class ProdDesc extends Component {
 			return (
 				<div className="ProdDesc text-left">
 					<ul className="nav nav-tabs justify-content-center">
-						<li className="nav-item">
+						<li  className="nav-item">
 							<span>
 							<button className={this.state.tab1} href="#" onClick={this.onClick} value='1'>Item details</button>
 							</span>
