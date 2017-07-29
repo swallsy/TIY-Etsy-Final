@@ -1,4 +1,8 @@
 .App {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: #F6F5F1;
 }
@@ -17,6 +21,11 @@
 
 .App-intro {
   font-size: large;
+}
+
+.main-content-div {
+  width: 1050px;
+  background-color: white;
 }
 
 @keyframes App-logo-spin {
