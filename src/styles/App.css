@@ -12,6 +12,14 @@
   height: 80px;
 }
 
+.sidebarthing {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 1100px;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
