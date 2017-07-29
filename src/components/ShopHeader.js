@@ -67,7 +67,7 @@ class ShopHeader extends Component {
           <a href={this.state.shop_url}>
           </a>
           <div className="Shoptitle">
-          <a class="realShopTitle">
+          <a className="realShopTitle">
             {this.state.shop_name}
           </a>
           <button>Favorite shop</button>

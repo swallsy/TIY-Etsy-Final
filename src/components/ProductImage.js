@@ -21,10 +21,10 @@ class ProductImage extends Component {
       let pictures = data.results.map((pic) => {
         return (
 
-          <div style={{
+          <div key={pic.listing_image_id} style={{
             height: 570, width:770
           }} >
-            <img key={pic.listing_image_id}  src={pic.url_570xN} className=""/>
+            <img src={pic.url_570xN} className=""/>
           </div>
 
         )
