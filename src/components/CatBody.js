@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-
+import CatCard from './CatBody/CatCards.js';
+import DetailedCatCard from './CatBody/DetailedCatCards.js';
 
 
 class CatBody extends Component {
@@ -13,12 +14,11 @@ class CatBody extends Component {
   };
 
   componentDidMount() {
-    fetch('https://api.etsy.com/v2/listings/trending?api_key=3yhxu7gn2ot24so9hzuqbxc9&explicit=1&amp;min=&amp;max=&amp;price_bucket=1&amp;use_mmx=1&&limit=100&offset=0&page=1&category=clothing&category=Accessories&category=paper_party_supplies&category=weddings&bags_and_purses&category=art_and_collectibles&category=jewelry&category=home_and_living&category=craft_supplies_and_tools&includes=MainImage')
+    fetch('https://api.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&explicit=1&amp;min=&amp;max=&amp;price_bucket=1&amp;use_mmx=1&&limit=100&offset=0&page=1&category=clothing&category=Accessories&category=paper_party_supplies&category=weddings&bags_and_purses&category=art_and_collectibles&category=jewelry&category=home_and_living&category=craft_supplies_and_tools&sort_on=score&sort_order=down&includes=MainImage')
     .then(resp => {
       return resp.json()
     })
       .then(resp => {
-        console.log(resp);
         let listings = resp.results;
         this.setState({listings: listings});
         console.log("state", this.state.listings);
@@ -27,13 +27,12 @@ class CatBody extends Component {
 
 
   render() {
-    if (this.state.listings) {
       const detailedCategories = [
         {
           category: {
             name: "Jewelry",
             path: "jewelry/",
-            id: 68887482
+            id: 1222
           },
           subCategories: {
             cat1: {
@@ -58,7 +57,7 @@ class CatBody extends Component {
           category: {
             name: "Craft Supplies & Tools",
             path: "craft_supplies_and_tools/",
-            id: 69150433
+            id: 6868
           },
           subCategories: {
             cat1: {
@@ -83,7 +82,7 @@ class CatBody extends Component {
           category: {
             name: "Home & Living",
             path: "home_and_living/",
-            id: 69150425
+            id: 1016
           },
           subCategories: {
             cat1: {
@@ -108,7 +107,7 @@ class CatBody extends Component {
           category: {
             name: "Art & Collectibles",
             path: "art_and_collectibles/",
-            id: 68887312
+            id: 121
           },
           subCategories: {
             cat1: {
@@ -134,37 +133,38 @@ class CatBody extends Component {
           {category: {
             name: "Clothing",
             path: "clothing",
-            id: 69150353
+            id: 418
           }},
           {category: {
             name: "Accessories",
             path: "accessories",
-            id: 69150467
+            id: 47
           }},
           {category: {
             name: "Paper & Party Supplies",
-            path: "paper_and_party_suppies"
+            path: "paper_and_party_suppies",
+            id: 1876
           }},
           {category: {
             name: "Weddings",
             path: "weddings",
-            id: 68887494
+            id: 1666
           }},
           {category: {
             name: "Bags & Purses",
             path: "bags_and_purses",
-            id: 69150455
+            id: 143
           }}
         ];
           return (
             <div className = "container" >
               {this.state.listings.length > 0 ? (
-              {/*}<div>
+              <div>
                 <DetailedCatCard detailedCategories={detailedCategories}
                          etsyListings={this.state.listings} />
                 <CatCard categories={categories}
                         etsyListings={this.state.listings} />
-              </div>*/}
+              </div>
               ) : (
               <div>Loading</div>
               )}
@@ -172,4 +172,6 @@ class CatBody extends Component {
           )
     }
   }
-}
+
+
+export default CatBody

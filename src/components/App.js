@@ -19,8 +19,10 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container-fluid row">
-          <CatBar className="col-md-2" />
-
+          <CatBar />
+        </div>
+        <div className="container">
+          <CatBody />
         </div>
       </div>
     );

@@ -10,7 +10,6 @@ import ShipTo from './CatBar/ShipTo.js';
 import ShopLocation from './CatBar/ShopLocation.js';
 import ProductCards from './CatBody/ProductCards.js';
 
-
 export default class CatBar extends Component {
   constructor() {
     super();
@@ -62,7 +61,7 @@ export default class CatBar extends Component {
       }
   }
   componentDidMount() {
-    fetch(this.state.baseURL + "" + this.state.mainFetchUrl)
+    fetch("https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User")
     .then(resp => resp.json())
       .then(resp => {
         let listing = resp.results;
@@ -91,13 +90,16 @@ export default class CatBar extends Component {
           <OrderingOptions />
           <ShipTo />
         </div>
-        <div className="CatBodyCards-controller col-md-10">
-          <ProductCards className="col-md-10" listingFilter={this.state.listingFilter} />
-        </div>
+        {this.state.listingFilter.length > 0 ? (
+          <div className="CatBodyCards-controller col-md-10">
+            <ProductCards className="col-md-10" listingFilter={this.state.listingFilter} />
+          </div>
+          ) : (
+          <div>Loading</div>
+        )}
         <div className="productCards-controller">
         </div>
       </div>
     )
   }
-
 }
