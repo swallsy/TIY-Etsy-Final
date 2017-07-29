@@ -19,10 +19,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container-fluid row">
-          <CatBar />
-        </div>
-        <div className="container">
           <CatBody />
+          <CatBar />
         </div>
       </div>
     );
