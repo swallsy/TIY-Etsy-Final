@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
 				<div className='row justify-content-center'>
 					<div className='col-12'>
-						<ShopHeader />
+						<ShopHeader listingId={listingId} />
 					</div>
 				</div>
 				<div className = 'row justify-content-center main-content-div'>
