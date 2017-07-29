@@ -33,6 +33,10 @@ class ShopSidebar extends Component {
         }
         // now let's iterate through the tempListings array and make some renderable array entries for the main render below
         let shopListingsCards = tempListings.map(listing => {
+          let title = listing.title;
+          if (title.length > 25) {
+            title = title.slice(0, 24) + "...";
+          }
           return (
             <div
               className="columncards col-6 card-sm shop-listings-card"
@@ -48,7 +52,7 @@ class ShopSidebar extends Component {
                 </div>
                 <div className="desc">
                   <p className="title">
-                    {listing.title}
+                    {title}
                   </p>
                   <p className="price">
                     ${listing.price}
