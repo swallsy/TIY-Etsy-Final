@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import AllCategories from './CatBar/AllCategories.js';
+
 import Color from './CatBar/Color.js';
 import ItemType from './CatBar/ItemType.js';
 import OrderingOptions from './CatBar/OrderingOptions.js';
@@ -7,9 +9,6 @@ import Price from './CatBar/Price.js';
 import ShipTo from './CatBar/ShipTo.js';
 import ShopLocation from './CatBar/ShopLocation.js';
 import ProductCards from './CatBody/ProductCards.js';
-import DetailedCatCard from './CatBody/DetailedCatCards.js'
-import CatCards from './CatBody/CatCards.js';
-import CatBody from './CatBody.js';
 
 export default class CatBar extends Component {
   constructor() {
@@ -21,7 +20,7 @@ export default class CatBar extends Component {
       //Values needed for Detailed Cat Card filters
       baseURL: 'https://openapi.etsy.com/v2/listings/trending?api_key=3yhxu7gn2ot24so9hzuqbxc9',
       selectedOptions:"",
-      mainFetchUrl: '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&includes=MainImage,Shop',
+      mainFetchUrl: '&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&includes=MainImage,Shop,User',
       fetchUrl:{
 
           categories:
@@ -62,7 +61,7 @@ export default class CatBar extends Component {
       }
   }
   componentDidMount() {
-    fetch(this.state.baseURL + "" + this.state.fetchUrl.categories.bagsAndPursesFetch)
+    fetch("https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User")
     .then(resp => resp.json())
       .then(resp => {
         let listing = resp.results;
@@ -80,7 +79,6 @@ export default class CatBar extends Component {
 
 
   render() {
-    console.log(this.state.listingFilter)
     return(
       <div className="row">
         <div className="card col-md-2">
@@ -92,14 +90,16 @@ export default class CatBar extends Component {
           <OrderingOptions />
           <ShipTo />
         </div>
-        <div className="CatBodyCards-controller col-md-10">
-          <CatBody />
-          <ProductCards className="col-md-10" listingFilter={this.state.listingFilter} />
-        </div>
+        {this.state.listingFilter.length > 0 ? (
+          <div className="CatBodyCards-controller col-md-10">
+            <ProductCards className="col-md-10" listingFilter={this.state.listingFilter} />
+          </div>
+          ) : (
+          <div>Loading</div>
+        )}
         <div className="productCards-controller">
         </div>
       </div>
     )
   }
-
 }

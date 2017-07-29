@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../../styles/CatBar.css';
+
 export default class AllCategories extends Component {
   constructor() {
     super()
@@ -26,7 +28,7 @@ export default class AllCategories extends Component {
     rowsToDisplay : 4,
     expanded: false,
     }
-    this.showMore = this.showMore.bind(this);
+    this.showMore = this.showMore.bind(this, true);
   }
 
   showMore() {
@@ -44,9 +46,9 @@ export default class AllCategories extends Component {
         </ul>
       </div>
       <p>
-        <a className="btn btn-primary" onClick={this.showMore}>
+        <a onClick={this.showMore}>
           {this.state.expanded ?
-            (<span>- Show less</span>) : (<span>+ Show more</span>)}
+            (<span className="show">- Show less</span>) : (<span className="show">+ Show more</span>)}
         </a>
       </p>
     </div>

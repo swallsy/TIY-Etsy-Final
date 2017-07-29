@@ -7,68 +7,105 @@ export default class ProductCards extends Component {
     this.state= {
     feedback_score: '',
     feedbackstar: '',
-    starfilled: <i className="fa fa-star" aria-hidden="true"></i>,
-    starunfilled: <i className="fa fa-star-o" aria-hidden="true"></i>
+    product: []
   }
+  console.log(this.props)
 }
 
-
-  render() {
-      let productCards = this.props.listingFilter.map((product) => {
-        this.setState({feedback_score: product.User.feedback_info.score});
-        if (this.state.feedback_score > 89) {
+  componentDidMount() {
+      let productCards = this.props.listingFilter.map((oneProduct) => {
+        console.log(oneProduct);
+        console.log(oneProduct.User.feedback_info.score)
+        if (oneProduct.state == "active") {
+        this.setState({feedback_score: oneProduct.User.feedback_info.score});
+         if (this.state.feedback_score > 89) {
             this.setState({
-                feedbackstar: <div>
-                        {this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}
+                feedbackstar:
+                  <div>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                  </div>
+            })
+          } else if (this.state.feedback_score  > 69) {
+            this.setState({
+                feedbackstar:
+                  <div>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star-o" aria-hidden="true"></i>
+                  </div>
+            })
+          } else if (this.state.feedback_score  > 49) {
+            this.setState({
+                feedbackstar:
+                  <div>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star-o" aria-hidden="true"></i>
+                    <i className="fa fa-star-o" aria-hidden="true"></i>
+                  </div>
+            })
+          } else if (this.state.feedback_score  > 29) {
+            this.setState({
+                feedbackstar:
+                    <div>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star-o" aria-hidden="true"></i>
+                      <i className="fa fa-star-o" aria-hidden="true"></i>
+                      <i className="fa fa-star-o" aria-hidden="true"></i>
                     </div>
             })
-        } else if (this.state.feedback_score  > 69) {
+          } else if (this.state.feedback_score  > 9) {
             this.setState({
-                feedbackstar: <div>
-                        {this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}
-                    </div>
+              feedbackstar:
+                <div>
+                  <i className="fa fa-star" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                </div>
             })
-        } else if (this.state.feedback_score  > 49) {
+          } else {
             this.setState({
-                feedbackstar: <div>
-                        {this.state.starfilled}{this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}
-                    </div>
-            })
-        } else if (this.state.feedback_score  > 29) {
-                this.setState({
-                    feedbackstar: <div>
-                            {this.state.starfilled}{this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
-                        </div>
-                })
-            } else if (this.state.feedback_score  > 9) {
-                this.setState({
-                    feedbackstar: <div>
-                            {this.state.starfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
-                        </div>
-                })
-            } else {
-                this.setState({
-                    feedbackstar: <div>
-                            {this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}{this.state.starunfilled}
-                        </div>
+              feedbackstar:
+                <div>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                  <i className="fa fa-star-o" aria-hidden="true"></i>
+                </div>
                 })
             }
-
         return (
-          <div className="card col-md-2 product-card" key={product.listing_image_id}>
-            <a href={product.url}>
-              <img className="product-image" src={product.MainImage.url_170x135} />
-              <div className="product-title">{product.title.substring(0, 36)}...</div>
-              <div className="shop-name">{product.Shop.shop_name}</div>
-              <div className="reviews">{this.state.feedbackstar}({product.num_favorers})</div>
-              <div className="price">${product.price}</div>
+          <div className="card col-md-2 product-card" key={oneProduct.listing_id}>
+            <a href={oneProduct.url}>
+              <img className="product-image" src={oneProduct.MainImage.url_170x135} />
+              <div className="product-title">{oneProduct.title.substring(0, 36)}...</div>
+              <div className="shop-name">{oneProduct.Shop.shop_name}</div>
+              <div className="reviews">{this.state.feedbackstar}({oneProduct.num_favorers})</div>
+              <div className="price">${oneProduct.price}</div>
             </a>
           </div>
         )
-      })
+      }
+    })
+    console.log(productCards);
+    this.setState({product: productCards})
+    console.log(this.state.product);
+  }
+  render() {
     return (
       <div className="row">
-        {productCards}
+        {this.state.product}
       </div>
     )
   }

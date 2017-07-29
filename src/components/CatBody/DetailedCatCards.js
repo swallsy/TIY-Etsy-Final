@@ -4,10 +4,14 @@ export default class DetailedCatCard extends Component {
   render() {
     let detailedCategories = this.props.detailedCategories;
     let etsyListings = this.props.etsyListings;
+    console.log(etsyListings);
+    console.log(detailedCategories);
     let detailedCatCard = detailedCategories.map((listing) => {
+      console.log(listing.category.name);
       let filteredListings = etsyListings.filter((filteredListing) => {
         return filteredListing.taxonomy_path.includes(listing.category.name);
       });
+      console.log(filteredListings);
       let randomListing = filteredListings[Math.floor(Math.random() * filteredListings.length)];
         return (
           <div key={randomListing.listing_id} className = "col-md-3">
