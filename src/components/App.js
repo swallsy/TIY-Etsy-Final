@@ -26,7 +26,7 @@ class App extends Component {
 						<ProductImage listingId={listingId} />
 						<ProdDesc listingId={listingId} />
 					</div>
-					<div className='col-4'>
+					<div className='col-4 sidebarthing'>
 						<PurchaseInfo listingId={listingId} />
 						<ShopSidebar listingId={listingId} />
 					</div>
