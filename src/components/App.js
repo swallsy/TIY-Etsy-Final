@@ -16,11 +16,11 @@ class App extends Component {
     return (
       <div className="App">
 				<div className='row justify-content-center'>
-					<div className='col-10'>
-						<ShopHeader listingId={listingId} />
+					<div className='col-12'>
+						<ShopHeader />
 					</div>
 				</div>
-				<div className = 'row justify-content-center'>
+				<div className = 'row justify-content-center main-content-div'>
 					<div className='col-6'>
 		      	<LikeBanner listingId={listingId} />
 						<ProductImage listingId={listingId} />
