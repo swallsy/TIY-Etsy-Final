@@ -32,8 +32,16 @@ class ProdDesc extends Component {
 		console.log("now doing the didmount.");
 		fetch("https://openapi.etsy.com/v2/listings/" + this.props.listingId + "?includes=Shop/User/Feedback,Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c").then(response => response.json()).then(response => {
 			this.setState({results: response.results});
+			let texthere = response.results[0].description
+			let prodDescText =
 
-			this.setState({prod_desc: response.results[0].description});
+			    <div>
+			        {texthere.split("\n").map(i => {
+			            return <div>{i}</div>;
+			        })}
+			    </div>;
+
+			this.setState({prod_desc: prodDescText});
 			let shippingCard = <div className='text-center'>
 				<h4>Payment Methods</h4>
 
