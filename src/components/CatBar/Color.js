@@ -3,39 +3,65 @@ import React, { Component } from 'react';
 export default class Color extends Component {
   constructor() {
     super();
+
+    this.state =  {
+     colors: [
+       {color: 'White', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C10'},
+       {color: 'Black', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1'},
+       {color: 'Blue', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C2'},
+       {color: 'Silver', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1215'},
+       {color: 'Red', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C9'},
+       {color: 'Green', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C4'},
+       {color: 'Pink', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C7'},
+       {color: 'Brown', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C3'},
+       {color: 'Gold', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1214'},
+       {color: 'Purple', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C8'},
+       {color: 'Yellow', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=1215%2C11'},
+       {color: 'Gray', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C5'},
+       {color: 'Orange', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C6'},
+       {color: 'Beige', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1213'},
+       {color: 'Rainbow', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1220'},
+       {color: 'Bronze', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1216'},
+       {color: 'Clear', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1219'},
+       {color: 'Copper', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1218'},
+       {color: 'Rose gold', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C1217'},
+       {color: 'Colorless', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C2309'},
+       {color: 'Champaigne', link: 'https://www.etsy.com/search?explicit=1&amp;use_mmx=1&amp;attr_1=11%2C2308'}
+     ],
+    rowsToDisplay: 5,
+    expanded: false,
+    }
+    this.showMore = this.showMore.bind(this, true);
+  }
+
+  showMore() {
+    this.state.rowsToDisplay === 5 ?
+      (this.setState({ rowsToDisplay: this.state.colors.length, expanded: true })) :
+      (this.setState({ rowsToDisplay: 5, expanded: false }))
   }
 
   render() {
-      let red = {
-        background: '#F40B32'
-      }
-      let yellow = {
-        background: '#F3CC0C'
-      }
-      let green = {
-        background: '#0AC20A'
-      }
-      let blue = {
-        background: '#0CCCF3'
-      }
-      let purple = {
-        background: '#a60cf3'
-      }
-      let black = {
-        background: '#000000'
-      }
-
     return(
-      <div className="color-container">
-        <input type="checkbox" style={{background: '#F40B32'}}/>
-        <input type="checkbox" style={yellow}/>
-        <input type="checkbox" style={green}/>
-        <input type="checkbox" style={blue}/>
-        <input type="checkbox" style={purple}/>
-        <input type="checkbox" style={black}/>
-      </div>
-
+      <form className="colorContainer">
+        <div className="colorColumn">
+          <ul className="colorList">
+            {this.state.colors.slice(0,this.state.rowsToDisplay).map((colors, i) =>
+              <li key={i} className="colorListItem">
+                <input type="checkbox" name="colorCheckBox"/>
+                <label htmlFor="colorCheckBox" className="colorLabels">
+                  <span></span>
+                  <a className="catListItem" href={colors.link}>{colors.color}</a>
+                </label>
+              </li>)}
+          </ul>
+          <p>
+            <a onClick={this.showMore}>
+              {this.state.expanded ?
+                (<span className="show">- Show less</span>) : (<span className="show">+ Show more</span>)}
+            </a>
+          </p>
+        </div>
+      </form>
     )
   }
-
 }

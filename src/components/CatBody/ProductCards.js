@@ -5,7 +5,6 @@ export default class ProductCards extends Component {
   constructor(props) {
     super(props);
     this.state= {
-    feedbackstar: '',
     product: []
   }
 }

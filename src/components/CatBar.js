@@ -61,7 +61,7 @@ export default class CatBar extends Component {
       }
   }
   componentDidMount() {
-    fetch("https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User")
+    fetch("https://openapi.etsy.com/v2/listings/trending?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User")
     .then(resp => resp.json())
       .then(resp => {
         let listing = resp.results;
@@ -80,22 +80,24 @@ export default class CatBar extends Component {
 
   render() {
     return(
-      <div className="row">
-        <div className="card col-md-2">
-          <AllCategories />
-          <ShopLocation />
-          <ItemType />
-          <Price getInitialState={this.getInitialState} />
-          <Color />
-          <OrderingOptions />
-          <ShipTo />
-        </div>
+
+        <div className="catBarColumn">
+          <h2 className="allCatTitle">All Categories</h2>
+          <div className="card">
+            <AllCategories />
+            <ShopLocation />
+            <ItemType />
+            <Price getInitialState={this.getInitialState} />
+            <Color />
+            <OrderingOptions />
+            <ShipTo />
+          </div>
         {this.state.listingFilter.length > 0 ? (
-          <div className="CatBodyCards-controller col-md-10">
-            <ProductCards className="col-md-10" listingFilter={this.state.listingFilter} />
+          <div className="container">
+            <ProductCards className="grid-items col-md-4" listingFilter={this.state.listingFilter} />
           </div>
           ) : (
-          <div>Loading</div>
+          <div></div>
         )}
         <div className="productCards-controller">
         </div>
