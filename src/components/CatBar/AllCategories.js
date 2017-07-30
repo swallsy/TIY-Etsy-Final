@@ -7,7 +7,7 @@ export default class AllCategories extends Component {
     super()
 
     this.state =  {
-     currentCategory:"All Categories",
+     currentCategory:"All categories",
      categories: [
        {'name': 'Jewelry', 'link': 'https://www.etsy.com/c/jewelry?explicit=1'},
        {'name': 'Craft Supplies & Tools', 'link': 'https://www.etsy.com/c/craft-supplies-and-tools?explicit=1'},
@@ -39,18 +39,20 @@ export default class AllCategories extends Component {
 
   render() {
     return (
-    <div className="container">
-      <div className="row">
-        <ul>
-          {this.state.categories.slice(0,this.state.rowsToDisplay).map((categories, i) => <li key={i}><a href={categories.link}>{categories.name}</a></li>)}
+    <div className="allCatContainer">
+      <div className="allCatColumn">
+        <div className="allCategories">{this.state.currentCategory}</div>
+        <ul className="categoryList">
+          {this.state.categories.slice(0,this.state.rowsToDisplay).map((categories, i) => <li key={i}><a className="catListItem" href={categories.link}>{categories.name}</a></li>)}
         </ul>
-      </div>
-      <p>
+        <p>
         <a onClick={this.showMore}>
-          {this.state.expanded ?
-            (<span className="show">- Show less</span>) : (<span className="show">+ Show more</span>)}
+            {this.state.expanded ?
+              (<span className="show">- Show less</span>) : (<span className="show">+ Show more</span>)}
         </a>
-      </p>
+        </p>
+
+      </div>
     </div>
     )
   }

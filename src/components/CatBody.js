@@ -14,7 +14,7 @@ class CatBody extends Component {
   };
 
   componentDidMount() {
-    fetch('https://api.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&explicit=1&amp;min=&amp;max=&amp;price_bucket=1&amp;use_mmx=1&&limit=100&offset=0&page=1&category=clothing&category=Accessories&category=paper_party_supplies&category=weddings&bags_and_purses&category=art_and_collectibles&category=jewelry&category=home_and_living&category=craft_supplies_and_tools&sort_on=score&sort_order=down&includes=MainImage')
+    fetch('https://api.etsy.com/v2/listings/trending?api_key=3yhxu7gn2ot24so9hzuqbxc9&explicit=1&amp;min=&amp;max=&amp;price_bucket=1&amp;use_mmx=1&&limit=100&offset=0&page=1&category=clothing&category=Accessories&category=paper_party_supplies&category=weddings&bags_and_purses&category=art_and_collectibles&category=jewelry&category=home_and_living&category=craft_supplies_and_tools&sort_on=score&sort_order=down&includes=MainImage')
     .then(resp => {
       return resp.json()
     })
