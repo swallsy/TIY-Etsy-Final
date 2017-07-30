@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Price_links extends React.Component {
+class Price extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,72 +25,48 @@ class Price_links extends React.Component {
       console.log("High price is     " + this.state.highPrice);
   }
 
-
   render() {
     return (
-      <form>
-        <div className="priceTitle">
-          <label>
-            Price ($)
-          </label>
-        </div>
-        <div className="radioPrice">
-          <input type="radio" value="anyPrice" checked={true} />
-            <a href="https://www.etsy.com/search?explicit=1&min=&max=&price_bucket=1&use_mmx=1">
-              <label>
-                Any price
-              </label>
-            </a>
-        </div>
-        <div className="radioPrice">
-          <input type="radio" value="underTwentyFive" />
-            <a href="https://www.etsy.com/search?explicit=1&min=&max=25&price_bucket=1&use_mmx=1">
-              <label>
-                Under $25
-              </label>
-            </a>
-        </div>
-        <div className="radioPrice">
-          <input type="radio" value="twentyFiveToFifty" />
-            <a href="https://www.etsy.com/search?explicit=1&min=25&max=50&price_bucket=1&use_mmx=1">
-              <label>
-                $25 to $50
-              </label>
-            </a>
-        </div>
-        <div className="radioPrice">
-          <input type="radio" value="fiftyToOneHundred" />
-            <a href="https://www.etsy.com/search?explicit=1&min=50&max=100&price_bucket=1&use_mmx=1">
-              <label>
-                $50 to $100
-              </label>
-            </a>
-        </div>
-        <div className="radioPrice">
-          <input type="radio" value="overOneHundred" />
-            <a href="https://www.etsy.com/search?explicit=1&min=100&max=&price_bucket=1&use_mmx=1">
-              <label>
-                Over $100
-              </label>
-            </a>
-        </div>
-        <div className="radioPrice">
-          <input type="radio" value="custom" />
+      <form className="itemTypeContainer">
+        <div className="itemTypeColumn">
+          <div className="priceTitle">
             <label>
-              Custom
+              Price ($)
             </label>
+          </div>
+          <div className="radioPrice">
+            <input type="radio" name="anyprice"/>
+            <label htmlFor="anyprice"><span></span><a href="https://www.etsy.com/search?explicit=1&min=&max=&price_bucket=1&use_mmx=1">&#160;&#160;Any price</a></label>
+          </div>
+          <div className="radioPrice">
+            <input type="radio" name="underTwentyFive"/>
+            <label htmlFor="underTwentyFive"><span></span><a href="https://www.etsy.com/search?explicit=1&min=&max=25&price_bucket=1&use_mmx=1">&#160;&#160;Under $25</a></label>
+          </div>
+          <div className="radioPrice">
+            <input type="radio" name="twentyFiveToFifty"/>
+            <label htmlFor="twentyFiveToFifty"><span></span><a href="https://www.etsy.com/search?explicit=1&min=25&max=50&price_bucket=1&use_mmx=1">&#160;&#160;$25 to $50</a></label>
+          </div>
+          <div className="radioPrice">
+            <input type="radio" name="fiftyToOneHundred"/>
+            <label htmlFor="fiftyToOneHundred"><span></span><a href="https://www.etsy.com/search?explicit=1&min=50&max=100&price_bucket=1&use_mmx=1">&#160;&#160;$50 to $100</a></label>
+          </div>
+          <div className="radioPrice">
+            <input type="radio" name="overOneHundred"/>
+            <label htmlFor="overOneHundred"><span></span><a href="https://www.etsy.com/search?explicit=1&min=100&max=&price_bucket=1&use_mmx=1">&#160;&#160;Over $100</a></label>
+          </div>
+          <div className="radioPrice">
+            <input type="radio" />
+            <label htmlFor="custom"><span></span>&#160;&#160;Custom</label>
+          </div>
+          <div className="priceInputContainer">
+            <input className="customPriceForm" onChange={this.handleLowPriceChange} type="text" value={this.state.lowPrice} placeholder="  Low"/>
+            <span className="to">&#160;to&#160;&#160;</span>
+            <input className="customPriceForm" onChange={this.handleHighPriceChange} type="text" placeholder="  High"/>
+            <button className="priceSubButton" type="submit" onClick={this.addToList}><i className="fa fa-play" aria-hidden="true"></i></button>
+          </div>
         </div>
-          <input className="customPriceForm" onChange={this.handleLowPriceChange} type="text" value={this.state.lowPrice}/>
-            <label>
-              to
-            </label>
-          <input className="customPriceForm" onChange={this.handleHighPriceChange} type="text" value={this.state.highPrice}/>
-        <input className="priceSubButton" type="submit" value="&rarr;" onClick={this.addToList} />
       </form>
-
-)
-
-
+    )
   }
 }
-export default Price_links;
+export default Price;
