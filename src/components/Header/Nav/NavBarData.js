@@ -15,15 +15,84 @@ const navBarData = [
                         name:"Gloves & Mittens",
                         link: "https://www.etsy.com/c/accessories/gloves-and-mittens?ref=catnav-2938"
                     },
+                    {
+                        name:"Hair Accessories",
+                        link:""
+                    },
+                    {
+                        name:"Hats & Caps",
+                        link:""
+                    },
+                    {
+                        name:"Keychains & Lanyards",
+                        link:""
+                    },
+                    {
+                        name:"Patches & Pins",
+                        link:""
+                    },
+                    {
+                        name:"Scarves & Wraps",
+                        link:""
+                    },
+                    {
+                        name:"Suite & Tie Accessories",
+                        link:""
+                    },
+                    {
+                        name:"Sunglasses & Eyewear",
+                        link:""
+                    },
+                    {
+                        name:"Umbrellas & Rain Accessories",
+                        link:""
+                    },
+
                 ]
             },
             {
                 name: "Bags & Purses",
                 link: "https://www.etsy.com/c/accessories?ref=catnav-2938",
                 sub_sub_categories: [
-                                      {
+                    {
                       name:"Backpacks",
                       link: "https://www.etsy.com/c/bags-and-purses/backpacks?ref=catnav-2938"
+                  },
+                  {
+                      name:"Diaper Bags",
+                      link:""
+                  },
+                  {
+                      name:"Electronics Cases",
+                      link:""
+                  },
+                  {
+                      name:"Handbags",
+                      link:""
+                  },
+                  {
+                      name:"Keychains & Lanyards",
+                      link:""
+                  },
+                  {
+                      name:"Luggage & Travel",
+                      link:""
+                  },
+                  {
+                      name:"Messenger Bags",
+                      link:""
+                  },
+                  {
+                      name:"Pouches & Coin Purses",
+                      link:""
+                  },
+                  {
+                      name:"Totes",
+                      link:""
+                  },
+                  {
+                      name:"Wallets & Money Clips",
+                      link:""
                   }
                 ]
             },
@@ -35,6 +104,18 @@ const navBarData = [
                       name:"Boy's Clothing",
                       link: "https://www.etsy.com/c/clothing/boys-clothing?ref=catnav-2938"
                   },
+                  {
+                      name:"Girls' Clothing",
+                      link:""
+                  },
+                  {
+                      name:"Men's Clothing",
+                      link:""
+                  },
+                  {
+                      name:"Women's Clothing",
+                      link:""
+                  }
                 ]
             },
             {
@@ -45,6 +126,18 @@ const navBarData = [
                       name:"Boy's Shoes",
                       link: "https://www.etsy.com/c/shoes/boys-shoes?ref=catnav-2938"
                   },
+                  {
+                      name:"Girl's Shoes",
+                      link:""
+                  },
+                  {
+                      name:"Men's Shoes",
+                      link:""
+                  },
+                  {
+                      name:"Women's Shoes",
+                      link:""
+                  }
                 ]
             }
         ]
@@ -61,6 +154,54 @@ const navBarData = [
                         name:"Anklets",
                         link: "https://www.etsy.com/c/jewelry/body-jewelry/anklets?ref=catnav-1179"
                     },
+                    {
+                        name:"Arm Bands",
+                        link:""
+                    },
+                    {
+                        name:"Barbells",
+                        link:""
+                    },
+                    {
+                        name:"Belly Chains",
+                        link:""
+                    },
+                    {
+                        name:"Belly Rings",
+                        link:""
+                    },
+                    {
+                        name:"Gauge & Plug Earrings",
+                        link:""
+                    },
+                    {
+                        name:"Hair Jewelery",
+                        link:""
+                    },
+                    {
+                        name:"Lip Rings",
+                        link:""
+                    },
+                    {
+                        name:"Nipple Jewelery",
+                        link:""
+                    },
+                    {
+                        name:"Nose Rings & Studs",
+                        link:""
+                    },
+                    {
+                        name:"Pinchers & Spirals",
+                        link:""
+                    },
+                    {
+                        name:"Shoulder Jewelery",
+                        link:""
+                    },
+                    {
+                        name:"Toe Rings",
+                        link:""
+                    },
                 ]},
                 {
                 name: "Bracelets",
@@ -70,6 +211,30 @@ const navBarData = [
                       name:"Bangles",
                       link: "https://www.etsy.com/c/jewelry/bracelets/bangles?ref=catnav-1179"
                   },
+                  {
+                      name:"Beaded Bracelets",
+                      link:""
+                  },
+                  {
+                      name:"Chain & Link Bracelets",
+                      link:""
+                  },
+                  {
+                      name:"Charm Bracelets",
+                      link:""
+                  },
+                  {
+                      name:"Cuff Bracelets",
+                      link:""
+                  },
+                  {
+                      name:"ID & Medical Bracelets",
+                      link:""
+                  },
+                  {
+                      name:"Woven & Braided Bracelets",
+                      link:""
+                  }
                 ]},
                 {
                 name: "Cuff Links and Tie Clips",
@@ -79,6 +244,14 @@ const navBarData = [
                       name:"Cuff Links",
                       link: "https://www.etsy.com/c/jewelry/cufflinks-and-tie-tacks/cuff-links?ref=catnav-1179"
                   },
+                  {
+                      name:"Shirt Studs",
+                      link:""
+                  },
+                  {
+                      name:"Tie Clips & Tacks",
+                      link:""
+                  }
                 ]},
                 {
                 name: "Earrings",
@@ -88,6 +261,50 @@ const navBarData = [
                       name:"Chandelier Earrings",
                       link: "https://www.etsy.com/c/jewelry/earrings/chandelier-earrings?ref=catnav-1179"
                   },
+                  {
+                      name:"Clip On Earrings",
+                      link:""
+                  },
+                  {
+                      name:"Cluster Earrings",
+                      link:""
+                  },
+                  {
+                      name:"Cuff & Wrap Earrings",
+                      link:""
+                  },
+                  {
+                      name:"Dangle & Drop Earrings",
+                      link:""
+                  },
+                  {
+                      name:"Ear Jackets & Climbers",
+                      link:""
+                  },
+                  {
+                      name:"Ear Weights",
+                      link:""
+                  },
+                  {
+                      name:"Gauge & Plug Earrings",
+                      link:""
+                  },
+                  {
+                      name:"Hoop Earrings",
+                      link:""
+                  },
+                  {
+                      name:"Screw Bach Earrings",
+                      link:""
+                  },
+                  {
+                      name:"Stud Earrings",
+                      link:""
+                  },
+                  {
+                      name:"Threader Earrings",
+                      link:""
+                  }
                 ]},
                 {
                 name: "Necklaces",
@@ -97,6 +314,46 @@ const navBarData = [
                       name:"Beaded Necklaces",
                       link: "https://www.etsy.com/c/jewelry/necklaces/beaded-necklaces?ref=catnav-1179"
                   },
+                  {
+                      name:"Big Necklaces",
+                      link:""
+                  },
+                  {
+                      name:"Cameo Necklaces",
+                      link:""
+                  },
+                  {
+                      name:"Chains",
+                      link:""
+                  },
+                  {
+                      name:"Charm Necklaces",
+                      link:""
+                  },
+                  {
+                      name:"Chokers",
+                      link:""
+                  },
+                  {
+                      name:"Crystal Necklaces",
+                      link:""
+                  },
+                  {
+                      name:"Lariat & Y Necklaces",
+                      link:""
+                  },
+                  {
+                      name:"Lockets",
+                      link:""
+                  },
+                  {
+                      name:"Monogram & Name Necklaces",
+                      link:""
+                  },
+                  {
+                      name:"Pendants",
+                      link:""
+                  }
                 ]},
                 {
                 name: "Rings",
@@ -106,6 +363,38 @@ const navBarData = [
                       name:"Bands",
                       link: "https://www.etsy.com/c/jewelry/rings/bands?ref=catnav-1179"
                   },
+                  {
+                      name:"Midi Rings",
+                      link:""
+                  },
+                  {
+                      name:"Multistone Rings",
+                      link:""
+                  },
+                  {
+                      name:"Ring Guards & Spacers",
+                      link:""
+                  },
+                  {
+                      name:"Signet Rings",
+                      link:""
+                  },
+                  {
+                      name:"Solitaire Rings",
+                      link:""
+                  },
+                  {
+                      name:"Stackable Rings",
+                      link:""
+                  },
+                  {
+                      name:"Statement Rings",
+                      link:""
+                  },
+                  {
+                      name:"Wedding & Engagement",
+                      link:""
+                  }
                 ]
             },
         ]
@@ -122,6 +411,34 @@ const navBarData = [
                         name:"Candle Making",
                         link: "https://www.etsy.com/c/craft-supplies-and-tools/home-and-hobby/candle-making?ref=catnav-562"
                     },
+                    {
+                        name:"Doll & Model Making",
+                        link:""
+                    },
+                    {
+                        name:"Electronics & Circuitry",
+                        link:""
+                    },
+                    {
+                        name:"Floral & Garden Crafts",
+                        link:""
+                    },
+                    {
+                        name:"Food & Fermenting",
+                        link:""
+                    },
+                    {
+                        name:"Framing",
+                        link:""
+                    },
+                    {
+                        name:"Home Improvement",
+                        link:""
+                    },
+                    {
+                        name:"Woodworking & Carpentry",
+                        link:""
+                    },
                 ]},
                 {
                 name: "Jewelry and Beauty",
@@ -131,6 +448,22 @@ const navBarData = [
                       name:"Hat Making & Hair Crafts",
                       link: "https://www.etsy.com/c/craft-supplies-and-tools/jewelry-and-beauty/hat-making-and-hair-crafts?ref=catnav-562"
                   },
+                  {
+                      name:"Jewelry Making & Beading",
+                      link:""
+                  },
+                  {
+                      name:"Makeup & Face Painting",
+                      link:""
+                  },
+                  {
+                      name:"Nail Art",
+                      link:""
+                  },
+                  {
+                      name:"Soap Making & Bath",
+                      link:""
+                  }
                 ]},
                 {
                 name: "Paper, Party & Kids",
@@ -140,6 +473,14 @@ const navBarData = [
                       name:"Kid's Crafts",
                       link: "https://www.etsy.com/c/craft-supplies-and-tools/paper-party-and-kids/kids-crafts?ref=catnav-562"
                   },
+                  {
+                      name:"Papercraft",
+                      link:""
+                  },
+                  {
+                      name:"PArty & Gifting",
+                      link:""
+                  }
                 ]},
                 {
                 name: "Sculpting & Formatting",
@@ -149,6 +490,34 @@ const navBarData = [
                       name:"3D Printing",
                       link: "https://www.etsy.com/c/craft-supplies-and-tools/sculpting-and-forming/3d-printing?ref=catnav-562"
                   },
+                  {
+                      name:"Carving & Whittling",
+                      link:""
+                  },
+                  {
+                      name:"Ceramics & Pottery",
+                      link:""
+                  },
+                  {
+                      name:"Glass Art",
+                      link:""
+                  },
+                  {
+                      name:"Metalworking",
+                      link:""
+                  },
+                  {
+                      name:"Molding & Casting",
+                      link:""
+                  },
+                  {
+                      name:"Mosaic Making",
+                      link:""
+                  },
+                  {
+                      name:"Robotics",
+                      link:""
+                  }
                 ]},
                 {
                 name: "Sewing & Fiber",
@@ -158,6 +527,42 @@ const navBarData = [
                       name:"Crochet",
                       link: "https://www.etsy.com/c/craft-supplies-and-tools/sewing-and-fiber/crochet?ref=catnav-562"
                   },
+                  {
+                      name:"Knitting",
+                      link:""
+                  },
+                  {
+                      name:"Leatherworking",
+                      link:""
+                  },
+                  {
+                      name:"Macrame",
+                      link:""
+                  },
+                  {
+                      name:"Rug Making",
+                      link:""
+                  },
+                  {
+                      name:"Sewing & Needlecraft",
+                      link:""
+                  },
+                  {
+                      name:"Shoemaking",
+                      link:""
+                  },
+                  {
+                      name:"Spinning",
+                      link:""
+                  },
+                  {
+                      name:"Upholstery",
+                      link:""
+                  },
+                  {
+                      name:"Weacing & Tapestry",
+                      link:""
+                  }
                 ]},
                 {
                 name: "Visual Arts",
@@ -167,6 +572,30 @@ const navBarData = [
                       name:"Calligraphy",
                       link: "https://www.etsy.com/c/craft-supplies-and-tools/visual-arts/calligraphy?ref=catnav-562"
                   },
+                  {
+                      name:"Collage",
+                      link:""
+                  },
+                  {
+                      name:"Drawing & Drafting",
+                      link:""
+                  },
+                  {
+                      name:"Dyeing & Batik",
+                      link:""
+                  },
+                  {
+                      name:"Painting",
+                      link:""
+                  },
+                  {
+                      name:"Photography",
+                      link:""
+                  },
+                  {
+                      name:"Printing & Printmaking",
+                      link:""
+                  }
                 ]
             },
         ]
