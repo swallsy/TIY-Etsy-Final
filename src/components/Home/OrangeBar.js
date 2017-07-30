@@ -11,7 +11,7 @@ export default class OrangeBar extends Component {
 
     this.state = {};
   }
-  
+
    chooseBar() {
     if (this.props.type === "safety") {
       return (
@@ -53,7 +53,7 @@ export default class OrangeBar extends Component {
       );
     } else if(this.props.type === "selling") {
             return (
-                <div className="row sellContainer">
+                <a href="https://www.etsy.com/mission?ref=hp&from=homepage.about_etsy"><div className="row sellContainer">
                     <div className="col-4">
                         <img className="catImage" src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_left.20170228151449.png" alt="a lady and a cat and some stuff"/>
                     </div>
@@ -65,12 +65,12 @@ export default class OrangeBar extends Component {
                     <div className="col-4">
                         <img className="manImage" src="https://www.etsy.com/assets/dist/images/homepage/vesta/sell_on_etsy_right.20170228151449.png" alt="dude and a plant and maybe a wall or something"/>
                     </div>
-                </div>
+                </div></a>
             )
         }
         else if(this.props.type === "whatIs") {
             return (
-                <div className="row whatiscontainer">
+                <a href="https://www.etsy.com/mission?ref=hp&from=homepage.about_etsy"><div className="row whatiscontainer">
                     <div className="col-4">
                         <img className="whatisimg1"  src="https://www.etsy.com/assets/dist/images/homepage/vesta/about_etsy_wide_left.20170228151449.png" alt="a lady walking her dog in the city"/>
                     </div>
@@ -82,7 +82,7 @@ export default class OrangeBar extends Component {
                     <div className="col-4">
                         <img className="whatisimg2"  src="https://www.etsy.com/assets/dist/images/homepage/vesta/about_etsy_wide_right.20170228151449.png" alt="a lady carrying some packages in the city"/>
                     </div>
-                </div>
+                </div></a>
             )
         }
     }
