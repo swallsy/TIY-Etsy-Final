@@ -21,63 +21,57 @@ export default class ProductCards extends Component {
         console.log(oneProduct);
         console.log(oneProduct.User.feedback_info.score);
         return (
-          <div className="card col-md-2 product-card" key={oneProduct.listing_id}>
-            <a href={oneProduct.url}>
+          <div className="card col-md-3 product-card" key={oneProduct.listing_id}>
+            <a href={oneProduct.url} className="link" >
               <img className="product-image" src={oneProduct.MainImage.url_170x135} />
-              <div className="product-title">{oneProduct.title.substring(0, 36)}...</div>
+              <div className="product-title">{oneProduct.title.substring(0, 36)}</div>
               <div className="shop-name">{oneProduct.Shop.shop_name}</div>
-                {oneProduct.User.feedback_info.score > 89 ? (
-                  <div className="reviews">
+              <div className="score">
+                {oneProduct.User.feedback_info.score > 79 ? (
+                  <span className="reviews">
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
-                  </div>
-                ) : oneProduct.User.feedback_info.score  > 69 ? (
-                  <div className="reviews">
+                  </span>
+                ) : oneProduct.User.feedback_info.score  > 59 ? (
+                  <span className="reviews">
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
-                  </div>
-                ) : oneProduct.User.feedback_info.score  > 49 ? (
-                  <div className="reviews">
+                  </span>
+                ) : oneProduct.User.feedback_info.score  > 39 ? (
+                  <span className="reviews">
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
-                  </div>
-                ) : oneProduct.User.feedback_info.score  > 29 ? (
-                  <div className="reviews">
+                  </span>
+                ) : oneProduct.User.feedback_info.score  > 19 ? (
+                  <span className="reviews">
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
-                  </div>
-                ) : oneProduct.User.feedback_info.score > 9 ? (
-                  <div className="reviews">
+                  </span>
+                ) : oneProduct.User.feedback_info.score < 19 ? (
+                  <span className="reviews">
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
                     <i className="fa fa-star-o" aria-hidden="true"></i>
-                  </div>
-                ) : oneProduct.User.feedback_info.score < 9 ? (
-                  <div className="reviews">
-                    <i className="fa fa-star-o" aria-hidden="true"></i>
-                    <i className="fa fa-star-o" aria-hidden="true"></i>
-                    <i className="fa fa-star-o" aria-hidden="true"></i>
-                    <i className="fa fa-star-o" aria-hidden="true"></i>
-                    <i className="fa fa-star-o" aria-hidden="true"></i>
-                  </div>
+                  </span>
                 ) : (
                   <span></span>
                 )}
-                <span>({oneProduct.num_favorers})</span>
+                <span className="total-reviews">  ({oneProduct.num_favorers})</span>
+              </div>
               <div className="price">${oneProduct.price}</div>
             </a>
           </div>
@@ -87,7 +81,7 @@ export default class ProductCards extends Component {
   }
   render() {
     return (
-      <div className="row">
+      <div className="product-row">
         {this.state.product}
       </div>
     )
