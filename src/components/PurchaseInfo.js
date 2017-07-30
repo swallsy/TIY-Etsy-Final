@@ -194,14 +194,12 @@ class PurchaseInfo extends Component {
 					<span id="SPAN_100">Favorited</span>
 				</button>
 				<button type="button" id="BUTTON_102">
-					<span id="SPAN_103"></span>
 					<span id="SPAN_104">Add to</span>
 					<span id="SPAN_105">Added</span>
-					<span id="SPAN_106"></span>
 				</button>
 			</div>
 		</div>
-</div>
+	</div>
 		);
 	};
 }
