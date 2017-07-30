@@ -28,7 +28,7 @@ export default class NavBar extends Component {
 
         let chevron;
         if(prop !== "Kids & Baby") {
-            chevron = <i className="fa fa-chevron-right" />
+            chevron = <i className="fa fa-chevron-right nav-cheveron"/>
         }
         return chevron
     }
