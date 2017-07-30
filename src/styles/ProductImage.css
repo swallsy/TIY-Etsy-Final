@@ -1,0 +1,10 @@
+.listingImage {
+	height: 570px;
+	width: 770px
+}
+
+.listingImageWrapper {
+	width: 770px;
+	padding: 50px;
+	justify-content: flex-start;
+}

@@ -39,7 +39,7 @@ class ShopSidebar extends Component {
           }
           return (
             <div
-              className="columncards col-6 card-sm shop-listings-card"
+              className="columncards card-sm shop-listings-card"
               key={listing.listing_id}
             >
               <a href={listing.url}>
