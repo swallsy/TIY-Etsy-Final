@@ -11,7 +11,7 @@ class InfoCards extends Component {
               <div className="infoCardBlock">
                 <div className="infoCardCol-1">
                   <img
-                    className="card-img-top infoCardIcon"
+                    className="card-img-top infoCardIcon" alt="Icon of women"
                     src={require("./images/infocard-1.png")}
                   />
                 </div>
@@ -33,7 +33,7 @@ class InfoCards extends Component {
               <div className="infoCardBlock">
                 <div className="infoCardCol-1">
                   <img
-                    className="card-img-top infoCardIcon"
+                    className="card-img-top infoCardIcon" alt="Man with cauldron of soup"
                     src={require("./images/infocard-2.png")}
                   />
                 </div>
@@ -55,6 +55,7 @@ class InfoCards extends Component {
                 <div className="infoCardCol-1">
                   <img
                     className="card-img-top infoCardIcon"
+                    alt="Two hands tieing a present"
                     src={require("./images/infocard-3.png")}
                   />
                 </div>

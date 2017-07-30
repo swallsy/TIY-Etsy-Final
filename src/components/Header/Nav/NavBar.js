@@ -8,6 +8,7 @@ export default class NavBar extends Component {
         super(props)
 
         this.handleHover = this.handleHover.bind(this)
+        this.handleLeave = this.handleLeave.bind(this)
 
         this.state = {
             isHovered: null
@@ -24,11 +25,15 @@ export default class NavBar extends Component {
         }
     }
 
+    handleLeave(event) {
+        this.setState({isHovered: null})
+    }
+
     render() {
         let navCategories = navBarData.map(cat => { // create main categories
             return (
                 <li key={cat.category} className="navbar-item">
-                    <span  className={cat.category} onMouseEnter={this.handleHover}>
+                    <span className={cat.category} onMouseEnter={this.handleHover}>
                         {cat.category}
                     </span>
                     <NavSub hovered={this.state.isHovered}/>
@@ -37,7 +42,7 @@ export default class NavBar extends Component {
         })
 
         return(
-            <ul id="navbar">
+            <ul id="navbar"  onMouseLeave={this.handleLeave}>
                 {navCategories}
             </ul>
         )

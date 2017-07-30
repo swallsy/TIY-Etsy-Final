@@ -7,6 +7,7 @@ export default class NavBar extends Component {
         super(props)
 
         this.handleHoverSub = this.handleHoverSub.bind(this)
+        this.conditionalChevron = this.conditionalChevron.bind(this)
 
         this.state = {
             isHoveredSub: null
@@ -23,6 +24,15 @@ export default class NavBar extends Component {
         }
     }
 
+    conditionalChevron(prop) {
+
+        let chevron;
+        if(prop !== "Kids & Baby") {
+            chevron = <i className="fa fa-chevron-right nav-cheveron"/>
+        }
+        return chevron
+    }
+
 
     render() {
         let renderSubCat;
@@ -36,9 +46,12 @@ export default class NavBar extends Component {
                                 {cat.sub_categories.map(sub => {
                                     return (
                                         <li key={sub.name} className="sub-cat" >
-                                             <span className={sub.name} onMouseEnter={this.handleHoverSub}>
+                                             <a href={sub.link}><span className={sub.name} onMouseEnter={this.handleHoverSub}>
                                                 {sub.name}
-                                            </span><i className="fa fa-chevron-right" />
+                                            </span></a>
+
+                                            {this.conditionalChevron(this.props.hovered)}
+
                                             <ul className="sub-sub-ul">
                                                 <NavSubSub dataLoc={sub} ogHovered={this.props.hovered} hoveredSub={this.state.isHoveredSub}/>
                                             </ul>
@@ -58,7 +71,7 @@ export default class NavBar extends Component {
                 <div>
                     {renderSubCat}
                 </div>
-                
+
         )
     }
 }
