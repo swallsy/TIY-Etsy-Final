@@ -5,13 +5,17 @@ class CatCard extends Component {
   render() {
     let categories = this.props.categories;
     let etsyListings = this.props.etsyListings;
+    let validListings = etsyListings.filter((validListing) => {
+      return validListing.state = "active" &&
+             validListing.taxonomy_path &&
+             validListing.MainImage;
+    });
+    console.log(validListings);
     let catCard = categories.map((listing) => {
-      let filteredListings = etsyListings.filter((filteredListing) => {
-          if (filteredListing.state == "active") {
+      let filteredListings = validListings.filter((filteredListing) => {
             return filteredListing.taxonomy_path.includes(listing.category.name);
-          }
       });
-        let randomListing = filteredListings[Math.floor(Math.random() * filteredListings.length)];
+    let randomListing = filteredListings[Math.floor(Math.random() * filteredListings.length)];
         return (
           <div key={randomListing.listing_id} className = "col-md-3">
             <div className="card" >
