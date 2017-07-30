@@ -21,9 +21,7 @@ class ProductImage extends Component {
       let pictures = data.results.map((pic) => {
         return (
 
-          <div key={pic.listing_image_id} style={{
-            height: 570, width:770
-          }} >
+          <div className='listingImage' key={pic.listing_image_id}>
             <img src={pic.url_570xN} className=""/>
           </div>
 
@@ -36,10 +34,7 @@ class ProductImage extends Component {
 
   render() {
     return (
-      <div style={{
-        height: 570,
-
-      }} >
+      <div className = 'listingImageWrapper align-left'>
         <React_Bootstrap_Carousel animation={true} onSelect={this.onSelect} className="carousel-fade">
           {this.state.pictures}
         </React_Bootstrap_Carousel>

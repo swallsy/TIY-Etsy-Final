@@ -11,7 +11,10 @@ import ShopSidebar from './ShopSidebar'
 class App extends Component {
   render() {
     // change this ID to change all of the fetches
-    const listingId = "538796965";
+    const listingId = "175112598";
+
+// cat battle armor: 175112598
+// macbook decal: 538796965
 
     return (
       <div className="App">
@@ -26,7 +29,7 @@ class App extends Component {
 						<ProductImage listingId={listingId} />
 						<ProdDesc listingId={listingId} />
 					</div>
-					<div className='col-4 sidebarthing'>
+					<div className='col-6 sidebarthing'>
 						<PurchaseInfo listingId={listingId} />
 						<ShopSidebar listingId={listingId} />
 					</div>
