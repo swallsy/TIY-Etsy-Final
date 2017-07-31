@@ -11,8 +11,8 @@ class LikeBanner extends Component {
         </div>
 
         <div className="likeHeaders">
-          <div className="h3">Like that item?</div>
-          <div className="h5">Add it to your favorites to revisit it later</div>
+          <div className="like">Like this item?</div>
+          <div className="add">Add it to your favorites to revisit it later</div>
         </div>
       </div>
     );
