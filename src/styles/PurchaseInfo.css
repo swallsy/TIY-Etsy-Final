@@ -4,9 +4,9 @@
   align-items: flex-start;
 }
 
-.title {
+.page-title {
   font-size: 20px;
-  font-family: Bitter;
+  font-family: 'Bitter';
   font-weight: 400;
 }
 
