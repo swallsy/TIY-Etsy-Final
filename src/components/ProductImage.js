@@ -46,7 +46,7 @@ class ProductImage extends Component {
     return (
       <div className = 'listingImageWrapper  justify-content-center '>
 				<div className = 'listingImage justify-content-center '>
-	        <React_Bootstrap_Carousel animation={true} onSelect={this.onSelect} className="carousel-fade justify-content-center ">
+	        <React_Bootstrap_Carousel animation={false} onSelect={this.onSelect} className="carousel-fade justify-content-center ">
 	          {this.state.pictures}
 	        </React_Bootstrap_Carousel>
 				</div>

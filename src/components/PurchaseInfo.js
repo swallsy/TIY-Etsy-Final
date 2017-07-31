@@ -19,7 +19,7 @@ class PurchaseInfo extends Component {
 	}
 
 	componentDidMount() {
-		fetch('https://openapi.etsy.com/v2/listings/' + this.props.listingId + '?includes=Inventory,ShippingInfo&api_key=nrfza0h31bu4g5biq6bq6g4c').then(response => response.json()).then(response => {
+		fetch('https://openapi.etsy.com/v2/listings/' + this.props.listingId + '?includes=Inventory,ShippingInfo,Shop/User/Feedback&api_key=nrfza0h31bu4g5biq6bq6g4c').then(response => response.json()).then(response => {
 
 			let products = response.results[0].Inventory[0].products;
 
@@ -48,6 +48,8 @@ class PurchaseInfo extends Component {
 				products: response.results[0].Inventory[0].products,
 				propertyValues: response.results[0].Inventory[0].products[0].property_values,
 				propertyName: response.results[0].Inventory[0].products[0].property_values[0].property_name,
+				num_favorers: response.results[0].num_favorers,
+				feedback_score: response.results[0].Shop.User.feedback_info.score,
 				mapInventory: mapInventory,
 				mapMaterials: mapMaterials
 
@@ -182,11 +184,11 @@ class PurchaseInfo extends Component {
 				</li>
 				<li id="LI_81">
 					Feedback:
-					<a href="#reviews" id="A_82">26 reviews</a>
+					<a href="#reviews" id="A_82">{this.state.feedback_score}</a>
 				</li>
 				<li id="LI_83">
 					Favorited by:
-					<a href="/listing/175112598/cat-battle-armor/favoriters?ref=l2-collection-count" id="A_84">6036 people</a>
+					<a href="/listing/175112598/cat-battle-armor/favoriters?ref=l2-collection-count" id="A_84">({this.state.num_favorers})</a>
 				</li>
 			</ul>
 			<ul id="UL_85">
