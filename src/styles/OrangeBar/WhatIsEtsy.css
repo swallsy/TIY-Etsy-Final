@@ -2,13 +2,15 @@
   background-color: #FF883E;
   width: 100vw;
   height: 235px;
-  margin: 30px 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   padding-top: -50px;
-  padding-left: 70px;
+  /*padding-left: 70px;*/
   text-align: center;
   font-family: 'Lato';
   font-weight: 300;
 }
+
 
 .whatisimg1 {
   margin-top: -30px;
@@ -34,6 +36,6 @@
   margin-top: -30px;
 }
 .whatTitle {
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: 'Serif';
+  font-weight: 100;
 }

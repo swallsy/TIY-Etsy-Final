@@ -134,6 +134,9 @@ export default class Cards extends Component {
                       </a>
                     </div>
                 </div>
+                <div className="bottomlink">
+                  <a className="shoplink" href="https://www.etsy.com/featured/gift-ideas?ref=hpsm">See more <i className="fa fa-chevron-right"></i></a>        
+                </div>
               </div>
             )
         }

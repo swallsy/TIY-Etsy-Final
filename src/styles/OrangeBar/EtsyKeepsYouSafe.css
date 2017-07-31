@@ -10,13 +10,17 @@
   padding-top: 30px;
   margin-top: 60px;
 }
+
 .safety-text {
   padding-top: 30px;
   font-size: 14px;
   font-family: Lato;
   font-weight: 300;
   padding-left: 40px;
+}
 
+.safety-text p {
+  color: white;
 }
 .safety-sub-heading {
   font-size: 18px;
@@ -27,8 +31,8 @@
   padding-left: 30%;
   font-size: 42px;
   padding-bottom: 10px;
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: serif;
+  font-weight: 100;
 }
 .safeImage {
   margin-right: 10px;
