@@ -7,7 +7,6 @@
   width: 220px;
   border: none;
   font-family: 'Lato';
-  font-weight: 300;
   display: inline-block;
   margin-right: 2em;
   padding: 0 0 2em 0;
@@ -32,21 +31,22 @@ a:hover .product-image {
 }
 
 .product-title {
-  color: #666666;
+  color: #5C5C5C;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 1.1em
 }
 
 .shop-name {
   color: #aaaaaa;
-  font-weight: lighter;
   align-content: left;
-  font-size: 0.8em;
+  font-size: 1em;
+  font-weight: 100;
 }
 
 .fa-star {
-  font-size: 12pt;
+  font-size: 1em;
   color: #FFA301;
   padding: 1px;
 }
@@ -60,10 +60,12 @@ a:hover .product-image {
 
 .total-reviews {
   color: #aaaaaa;
-  font-size: 0.8em;
+  font-size: 1em;
+  font-weight: lighter;
 }
 
 .price {
-  color: #666666;
-  font-weight: bold;
+  color: #5C5C5C;
+  font-weight: bolder;
+  font-size: 1.2em;
 }

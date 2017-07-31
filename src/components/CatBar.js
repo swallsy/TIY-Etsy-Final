@@ -9,6 +9,7 @@ import Price from './CatBar/Price.js';
 import ShipTo from './CatBar/ShipTo.js';
 import ShopLocation from './CatBar/ShopLocation.js';
 import ProductCards from './CatBody/ProductCards.js';
+import PageCounter from './PageCounter.js';
 
 export default class CatBar extends Component {
   constructor() {
@@ -99,7 +100,9 @@ export default class CatBar extends Component {
           ) : (
           <div></div>
         )}
-        <div className="productCards-controller">
+  
+        <div className="pageCounter-controller">
+          <PageCounter />
         </div>
       </div>
     )
