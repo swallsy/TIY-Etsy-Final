@@ -1,4 +1,8 @@
-.container {
+.catBodyContainer {
   padding: 5px;
-  margin: 0 0 10vw 0;
+  margin: 0 3vw 10vw 23vw;
+}
+
+.catCardRow {
+  margin-left: 1vw;
 }
