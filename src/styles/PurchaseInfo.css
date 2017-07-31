@@ -100,7 +100,18 @@
 }
 
 .OverviewSection ul {
-  margin-left: -15px;
+  list-style: disc outside none;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.OverviewSection li {
+  font-size: 14px;
+  color: #666;
+  padding-left: 1px;
+  display: list-item;
+  text-align: left;
+  position: relative;
 }
 
 .OverviewSection button {
@@ -120,6 +131,8 @@
   border-color: #dbdbdb;
   border-width: .5px;
 }
+
+.OverviewSection a {   color: #F56400 ; }
 
 .favoriteButton {
   margin-right: 15px;
