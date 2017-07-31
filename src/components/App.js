@@ -34,6 +34,8 @@ class App extends Component {
 						<ShopSidebar listingId={listingId} />
 					</div>
 				</div>
+				<div className = 'row bottomBorder'>
+				</div>
 			</div>
     );
   }

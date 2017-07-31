@@ -6,16 +6,7 @@ body {
 	width: 15px
 }
 
-.nav-item {
-	display: flex;
-	flex-flow: row nowrap;
-}
 
-.nav-tabs {
-	display: flex;
-	flex-flow: row nowrap;
-	width: 70%
-}
 
 .useravatar {
 	width: 100px
@@ -29,6 +20,14 @@ body {
 	color: gold
 }
 
-.nav-tabs  {
-	line-height: 1
+.useravatar {
+	width: 30px;
+	border-radius: 50%
+}
+
+.nav-item button {
+	border-radius: 0
+}
+.reviewCard {
+	border: none
 }

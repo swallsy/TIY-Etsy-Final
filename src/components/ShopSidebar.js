@@ -39,7 +39,7 @@ class ShopSidebar extends Component {
           }
           return (
             <div
-              className="columncards card-sm shop-listings-card"
+              className="columncards card-sm shop-listings-card justify-content-center"
               key={listing.listing_id}
             >
               <a href={listing.url}>
@@ -87,15 +87,15 @@ class ShopSidebar extends Component {
     console.log(this.state);
 
     return (
-      <div className="ShopSidebar">
-        <div className="picture">
+      <div className="ShopSidebar justify-content-center">
+        <div className="picture justify-content-center">
         <img
           alt="stuff"
-          className="shop-sidebar-shop-pic"
+          className="shop-sidebar-shop-pic justify-content-center"
           src={this.state.shop_picurl}
         />
       </div>
-      <div className="description">
+      <div className="description ">
         <a href={this.state.shop_url}>
           <h3>
             {this.state.shop_name}
