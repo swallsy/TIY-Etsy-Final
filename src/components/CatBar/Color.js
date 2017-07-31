@@ -57,7 +57,7 @@ export default class Color extends Component {
           <p>
             <a onClick={this.showMore}>
               {this.state.expanded ?
-                (<span className="showMore">- Show less</span>) : (<span className="showMore">+ Show more</span>)}
+                (<span className="showMoreColor">- Show less</span>) : (<span className="showMoreColor">+ Show more</span>)}
             </a>
           </p>
         </div>
