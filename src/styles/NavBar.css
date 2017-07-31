@@ -9,6 +9,7 @@
     background-color: white;
     border-top: 1px solid #E1E3DF;
     border-bottom: 1px solid #E1E3DF;
+    margin: 0px;
 }
 
 .navbar-item {
@@ -74,18 +75,20 @@
     left: 30%;
     top: 0px;
     margin-top: 10px;
-
+    width: 600px;
+    height: 400px;
 }
 
 .sub-sub-ul-div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100%
+    height: 100%;
+    width: 100%;
 }
 
 .sub-sub-li {
-    display: block;
+    /*display: block;*/
     list-style: none;
     height: 12%;
     padding-bottom: 15px;
