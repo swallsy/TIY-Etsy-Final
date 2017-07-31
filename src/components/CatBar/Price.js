@@ -15,28 +15,28 @@ class Price extends React.Component {
             </label>
           </div>
           <div className="radioPrice">
-            <input type="radio" name="anyprice"/>
-            <label htmlFor="anyprice"><span></span>&#160;&#160;Any price</label>
+            <input type="radio" value="anyPrice" checked={this.props.selectedOption === 'anyPrice'} onChange={this.props.handleOptionChange}/>
+            <label><span></span>&#160;&#160;Any price</label>
           </div>
           <div className="radioPrice">
-            <input type="radio" name="underTwentyFive"/>
-            <label htmlFor="underTwentyFive"><span></span>&#160;&#160;Under $25</label>
+              <input type="radio"  value="underTwentyFive" checked={this.props.selectedOption === 'underTwentyFive'} onChange={this.props.handleOptionChange}/>
+              <label><span></span>&#160;&#160;Under $25</label>
+          </div>
+          <div className="radioPrices">
+              <input type="radio"  value="twentyFivetoFifty" checked={this.props.selectedOption === 'twentyFivetoFifty'} onChange={this.props.handleOptionChange}/>
+              <label ><span></span>&#160;&#160;$25 to $50</label>
           </div>
           <div className="radioPrice">
-            <input type="radio" name="twentyFiveToFifty"/>
-            <label htmlFor="twentyFiveToFifty"><span></span>&#160;&#160;$25 to $50</label>
+              <input type="radio" value="fiftyToOneHundred" checked={this.props.selectedOption === 'fiftyToOneHundred'} onChange={this.props.handleOptionChange}/>
+              <label><span></span>&#160;&#160;$50 to $100</label>
           </div>
           <div className="radioPrice">
-            <input type="radio" name="fiftyToOneHundred"/>
-            <label htmlFor="fiftyToOneHundred"><span></span>&#160;&#160;$50 to $100</label>
+              <input type="radio" value="overOneHundred" checked={this.props.selectedOption === 'overOneHundred'} onChange={this.props.handleOptionChange}/>
+              <label ><span></span>&#160;&#160;Over $100</label>
           </div>
           <div className="radioPrice">
-            <input type="radio" name="overOneHundred"/>
-            <label htmlFor="overOneHundred"><span></span>&#160;&#160;Over $100</label>
-          </div>
-          <div className="radioPrice">
-            <input type="radio" />
-            <label htmlFor="custom"><span></span>&#160;&#160;Custom</label>
+              <input type="radio"  value="custom" />
+              <label><span></span>&#160;&#160;Custom</label>
           </div>
           <div className="priceInputContainer">
             <input className="customPriceForm" type="text" placeholder="  Low"/>

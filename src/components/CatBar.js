@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import AllCategories from './CatBar/AllCategories.js';
 
@@ -9,6 +9,7 @@ import Price from './CatBar/Price.js';
 import ShipTo from './CatBar/ShipTo.js';
 import ShopLocation from './CatBar/ShopLocation.js';
 import ProductCards from './CatBody/ProductCards.js';
+import CatBody from './CatBody.js'
 import PageCounter from './PageCounter.js';
 
 export default class CatBar extends Component {
@@ -19,88 +20,127 @@ export default class CatBar extends Component {
       listingFilter: [],
       //Thes are the filters that will be applied to the the api fetch
       //Values needed for Detailed Cat Card filters
-      baseURL: 'https://openapi.etsy.com/v2/listings/trending?api_key=3yhxu7gn2ot24so9hzuqbxc9',
-      selectedOptions:"",
-      mainFetchUrl: '&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&includes=MainImage,Shop,User',
-      fetchUrl:{
+      selectedOption: 'anyPrice',
+      under25: [],
+      between25_50: [],
+      between50_100: [],
+      over100: [],
+      mainFetchUrl: 'https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User',
 
-          categories:
-          {
-            allCategoriesFetch:
-            "&explicit=1&amp;use_mmx=1&amp;min=&amp;max=&amp;price_bucket=1&amp&includes=MainImage,Shop",
-
-            craftSuppliesAndToolsFetch: '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=craft_supplies_and_tools&includes=MainImage,Shop',
-
-            homeAndLivingFetch:
-            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=home_and_living&includes=MainImage,Shop',
-
-            ArtAndCollectiblesFetch:
-            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=art_and_collectibles&includes=MainImage,Shop',
-
-            clothingFetch:
-            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=clothing&includes=MainImage,Shop',
-
-            accessoriesFetch:
-            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=accessories&includes=MainImage,Shop',
-
-            paperAndPartySuppliesFetch:
-            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=paper_and_party_supplies&includes=MainImage,Shop',
-
-            weddingsFetch:
-            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=weddings&includes=MainImage,Shop',
-
-            bagsAndPursesFetch:
-            '&explicit=1&min=&max=&price_bucket=1&use_mmx=1&categories=bags_and_purses&includes=MainImage,Shop,User'
-          },
-          price: {
-            under25: "&explicit=1&amp;min=&amp;max=25&amp;price_bucket=1&includes=MainImage,Shop",
-            between25_50: '&explicit=1&amp;min=25&amp;max=50&amp;price_bucket=1&includes=MainImage,Shop',
-            between50_100: '&explicit=1&amp;min=50&amp;max=100&amp;price_bucket=1&includes=MainImage,Shop'
-          }
-
-        }
+      fetchUrls: {
+          anyPrice: 'https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User',
+          underTwentyFive: 'https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min_price=0&max_price=25&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User',
+          twentyFivetoFifty: 'https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min_price=25&max_price=50&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User',
+          fiftyToOneHundred: 'https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min_price=50&max_price=100&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User',
+          overOneHundred: 'https://openapi.etsy.com/v2/listings/active?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min_price=100&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User',
       }
-  }
-  componentDidMount() {
-    fetch("https://openapi.etsy.com/v2/listings/trending?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=48&explicit=1&min=&max=&price_bucket=1&use_mmx=1&sort_on=score&sort_order=down&includes=MainImage,Shop,User")
-    .then(resp => resp.json())
-      .then(resp => {
-        let listing = resp.results;
-        this.setState({listingFilter: listing});
-        console.log("listing filter below");
-        console.log(this.state.listingFilter)
-      })
+    }
+
+    this.handleOptionChange = this.handleOptionChange.bind(this);
   }
 
-  getInitialState = function() {
-    return{
-      selectedOption: "option1"
-    }
+
+  componentDidMount() {
+    fetch(this.state.mainFetchUrl).then(resp => resp.json()).then(resp => {
+      let listing = resp.results;
+      this.setState({listingFilter: listing});
+      console.log("listing filter below");
+      console.log(this.state.listingFilter)
+    })
+    fetch(this.state.fetchUrls.underTwentyFive).then(resp => resp.json()).then(resp => {
+      let listin = resp.results;
+      this.setState({under25: listin});
+    })
+    fetch(this.state.fetchUrls.twentyFivetoFifty).then(resp => resp.json()).then(resp => {
+      let listi = resp.results;
+      this.setState({between25_50: listi});
+    })
+    fetch(this.state.fetchUrls.fiftyToOneHundred).then(resp => resp.json()).then(resp => {
+      let list = resp.results;
+      this.setState({between50_100: list});
+    })
+    fetch(this.state.fetchUrls.overOneHundred).then(resp => resp.json()).then(resp => {
+      let lis = resp.results;
+      this.setState({over100: lis});
+    })
   }
+
+handleOptionChange(eventTarget) {
+  console.log(eventTarget.target.value);
+  let radioVal = eventTarget.target.value;
+  if(radioVal === "anyPrice"){
+    let anyP = this.state.fetchUrls.anyPrice;
+    this.setState({
+      selectedOption: eventTarget.target.value,
+      mainFetchUrl: anyP
+    });
+
+  }
+  if(radioVal === "underTwentyFive"){
+    let underTwentyF = this.state.fetchUrls.underTwentyFive;
+    this.setState({
+      selectedOption: eventTarget.target.value,
+      mainFetchUrl: underTwentyF
+    });
+
+  }
+  else if(radioVal === "twentyFivetoFifty"){
+    let twentyFivetoF = this.state.fetchUrls.twentyFivetoFifty;
+    this.setState({
+      selectedOption: eventTarget.target.value,
+      mainFetchUrl: twentyFivetoF
+    });
+
+  }
+  else if(radioVal === "fiftyToOneHundred"){
+    let fiftyToOneHund = this.state.fetchUrls.fiftyToOneHundred;
+    this.setState({
+      selectedOption: eventTarget.target.value,
+      mainFetchUrl: fiftyToOneHund
+    });
+
+  }
+  else if(radioVal === "overOneHundred"){
+    let overOneHund = this.state.fetchUrls.overOneHundred;
+    this.setState({
+      selectedOption: eventTarget.target.value,
+      mainFetchUrl: overOneHund
+    });
+
+
+  }
+
+}
 
 
   render() {
-    return(
-
-      <div className="catBarColumn">
-
-        <div className="card">
-          <AllCategories />
-          <ShopLocation />
-          <ItemType />
-          <Price getInitialState={this.getInitialState} />
-          <Color />
-          <OrderingOptions />
-          <ShipTo />
+    return (
+      <div className="row">
+        <div className="card col-md-2">
+          <AllCategories/>
+          <ShopLocation/>
+          <ItemType/>
+          <Price handleOptionChange={this.handleOptionChange} selectedOption={this.state.selectedOption} props={this.state}/>
+          <Color/>
+          <OrderingOptions/>
+          <ShipTo/>
         </div>
-        {this.state.listingFilter.length > 0 ? (
-          <div className="card-container">
-            <ProductCards className="grid-items col-md-4" listingFilter={this.state.listingFilter} />
-          </div>
-          ) : (
-          <div></div>
-        )}
+        {this.state.listingFilter.length > 0
+          ? (
 
+            <div className="CatBodyCards-controller col-md-10 row">
+              <ProductCards className="col-md-10"
+                listingFilter={this.state.listingFilter}
+                under25={this.state.under25}
+                between25_50={this.state.between25_50}
+                between50_100={this.state.between50_100}
+                over100={this.state.over100}
+                selectedOption={this.state.selectedOption}/>
+            </div>
+          )
+          : (
+            <div>Loading</div>
+          )}
         <div className="pageCounter-controller">
           <PageCounter />
         </div>
