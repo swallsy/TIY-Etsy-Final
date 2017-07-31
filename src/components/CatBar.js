@@ -82,25 +82,25 @@ export default class CatBar extends Component {
   render() {
     return(
 
-        <div className="catBarColumn">
-          <h2 className="allCatTitle">All Categories</h2>
-          <div className="card">
-            <AllCategories />
-            <ShopLocation />
-            <ItemType />
-            <Price getInitialState={this.getInitialState} />
-            <Color />
-            <OrderingOptions />
-            <ShipTo />
-          </div>
+      <div className="catBarColumn">
+
+        <div className="card">
+          <AllCategories />
+          <ShopLocation />
+          <ItemType />
+          <Price getInitialState={this.getInitialState} />
+          <Color />
+          <OrderingOptions />
+          <ShipTo />
+        </div>
         {this.state.listingFilter.length > 0 ? (
-          <div className="container">
+          <div className="card-container">
             <ProductCards className="grid-items col-md-4" listingFilter={this.state.listingFilter} />
           </div>
           ) : (
           <div></div>
         )}
-  
+
         <div className="pageCounter-controller">
           <PageCounter />
         </div>

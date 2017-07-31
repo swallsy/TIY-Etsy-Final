@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../styles/DetailedCatCards.css';
 
 export default class DetailedCatCard extends Component {
   render() {
@@ -23,23 +24,25 @@ export default class DetailedCatCard extends Component {
                   <h2 className="card-title">
                     <a href={"https://www.etsy.com/c/" + listing.category.path}>{listing.category.name}</a>
                   </h2>
-                  <p className="card-text">
-                    <a href={"https://www.etsy.com/c/" + listing.category.path +
-                    listing.subCategories.cat1.path}>{listing.subCategories.cat1.name}</a>
-                  </p>
-                  <p className="card-text">
-                    <a href={"https://www.etsy.com/c/" + listing.category.path +
-                    listing.subCategories.cat2.path}>{listing.subCategories.cat2.name}</a>
-                  </p>
-                  <p className="card-text">
-                    <a href={"https://www.etsy.com/c/" + listing.category.path +
-                    listing.subCategories.cat3.path}>{listing.subCategories.cat3.name}</a>
-                  </p>
-                  <p className="card-text">
-                    <a href={"https://www.etsy.com/c/" + listing.category.path +
-                    listing.subCategories.cat4.path}>{listing.subCategories.cat4.name}</a>
-                  </p>
-                    <a href={"https://www.etsy.com/c/" + listing.category.path}>Shop all  {listing.category.name}</a>
+                  <ul className="sub-cat-text">
+                    <li className="card-text">
+                      <a href={"https://www.etsy.com/c/" + listing.category.path +
+                      listing.subCategories.cat1.path}>{listing.subCategories.cat1.name}</a>
+                    </li>
+                    <li className="card-text">
+                      <a href={"https://www.etsy.com/c/" + listing.category.path +
+                      listing.subCategories.cat2.path}>{listing.subCategories.cat2.name}</a>
+                    </li>
+                    <li className="card-text">
+                      <a href={"https://www.etsy.com/c/" + listing.category.path +
+                      listing.subCategories.cat3.path}>{listing.subCategories.cat3.name}</a>
+                    </li>
+                    <li className="card-text">
+                      <a href={"https://www.etsy.com/c/" + listing.category.path +
+                      listing.subCategories.cat4.path}>{listing.subCategories.cat4.name}</a>
+                    </li>
+                  </ul>
+                  <a href={"https://www.etsy.com/c/" + listing.category.path}>Shop all  {listing.category.name}</a>
                 </div>
               </div>
             </div>

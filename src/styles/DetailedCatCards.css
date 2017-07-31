@@ -1,0 +1,28 @@
+.col-md-3 {
+  color: #5C5C5C;
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.card-block {
+  text-align: left;
+}
+
+.card-title {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+.sub-cat-text {
+  list-style-type: none;
+  width: 100%;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card-text {
+  /*padding-left: 0;*/
+}

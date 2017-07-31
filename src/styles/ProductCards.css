@@ -1,6 +1,6 @@
 .product-row {
-  /*width: 75vw;*/
-  /*display: inline-block;*/
+  width: 100%;
+  display: inline-block;
 }
 
 .product-card {
