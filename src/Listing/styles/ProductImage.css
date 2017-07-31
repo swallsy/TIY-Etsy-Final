@@ -1,0 +1,21 @@
+
+.requestboxtext {
+	background-color: #F1F1F1;
+	line-height: 3;
+
+}
+.requestthumbnail {
+	width: 50px;
+}
+a.orangelink {
+	color: #F46800
+}
+
+.requestbox {
+	margin-top: 10px;
+	margin-bottom: 10px
+}
+
+.listingImage {
+	margin: 0;
+}

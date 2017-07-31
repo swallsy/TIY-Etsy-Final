@@ -1,0 +1,72 @@
+.browse-collection-img {
+
+  width: 80%;
+}
+.overflowFix{
+  overflow: hidden;
+}
+
+.imgFix {
+  width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+
+.browse-collection-item {
+  margin: -.5vw;
+  background-color: white;
+  border: .5px solid lightgrey;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.browse-collections-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.browse-collection-item:hover .browse-collections-text-content{
+  text-decoration: underline;
+}
+
+.browse-collections {
+  margin: 20px;
+}
+
+.browse-collections-header{
+  text-align: center;
+  margin: 3vw;
+}
+
+.browse-collections-header:hover, .browse-collections-text-header:hover, .browse-collections-text-content:hover, .browse-collections-seemore:hover {
+  text-decoration: underline;
+}
+.browse-collections-text {
+  margin: 2vw;
+  align-self: center;
+}
+
+.browse-collections-text-content {
+  color: rgb(34, 34, 34);
+  font-size: 20px;
+  font-weight: 600;
+}
+.browse-collections-text-header{
+  color: rgb(119, 119, 119);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.browse-collections-text-header:hover {
+  text-decoration: none;
+}
+.browse-collections-seemore{
+  font-size: 14px;
+  margin: 2vw;
+  text-align: center;
+  color: #FF883E;
+}

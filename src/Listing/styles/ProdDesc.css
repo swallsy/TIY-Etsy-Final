@@ -1,0 +1,33 @@
+body {
+
+}
+
+.star {
+	width: 15px
+}
+
+
+
+.useravatar {
+	width: 100px
+}
+
+.fa-star {
+	color: gold
+}
+
+.fa-star-o {
+	color: gold
+}
+
+.useravatar {
+	width: 30px;
+	border-radius: 50%
+}
+
+.nav-item button {
+	border-radius: 0
+}
+.reviewCard {
+	border: none
+}

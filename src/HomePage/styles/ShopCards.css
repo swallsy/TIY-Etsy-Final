@@ -1,0 +1,124 @@
+.shop-cards {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.card-box {
+    box-shadow: 0px 0px 1px 0px #828282;
+    border-radius: 3px;
+    background-color: white;
+}
+
+#shop-by-category {
+  padding-top: 60px;
+}
+
+
+#shop-by-category-cards {
+  margin: 0;
+}
+
+
+.shop-cards-wrapper {
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.s-card-cat-name {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: rgb(68, 68, 68);
+    font-size: 14px;
+    font-family: 'Lato';
+    line-height: 35px;
+}
+
+.s-card-cat-name:hover {
+  text-decoration: underline;
+}
+
+.s-card-image {
+    height: 162px;
+    overflow: hidden;
+}
+
+.s-card-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.padding {
+   padding:10px !important;
+   margin: 0 !important;
+   max-width: none;
+}
+
+#sc-gc-1 {
+    background-image: url("https://img0.etsystatic.com/179/1/11499597/il_340x270.1193714076_7b7u.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sc-gc-2 {
+    background-image: url("https://img0.etsystatic.com/068/0/5407252/il_340x270.795607534_c1qe.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sc-gc-3 {
+    background-image: url("https://img1.etsystatic.com/205/0/11266858/il_340x270.1298965649_bz9o.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sc-gc-4 {
+    background-image: url("https://img0.etsystatic.com/144/0/12540500/il_340x270.1176234406_cgfp.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sc-gc-5 {
+    background-image: url("https://img0.etsystatic.com/156/1/7238361/il_340x270.1096132510_a7e4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sc-gc-6 {
+    background-image: url("https://img1.etsystatic.com/122/1/10083918/il_340x270.1028259963_gfoa.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shoplink {
+  font-size: 14px;
+  margin: 2vw;
+  text-align: center;
+  color: #FF883E;
+}
+
+.shoplink:hover {
+  text-decoration: underline;
+  color: #FF883E;
+}
+
+.bottomlink {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 5px;
+}
