@@ -10,14 +10,17 @@ body {
   font-size: 1vw;
 }
 
+.card-container {
+  margin: -39vw 0 0 16vw;
+}
+
 .catBarColumn {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column;
   align-items: flex-start;
   position: absolute;
-  margin-left: 1.35vw;
-  z-index: 2;
-  /*width: 100%;*/
+  margin-left: 1.50vw;
+  z-index: 2;;
 }
 
 .card {

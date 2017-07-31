@@ -158,13 +158,17 @@ class CatBody extends Component {
           }}
         ];
           return (
-            <div className = "container" >
+            <div className = "catBodyContainer">
               {this.state.listings.length > 0 ? (
               <div>
-                <DetailedCatCard detailedCategories={detailedCategories}
-                         etsyListings={this.state.listings} />
-                <CatCard categories={categories}
-                        etsyListings={this.state.listings} />
+                <div>
+                  <DetailedCatCard detailedCategories={detailedCategories}
+                                   etsyListings={this.state.listings} />
+                  </div>
+                <div className = "catCardRow row">
+                  <CatCard categories={categories}
+                           etsyListings={this.state.listings} />
+                </div>
               </div>
               ) : (
               <div>Loading</div>
