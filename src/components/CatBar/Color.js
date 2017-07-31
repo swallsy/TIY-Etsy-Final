@@ -50,14 +50,14 @@ export default class Color extends Component {
                 <input type="checkbox" name="colorCheckBox"/>
                 <label htmlFor="colorCheckBox" className="colorLabels">
                   <span></span>
-                  <a className="catListItem" href={colors.link}>{colors.color}</a>
+                  <a className="colorListItem" href={colors.link}>&#160;&#160;{colors.color}</a>
                 </label>
               </li>)}
           </ul>
           <p>
             <a onClick={this.showMore}>
               {this.state.expanded ?
-                (<span className="show">- Show less</span>) : (<span className="show">+ Show more</span>)}
+                (<span className="showMore">- Show less</span>) : (<span className="showMore">+ Show more</span>)}
             </a>
           </p>
         </div>
