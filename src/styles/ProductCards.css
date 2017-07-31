@@ -4,12 +4,12 @@
 }
 
 .product-card {
-  width: 220px;
+  width: 240px;
   border: none;
   font-family: 'Lato';
   display: inline-block;
-  margin-right: 2em;
   padding: 0 0 2em 0;
+  margin-left: 1vw;
   text-align: left;
 }
 
@@ -18,8 +18,6 @@
 }
 
 .product-image {
-  /*width: 220px;
-  height: 175px;*/
   width: 100%;
   border-radius: 2px;
   margin-bottom: 5px;

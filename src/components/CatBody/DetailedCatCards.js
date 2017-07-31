@@ -17,32 +17,32 @@ export default class DetailedCatCard extends Component {
       });
     let randomListing = filteredListings[Math.floor(Math.random() * filteredListings.length)];
           return (
-            <div key={randomListing.listing_id} className = "col-md-3">
-              <div className="card" >
-                <a href={randomListing.url}><img className="card-img-top"     src={randomListing.MainImage.url_170x135} alt="random jewelry" /></a>
+            <div key={randomListing.listing_id} className = "detailedCatCardColumn col-md-3">
+              <div className="detailedCatCard card no-gutters" >
+                <a href={randomListing.url}><img className="card-img-top" src={randomListing.MainImage.url_170x135} alt="random jewelry" /></a>
                 <div className="card-block">
                   <h2 className="card-title">
-                    <a href={"https://www.etsy.com/c/" + listing.category.path}>{listing.category.name}</a>
+                    <a className="catTitleLink" href={"https://www.etsy.com/c/" + listing.category.path}>{listing.category.name}</a>
                   </h2>
                   <ul className="sub-cat-text">
                     <li className="card-text">
-                      <a href={"https://www.etsy.com/c/" + listing.category.path +
+                      <a className="catLink" href={"https://www.etsy.com/c/" + listing.category.path +
                       listing.subCategories.cat1.path}>{listing.subCategories.cat1.name}</a>
                     </li>
                     <li className="card-text">
-                      <a href={"https://www.etsy.com/c/" + listing.category.path +
+                      <a className="catLink" href={"https://www.etsy.com/c/" + listing.category.path +
                       listing.subCategories.cat2.path}>{listing.subCategories.cat2.name}</a>
                     </li>
                     <li className="card-text">
-                      <a href={"https://www.etsy.com/c/" + listing.category.path +
+                      <a className="catLink"  href={"https://www.etsy.com/c/" + listing.category.path +
                       listing.subCategories.cat3.path}>{listing.subCategories.cat3.name}</a>
                     </li>
                     <li className="card-text">
-                      <a href={"https://www.etsy.com/c/" + listing.category.path +
+                      <a className="catLink"href={"https://www.etsy.com/c/" + listing.category.path +
                       listing.subCategories.cat4.path}>{listing.subCategories.cat4.name}</a>
                     </li>
                   </ul>
-                  <a href={"https://www.etsy.com/c/" + listing.category.path}>Shop all  {listing.category.name}</a>
+                  <a className="catShopAllLink" href={"https://www.etsy.com/c/" + listing.category.path}>Shop all  {listing.category.name}</a>
                 </div>
               </div>
             </div>
