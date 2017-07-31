@@ -9,17 +9,19 @@
   text-align: center;
   font-family: 'Lato';
   font-weight: 300;
+
 }
 
 
 .whatisimg1 {
   margin-top: -30px;
+  margin-left: 50px;
 }
 
 .whatistext {
   color: white;
   padding-top: 50px;
-  padding-left: 40px;
+  padding-left: 120px;
 }
 
 .whatislink {
@@ -34,6 +36,7 @@
 
 .whatisimg2 {
   margin-top: -30px;
+  margin-left: 60px
 }
 .whatTitle {
   font-family: 'Serif';
