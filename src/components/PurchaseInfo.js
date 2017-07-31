@@ -75,7 +75,7 @@ class PurchaseInfo extends Component {
 			<div>
 			<div className="titleContainer">
 			<div>
-				<h1 className="title">
+				<h1 className="page-title">
 					{this.state.title}
 				</h1>
 			</div>
