@@ -89,21 +89,22 @@ class ShopSidebar extends Component {
     return (
       <div className="ShopSidebar justify-content-center">
         <div className="picture justify-content-center">
-        <img
-          alt="stuff"
-          className="shop-sidebar-shop-pic justify-content-center"
-          src={this.state.shop_picurl}
-        />
-      </div>
-      <div className="description ">
-        <a href={this.state.shop_url}>
-          <h3>
-            {this.state.shop_name}
-          </h3>
-        </a>
+	        <img
+	          alt="stuff"
+	          className="shop-sidebar-shop-pic"
+	          src={this.state.shop_picurl}
+	        />
+	      </div>
+				<br/>
+	      <div className="description justify-content-center">
+	        <a href={this.state.shop_url}>
+	          <h3>
+	            {this.state.shop_name}
+	          </h3>
+	        </a>
+				</div>
         <div className="shop-listings-cards">
           {this.state.shop_listings}
-        </div>
         </div>
       </div>
     );
