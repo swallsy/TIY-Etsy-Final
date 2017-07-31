@@ -48,7 +48,7 @@ export default class AllCategories extends Component {
         <p>
         <a onClick={this.showMore}>
             {this.state.expanded ?
-              (<span className="showMore">- Show less</span>) : (<span className="showMore">+ Show more</span>)}
+              (<span className="showMoreCat">- Show less</span>) : (<span className="showMoreCat">+ Show more</span>)}
         </a>
         </p>
 
