@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import Header from "";
-import Footer from "";
+import Header from "./HomePage/components/Header/Header.js";
+import Footer from "./trending/components/Footer.js";
 
 class BaseLayout extends Component {
   render() {

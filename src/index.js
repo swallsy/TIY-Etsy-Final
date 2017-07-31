@@ -11,8 +11,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 //import Components
 import Home from "./HomePage/components/Home/Home.js";
 import Listing from "./Listing/components/Listing.js";
-import TrendingPage from "";
-import CategoryPage from "";
+import TrendingPage from "./trending/components/App.js";
+import CategoryPage from "./categories/components/App.js";
 
 import BaseLayout from "./base_layout.js";
 
@@ -24,8 +24,8 @@ ReactDOM.render(
     <BaseLayout>
       <Switch>
         <Route path="/Listing" component={Listing} />
-        <Route path="/Trending" component={} />
-        <Route path="/Category" component={} />
+        <Route path="/Trending" component={TrendingPage} />
+        <Route path="/Category" component={CategoryPage} />
         <Route path="/" component={Home} />
       </Switch>
     </BaseLayout>
