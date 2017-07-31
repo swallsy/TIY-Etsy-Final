@@ -88,6 +88,7 @@ class ShopSidebar extends Component {
 
     return (
       <div className="ShopSidebar justify-content-center">
+        <div className="header">
         <div className="picture justify-content-center">
 	        <img
 	          alt="stuff"
@@ -103,6 +104,7 @@ class ShopSidebar extends Component {
 	          </h3>
 	        </a>
 				</div>
+        </div>
         <div className="shop-listings-cards">
           {this.state.shop_listings}
         </div>
