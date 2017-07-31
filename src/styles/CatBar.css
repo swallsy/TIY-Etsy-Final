@@ -1,3 +1,8 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@font-face {
+  font-family: 'FontAwesome';
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -73,10 +78,11 @@ li {
   overflow: auto;
 }
 
-.show {
-  color: #ea7532;
+.showMore {
+  color: #e86c25;
   font-weight: 300vw;
   margin-top: -1vw 0 2vw 0;
+  cursor: pointer;
 }
 
 /* Shop Location Styling */
@@ -126,7 +132,7 @@ input[type=radio] + label span {
   cursor: pointer;
 }
 
-input[type="radio"]:checked + label span:before {
+input[type=radio]:checked + label span:before {
   content: '⬤';
   color: #f56400;
   font-size: .85vw;
@@ -175,11 +181,11 @@ input[type="radio"]:checked + label span:before {
 }
 
 .itemTypeColumn {
-    color: #7a7a7a;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    margin: .75vw 0 1.5vw 0;
+  color: #7a7a7a;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  margin: .75vw 0 1.5vw 0;
 }
 
 .priceTitle {
@@ -195,7 +201,7 @@ input[type="radio"]:checked + label span:before {
 .priceInputContainer {
   display: flex;
   flex-flow: row nowrap;
-  align-items: baseline;
+  align-items: center;
   margin-left: 2vw;
 }
 
@@ -232,35 +238,47 @@ input[type="radio"]:checked + label span:before {
 }
 
 .colorColumn {
-    color: #7a7a7a;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    margin: 1vw 0 1.5vw 0;
+  color: #7a7a7a;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  margin: 2vw 0 1.5vw 0;
 }
 
 .colorList {
   list-style: none;
+  padding: none;
+  margin: none;
+}
+
+.colorCheckBox {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 2vw;
 }
 
 .colorListItem {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
   text-decoration: none;
   font-weight: 400;
   color: #7a7a7a;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  margin-bottom: -.5vw;
 }
 
-input[type="checkbox"] {
+.colorListItem input[type="checkbox"] {
   width: 1.25vw;
   height: 1.25vw;
+  background-color: #FFFFFF;
+  color: #ea7532;
   position: relative;
   z-index: 2;
   cursor: pointer;
+  margin: 0 0 .15vw -4vw;
 }
 
-input[type="checkbox"] + label span {
+.colorListItem input[type="checkbox"] + label span {
   display: inline-block;
   width: 1.25vw;
   height: 1.25vw;
@@ -268,15 +286,15 @@ input[type="checkbox"] + label span {
   border: .75px solid #a5a5a5;
   border-radius: 3px;
   background: #FFFFFF;
-  vertical-align: bottom;
   cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label span:before {
-  content: '';
-  color: #a1a3a8;
-  font-size: 5vw;
+.colorListItem input[type="checkbox"]:checked + label span:before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: #ea7532;
+  font-size: 1.35vw;
   font-weight: bold;
-  line-height: 5vw;
+  position: absolute;
   cursor: pointer;
 }
