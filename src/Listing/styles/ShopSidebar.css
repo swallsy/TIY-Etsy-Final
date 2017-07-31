@@ -1,0 +1,83 @@
+.ShopSidebar {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.description h3{
+  color: black;
+  font-family: serif;
+  font-weight: bold;
+  margin-top: -18px;
+}
+
+.shop-listings-cards {
+  display: flex;
+  justify-content: space-around;
+  width: 410px;
+  flex-flow: row wrap;
+}
+
+.shop-listings-card-pic {
+  margin-top: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.columncards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  font-size: 20px;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+.columncards img {
+  height: 100%;
+  width: 100%;
+}
+
+.columncards div img {
+  height: 150px;
+  width: 195px;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: bold;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 7.5px;
+}
+
+.desc {
+  text-decoration: none;
+  color: black;
+  width: 195px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-flow: column nowrap;
+  margin-bottom: 25px;
+  border: none;
+  padding-left: 7.5px;
+  border-style: solid;
+  border-color: #adadad;
+  border-width: 1px;
+}
