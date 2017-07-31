@@ -20,13 +20,15 @@
   align-items: flex-start;
   margin-left: 20px;
   height: 70px;
-  font-size: 20px;
+  font-size: 14px;
 }
 
-.h3 {
-  font-size: 20px;
+.like {
+  font-size: 18px;
+  font-weight: 800;
 }
 
-.h5 {
-  font-size: 20px;
+.add {
+  font-size: 14px;
+  text: #666;
 }
