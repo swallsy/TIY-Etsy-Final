@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*BEGIN ShopSidebar styling*/
+
+.shop-sidebar-shop-pic {
+  width: 50px;
+  height: 50px;
+}
+
+.shop-listings-card-pic {
+  width: 190px;
+}
+
+/*END ShopSidebar styling*/
