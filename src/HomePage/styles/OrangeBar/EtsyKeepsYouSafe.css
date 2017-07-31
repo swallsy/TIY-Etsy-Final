@@ -1,0 +1,42 @@
+.container {
+  width: 100vw;
+}
+.safeContainer {
+  background-color: #FF883E;
+  color: white;
+  width: 100vw;
+  height: 275px;
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 60px;
+}
+
+.safety-text {
+  padding-top: 30px;
+  font-size: 14px;
+  font-family: Lato;
+  font-weight: 300;
+  padding-left: 40px;
+}
+
+.safety-text p {
+  color: white;
+}
+.safety-sub-heading {
+  font-size: 18px;
+  font-family: 'Lato';
+}
+
+.safety-heading {
+  padding-left: 30%;
+  font-size: 42px;
+  padding-bottom: 10px;
+  font-family: serif;
+  font-weight: 100;
+}
+.safeImage {
+  margin-right: 10px;
+}
+.keyImage {
+  margin-left: -10px;
+}

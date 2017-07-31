@@ -1,0 +1,34 @@
+
+
+.myheader {
+  margin-top: 20px;
+  border-color: black;
+  background-color: #F6F5F1;
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: flex-start;
+  align-items: space-around;
+  height: 70px;
+  font-size: 15px;
+}
+
+.likeHeaders {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin-left: 20px;
+  height: 70px;
+  font-size: 14px;
+}
+
+.like {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.add {
+  font-size: 14px;
+  text: #666;
+}
