@@ -1,0 +1,33 @@
+.sellContainer {
+  width: 100vw;
+  background-color: #ffac62;
+  height: 235px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: 'Lato';
+  font-weight: 300;
+}
+.sellTitle {
+  font-size: 42px;
+  font-family: 'Serif';
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+.catImage {
+  margin-top: -20px;
+}
+.manImage {
+  margin-top: -24px;
+}
+.sellText {
+  padding-top: 50px;
+}
+.sellLink {
+  color:white;
+  font-size: 14px;
+}
+.sellLink:hover {
+  text-decoration: underline;
+  color: white;
+}
