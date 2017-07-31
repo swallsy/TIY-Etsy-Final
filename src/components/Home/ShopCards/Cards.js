@@ -61,7 +61,7 @@ export default class Cards extends Component {
                         <a href={category.url}>
                         <div className="card-box">
                             <div id={"card-image" + (increment++)} className="s-card-image">
-                              <img src={category.MainImage.url_570xN} className="display-block"/>
+                              <img alt="ShopCard" src={category.MainImage.url_570xN} className="display-block"/>
                             </div>
                             <p className="s-card-cat-name">{categoryObj.uniqueCategory}</p>
                         </div>
@@ -135,7 +135,7 @@ export default class Cards extends Component {
                     </div>
                 </div>
                 <div className="bottomlink">
-                  <a className="shoplink" href="https://www.etsy.com/featured/gift-ideas?ref=hpsm">See more <i className="fa fa-chevron-right"></i></a>        
+                  <a className="shoplink" href="https://www.etsy.com/featured/gift-ideas?ref=hpsm">See more <i className="fa fa-chevron-right"></i></a>
                 </div>
               </div>
             )

@@ -9,6 +9,7 @@ class Search extends Component {
           <div className="logo">
             <a className="navbar-brand" href="https://www.etsy.com/?ref=lgo">
               <img
+                alt="Etsy Logo"
                 className="etsyLogo"
                 src={require("./images/etsy-logo.svg")}
               />
@@ -54,6 +55,7 @@ class Search extends Component {
           <div className="shopCart">
             <a href="https://www.etsy.com/cart?ref=hdr">
             <img
+              alt="Shopping Cart"
               className="shoppingCart"
               src={require("./images/shopping-cart.png")}
             />
