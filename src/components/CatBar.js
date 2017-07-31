@@ -9,6 +9,7 @@ import Price from './CatBar/Price.js';
 import ShipTo from './CatBar/ShipTo.js';
 import ShopLocation from './CatBar/ShopLocation.js';
 import ProductCards from './CatBody/ProductCards.js';
+import PageCounter from './PageCounter.js';
 
 export default class CatBar extends Component {
   constructor() {
@@ -81,25 +82,27 @@ export default class CatBar extends Component {
   render() {
     return(
 
-        <div className="catBarColumn">
-          <h2 className="allCatTitle">All Categories</h2>
-          <div className="card">
-            <AllCategories />
-            <ShopLocation />
-            <ItemType />
-            <Price getInitialState={this.getInitialState} />
-            <Color />
-            <OrderingOptions />
-            <ShipTo />
-          </div>
+      <div className="catBarColumn">
+
+        <div className="card">
+          <AllCategories />
+          <ShopLocation />
+          <ItemType />
+          <Price getInitialState={this.getInitialState} />
+          <Color />
+          <OrderingOptions />
+          <ShipTo />
+        </div>
         {this.state.listingFilter.length > 0 ? (
-          <div className="container">
+          <div className="card-container">
             <ProductCards className="grid-items col-md-4" listingFilter={this.state.listingFilter} />
           </div>
           ) : (
           <div></div>
         )}
-        <div className="productCards-controller">
+
+        <div className="pageCounter-controller">
+          <PageCounter />
         </div>
       </div>
     )

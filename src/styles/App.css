@@ -22,3 +22,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.allCatTitle {
+  font-size: 2em;
+  color: #474747;
+  margin: 2em 0 .7em 1.7em;
+  text-align: left;
+}

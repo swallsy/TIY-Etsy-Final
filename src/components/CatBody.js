@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import CatCard from './CatBody/CatCards.js';
 import DetailedCatCard from './CatBody/DetailedCatCards.js';
 
+import '../styles/CatBody.css';
+
 
 class CatBody extends Component {
   constructor(props) {

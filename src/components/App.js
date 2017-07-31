@@ -18,9 +18,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h2 className="allCatTitle">All categories</h2>
         <div className="container-fluid row">
-          <CatBody />
           <CatBar />
+          <CatBody />
         </div>
       </div>
     );
