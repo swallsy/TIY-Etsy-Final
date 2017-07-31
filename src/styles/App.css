@@ -17,7 +17,7 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
-  height: 1100px;
+  /*height: 1100px;*/
 }
 
 .App-header {
@@ -36,7 +36,17 @@
   background-color: white;
 }
 
+.fa-heart {
+	color: gray;
+	padding-right: 10px
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.bottomBorder {
+	height: 100px;
+  background-color: #F6F5F1;
 }

@@ -23,16 +23,18 @@ class App extends Component {
 						<ShopHeader listingId={listingId} />
 					</div>
 				</div>
-				<div className = 'row justify-content-center main-content-div'>
+				<div className = 'row main-content-div'>
 					<div className='col-6'>
 		      	<LikeBanner listingId={listingId} />
 						<ProductImage listingId={listingId} />
 						<ProdDesc listingId={listingId} />
 					</div>
-					<div className='col-6 sidebarthing'>
+					<div className='col-6'>
 						<PurchaseInfo listingId={listingId} />
 						<ShopSidebar listingId={listingId} />
 					</div>
+				</div>
+				<div className = 'row bottomBorder'>
 				</div>
 			</div>
     );

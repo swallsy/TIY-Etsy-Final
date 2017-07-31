@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../styles/App.css';
+import React, { Component } from "react";
+import "../styles/App.css";
 import "../styles/ShopHeader.css";
 
 class ShopHeader extends Component {
@@ -8,17 +8,19 @@ class ShopHeader extends Component {
 
     this.state = {
       results: {},
-      shop_name: '',
-      shop_url: '',
-      shop_picurl: '',
+      shop_name: "",
+      shop_url: "",
+      shop_picurl: "",
       shop_listings: [],
-      shop_listings_count: ''
+      shop_listings_count: ""
     };
   }
 
   componentDidMount() {
     fetch(
-      'https://openapi.etsy.com/v2/listings/' + this.props.listingId + '?includes=Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c'
+      "https://openapi.etsy.com/v2/listings/" +
+        this.props.listingId +
+        "?includes=Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c"
     )
       .then(response => response.json())
       .then(response => {
@@ -64,13 +66,14 @@ class ShopHeader extends Component {
           />
         </a>
         <div id="shopname" className="col-1 shopname">
-          <a href={this.state.shop_url}>
-          </a>
+          <a href={this.state.shop_url} />
           <div className="Shoptitle">
-          <a className="realShopTitle">
-            {this.state.shop_name}
-          </a>
-          <button>Favorite shop</button>
+            <a className="realShopTitle">
+              {this.state.shop_name}
+            </a>
+            <button>
+              <i className="fa fa-heart" />Favorite shop
+            </button>
           </div>
         </div>
         <div className="col-3" />

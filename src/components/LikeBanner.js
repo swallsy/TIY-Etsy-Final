@@ -7,7 +7,7 @@ class LikeBanner extends Component {
     return (
       <div className="LikeBanner col-12 myheader">
         <div className="buttondiv">
-          <button className="button">Favorite</button>
+          <button className="button"><i className="fa fa-heart" />Favorite</button>
         </div>
 
         <div className="likeHeaders">
