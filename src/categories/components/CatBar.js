@@ -116,7 +116,7 @@ handleOptionChange(eventTarget) {
   render() {
     return (
       <div className="row">
-        <div className="card col-md-2">
+        <div className="catBarCard col-md-2">
           <AllCategories/>
           <ShopLocation/>
           <ItemType/>

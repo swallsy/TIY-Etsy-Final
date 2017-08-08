@@ -4,7 +4,7 @@ import "../../styles/Search.css";
 class Search extends Component {
   render() {
     return (
-      <div className="navbar navTop">
+      <div className=" navTop">
         <div className="searchBar">
           <div className="logo">
             <a className="navbar-brand" href="https://www.etsy.com/?ref=lgo">

@@ -4,7 +4,7 @@ import "../../styles/InfoCards.css";
 class InfoCards extends Component {
   render() {
     return (
-      <div className="row infoCardContainer">
+      <div className="infoCardContainer ">
         <div className="col-sm-4">
           <div className="card infocard">
             <div className="card-block">

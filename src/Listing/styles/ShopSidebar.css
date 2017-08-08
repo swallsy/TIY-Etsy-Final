@@ -5,10 +5,7 @@ justify-content: space-around;
 margin-top: 20px;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .description h3{
   color: black;

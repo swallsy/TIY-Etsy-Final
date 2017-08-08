@@ -23,7 +23,7 @@ body {
   z-index: 2;;
 }
 
-.card {
+.catBarCard {
   display: flex;
   flex-flow: column nowrap;
   margin-left: 2vw;

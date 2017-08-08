@@ -5,7 +5,7 @@
 .navTop {
   height: 80px;
   padding-top: 15px;
-  padding-left: 30px;
+
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -23,8 +23,18 @@
 .searchBar {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 49vw;
+  width: 48vw;
 }
+.navRight {
+  width: 48vw;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  padding-right: 30px;
+}
+
 .textArea {
   width:30vw;
   font-family: Lato;
@@ -59,15 +69,7 @@
   font-weight: 300;
 
 }
-.navRight {
-  width: 49vw;
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-content: center;
-  padding-right: 30px;
-}
+
 .navText{
   font-family: Arial;
   font-weight: 300;
