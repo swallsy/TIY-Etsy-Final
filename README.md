@@ -2,6 +2,8 @@
 # TIY Durham - Cohort 10
 
 ## Team Homepage
+
+## PROJECT LEADS
 ### Monday: Sara
 - set up Trello
 - feature cards
@@ -21,6 +23,13 @@
 - Assigned remaining styling.
 - Discussed and decided font and page styling.
 ### Friday: Lula
+
+## CONTRIBUTIONS
+
+##Sara:
+- Built the carousel
+- Built the Recent Reviews section
+- Built the Browse Collections section, pulling dynamically from the current trending items to populate the images and titles.
 
 ## Team Listing
 
