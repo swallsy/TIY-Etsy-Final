@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import fetchJsonp from "fetch-jsonp";
 
 export default class Cards extends Component {
     constructor(props) {
@@ -144,8 +145,7 @@ export default class Cards extends Component {
     }
 
     componentWillMount() {
-        let categoryImages = "https://api.etsy.com/v2/listings/trending?api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=80&includes=MainImage";
-        fetch(categoryImages)
+        fetchJsonp("https://api.etsy.com/v2/listings/trending.js?callback=getData&api_key=3yhxu7gn2ot24so9hzuqbxc9&limit=80&includes=MainImage")
             .then (response => response.json())
             .then (response => {
               let tempArr = [];

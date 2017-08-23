@@ -4,11 +4,11 @@
   padding: 0 3% 0 3%;
 }
 
-.card {
+.fresh-blog-card {
   border: 0;
 }
 
-.card-block {
+.fresh-blog-card-block {
   padding: 0;
   background-color: #FAF9F5;
 }
