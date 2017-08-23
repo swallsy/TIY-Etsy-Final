@@ -73,7 +73,7 @@ export default class Cards extends Component {
 
             renderMe = (
               <div className="container-fluid shop-cards-wrapper" id="shop-by-category">
-                <h2 className="title">Shop by category</h2>
+                  <h2 className="shop-cards-title">Shop by category</h2>
                 <div className="row" id="shop-by-category-cards">
                   {render}
                 </div>
@@ -84,7 +84,7 @@ export default class Cards extends Component {
             renderMe = (
 
               <div className="container-fluid shop-cards-wrapper" id="shop-by-category">
-                <h2 className="title">Shop for gifts</h2>
+                <h2 className="shop-cards-title">Shop for gifts</h2>
                 <div className="row" id="shop-by-category-cards">
                     <div className="col-md-2 items padding">
                       <a href="https://www.etsy.com/featured/summer-gifts-under-30?ref=hp_g">
