@@ -6,7 +6,8 @@
 
 .product-row {
   width: 920px;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-card-column {
@@ -16,13 +17,15 @@
 }
 
 .product-card {
-  width: 213px;
+  /*width: 213px;*/
   height: 274px;
   border: none;
   font-family: 'Lato';
   display: inline-block;
   padding: 0px;
-  margin-left: 1.7vw;
+  box-sizing: border-box;
+  padding: 15px;
+  /*margin-left: 1.7vw;*/
   text-align: left;
 }
 
