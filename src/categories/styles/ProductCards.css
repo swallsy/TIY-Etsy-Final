@@ -1,19 +1,32 @@
+.product-cards-container {
+  width: 910px;
+  margin-left: 2.5vw;
+  padding: 0px;
+}
+
 .product-row {
-  width: 100%;
+  width: 920px;
   display: inline-block;
+}
+
+.product-card-column {
+  width: 920px!important;
+  padding: 0px;
+  margin: 0px;
 }
 
 .product-card {
-  width: 240px;
+  width: 213px;
+  height: 274px;
   border: none;
   font-family: 'Lato';
   display: inline-block;
-  padding: 0 0 2em 0;
-  margin-left: 1vw;
+  padding: 0px;
+  margin-left: 1.7vw;
   text-align: left;
 }
 
-.link:hover {
+a:hover {
   text-decoration: none;
 }
 
