@@ -17,19 +17,21 @@
 .carousel-item h2 {
   text-align: left;
   padding-left: 0;
+  padding-bottom: 20px;
   margin-left: 0;
-  padding-bottom: 30px;
   color: #323232;
   font-weight: 100;
   font-size: 3.5em;
   font-family: serif;
 }
 
-.carousel-text.carousel-caption{
-  width: 35%;
+
+.carousel-caption {
+  width: 40%;
   text-align: left;
   left: 10%;
   text-shadow: none;
+  margin: 20px 0px;
 }
 
 .image-background {
