@@ -3,6 +3,8 @@ import fetchJsonp from "fetch-jsonp";
 
 import CatCard from './CatBody/CatCards.js';
 import DetailedCatCard from './CatBody/DetailedCatCards.js';
+import ProductCards from "./CatBody/ProductCards";
+import PageCounter from "./PageCounter";
 
 import '../styles/CatBody.css';
 import "../styles/spinner.css";
@@ -26,7 +28,7 @@ class CatBody extends Component {
         let listings = resp.results;
         this.setState({listings: listings});
       })
-    }
+  }
 
 
   render() {
@@ -159,24 +161,36 @@ class CatBody extends Component {
             id: 143
           }}
         ];
-          return (
-            <div>
-              {this.state.listings.length > 0 ? (
-              <div className = "container catBodyContainer">
-                <div className="row detailed-card-row">
-                  <DetailedCatCard detailedCategories={detailedCategories}
-                                   etsyListings={this.state.listings} />
-                </div>
+      return (
+        <div>
+          {this.state.listings.length > 0 ? (
+          <div className = "container catBodyContainer">
+            <div className="row detailed-card-row">
+              <div className=" col-md-9 card-column">
+                <DetailedCatCard detailedCategories={detailedCategories}
+                               etsyListings={this.state.listings} />
                 <CatCard categories={categories}
-                           etsyListings={this.state.listings} />
+                       etsyListings={this.state.listings} />
+                <ProductCards listingFilter={this.state.listingFilter}
+                              under25={this.state.under25}
+                              between25_50={this.state.between25_50}
+                              between50_100={this.state.between50_100}
+                              over100={this.state.over100}
+                              selectedOption={this.state.selectedOption}/>
+                <div className="pageCounter-controller">
+                  <PageCounter />
                 </div>
-              ) : (
-              <div className="lds-spinner"></div>
-              )}
+              </div>
             </div>
-          )
-    }
+          </div>
+        ) : (
+          <div></div>
+        )}
+      </div>
+    )
   }
+}
+
 
 
 export default CatBody

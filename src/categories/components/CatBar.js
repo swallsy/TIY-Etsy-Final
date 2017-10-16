@@ -11,9 +11,6 @@ import OrderingOptions from './CatBar/OrderingOptions.js';
 import Price from './CatBar/Price.js';
 import ShipTo from './CatBar/ShipTo.js';
 import ShopLocation from './CatBar/ShopLocation.js';
-import ProductCards from './CatBody/ProductCards.js';
-import CatBody from './CatBody.js'
-import PageCounter from './PageCounter.js';
 
 export default class CatBar extends Component {
   constructor() {
@@ -109,10 +106,7 @@ handleOptionChange(eventTarget) {
       selectedOption: eventTarget.target.value,
       mainFetchUrl: overOneHund
     });
-
-
   }
-
 }
 
 
@@ -128,27 +122,6 @@ handleOptionChange(eventTarget) {
           <OrderingOptions/>
           <ShipTo/>
         </div>
-        {this.state.listingFilter.length > 0
-          ? (
-            <div className=" col-md-9 card-column">
-              <CatBody />
-              <div className="container product-cards-container">
-                <ProductCards
-                  listingFilter={this.state.listingFilter}
-                  under25={this.state.under25}
-                  between25_50={this.state.between25_50}
-                  between50_100={this.state.between50_100}
-                  over100={this.state.over100}
-                  selectedOption={this.state.selectedOption}/>
-              </div>
-              <div className="pageCounter-controller">
-                <PageCounter />
-              </div>
-            </div>
-          )
-          : (
-              <div className="lds-spinner"></div>
-          )}
       </div>
     )
   }
