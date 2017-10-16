@@ -19,10 +19,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="category-header">
-          <h2 className="allCatTitle">All categories</h2>
-        </div>
         <div className="container-fluid app-container">
+          <div className="category-header">
+            <h2 className="allCatTitle">All categories</h2>
+          </div>
           <CatBar />
         </div>
       </div>

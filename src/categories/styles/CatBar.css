@@ -148,10 +148,10 @@ input[type=radio] + label span {
 input[type=radio]:checked + label span:before {
   content: '⬤';
   color: #f56400;
-  font-size: 10.5px;
+  font-size: 10.4px;
   position: absolute;
-  left: 1.9px;
-  bottom: 1.27px;
+  left: 1.75px;
+  bottom: 1.75px;
   cursor: pointer;
 }
 
@@ -168,9 +168,9 @@ input[type=radio]:checked + label span:before {
   font-weight: 300;
   border-radius: 5%;
   border: .25px solid #dbdbdb;
-  width: 9.5vw;
-  height: 2.8vw;
-  margin: .5vw .2vw 0vw 2vw;
+  width: 140px;
+  height: 38px;
+  margin: .5vw .2vw 0vw 0px;
 }
 
 .infoSubButton {
@@ -178,14 +178,14 @@ input[type=radio]:checked + label span:before {
   background: #FFFFFF;
   border-radius: 5%;
   border: .25px solid #dbdbdb;
-  width: 2.8vw;
-  height: 2.8vw;
-  padding-bottom: 1.5vw;
-  margin: 0 0 0vw .2vw;
+  width: 38px;
+  height: 38px;
+  padding-bottom: 4px;
+  margin: 0 0 0vw 3px;
 }
 
 .fa-play {
-  padding-top: .75vw;
+  padding-top: 8px;
 }
 
 /* Item type column styling */
@@ -248,7 +248,7 @@ input[type=radio]:checked + label span:before {
 .priceInputContainer {
   display: flex;
   flex-flow: row nowrap;
-  margin: 7px 0 0 36px;
+  margin: 5px 0 7px 20px;
 }
 
 .customPriceForm {
@@ -256,13 +256,13 @@ input[type=radio]:checked + label span:before {
   font-weight: 300;
   border-radius: 5%;
   border: .25px solid #dbdbdb;
-  width: 3.8vw;
-  height: 2.8vw;
-  margin: .5vw .3vw 0 0vw;
+  width: 56px;
+  height: 37px;
+  margin: 7px 4px 0 0;
 }
 
 .to {
-  padding-top: 1.2vw;
+  padding-top: 15px;
 }
 
 .priceSubButton {
@@ -270,8 +270,8 @@ input[type=radio]:checked + label span:before {
   background: #FFFFFF;
   border-radius: 5%;
   border: .25px solid #dbdbdb;
-  width: 2.8vw;
-  height: 2.8vw;
+  width: 37px;
+  height: 37px;
   margin: 6.5px 0 0 5px;
 }
 
@@ -350,14 +350,14 @@ input[type=radio]:checked + label span:before {
   font-size: 13.5px;
   font-weight: bold;
   position: absolute;
-  bottom: -7px;
+  bottom: -5px;
   cursor: pointer;
 }
 
 .showMoreColor {
   display: block;
   color: #e86c25;
-  font-weight: 300vw;
+  font-weight: 300;
   margin: 7px 0px 0px 0px;
   padding-bottom: 9px;
   cursor: pointer;
