@@ -17,16 +17,16 @@
 }
 
 .product-card {
-  /*width: 213px;*/
-  height: 274px;
+  width: 18%;
+  height: auto;
   border: none;
   font-family: 'Lato';
   display: inline-block;
   padding: 0px;
   box-sizing: border-box;
-  padding: 15px;
-  /*margin-left: 1.7vw;*/
+  margin: .8vw;
   text-align: left;
+
 }
 
 a:hover {
@@ -36,12 +36,13 @@ a:hover {
 .product-image {
   width: 100%;
   border-radius: 2px;
-  margin-bottom: 5px;
+  margin: 0px;
 }
 
 a:hover .product-image {
   box-shadow: 0px 1px 5px #aaaaaa;
   transition: box-shadow 0.3s ease-in-out;
+  width: 100%;
 }
 
 .product-title {
@@ -49,18 +50,25 @@ a:hover .product-image {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.1em
+  font-size: .95em
 }
 
 .shop-name {
   color: #aaaaaa;
   align-content: left;
-  font-size: 1em;
+  font-size: .78em;
   font-weight: 100;
+  padding-top: 2px;
 }
 
 .fa-star {
-  font-size: 1em;
+  font-size: .85em;
+  color: #FFA301;
+  padding: 1px;
+}
+
+.fa-star-o {
+  font-size: .85em;
   color: #FFA301;
   padding: 1px;
 }
@@ -74,12 +82,21 @@ a:hover .product-image {
 
 .total-reviews {
   color: #aaaaaa;
-  font-size: 1em;
-  font-weight: lighter;
+  font-size: .85em;
+  font-weight: 300;
+  display: inline;
+  margin-right: 50%;
+}
+
+.price-container {
+  text-align: left;
+  width: 5vw;
 }
 
 .price {
   color: #5C5C5C;
   font-weight: bolder;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  text-align: left;
+  margin: 0px;
 }

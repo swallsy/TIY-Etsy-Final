@@ -24,6 +24,7 @@ class App extends Component {
             <h2 className="allCatTitle">All categories</h2>
           </div>
           <CatBar />
+          <CatBody />
         </div>
       </div>
     );

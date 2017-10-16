@@ -22,7 +22,7 @@ body {
 /* Category links styling */
 
 .allCatColumn {
-  font-size: .87em;
+  font-size: .78em;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -77,7 +77,7 @@ li {
 /* Shop Location Styling */
 
 .shopLocationContainer {
-  font-size: .87em;
+  font-size: .78em;
   color: #7a7a7a;
   height: 158px;
   width: 200px;
@@ -191,7 +191,7 @@ input[type=radio]:checked + label span:before {
 /* Item type column styling */
 
 .itemTypeContainer {
-  font-size: .87em;
+  font-size: .78em;
   color: #7a7a7a;
   display: flex;
   flex-flow: column nowrap;
@@ -225,7 +225,7 @@ input[type=radio]:checked + label span:before {
 }
 
 .price-container {
-  font-size: .87em;
+  font-size: .78em;
   color: #7a7a7a;
   height: 230px;
   display: flex;
@@ -292,10 +292,12 @@ input[type=radio]:checked + label span:before {
 }
 
 .color-title {
-  font-size: .89em;
+  margin-top: 20px;
+  font-size: .78em;
+  font-weight: bold;
 }
 .colorList {
-  font-size: .89em;
+  font-size: .74em;
   margin: 0px 0px 0px 20px;
   padding: none;
   margin: none;
@@ -365,7 +367,7 @@ input[type=radio]:checked + label span:before {
 
 /*Ordering options*/
 .orderingOptionsColumn {
-  font-size: .89em;
+  font-size: .78em;
   font-weight: 300;
   color: #7a7a7a;
   height: 100px;
