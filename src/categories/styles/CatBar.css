@@ -9,13 +9,16 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.catBarCard {
-  display: flex;
-  flex-flow: column nowrap;
-  margin-left: 2.5vw;
+.card.catBarCard {
+  width: 231px!important;
+  height: auto;
+  padding: 0px!important;
+  margin: 0px!important;
+}
+
+.catBar {
+  width: auto;
   padding: 0px;
-  width: 231px;
-  height: 1055px;
 }
 
 
@@ -150,8 +153,8 @@ input[type=radio]:checked + label span:before {
   color: #f56400;
   font-size: 10.4px;
   position: absolute;
-  left: 1.75px;
-  bottom: 1.75px;
+  left: 2.3px;
+  bottom: 1.88px;
   cursor: pointer;
 }
 
@@ -357,6 +360,7 @@ input[type=radio]:checked + label span:before {
 }
 
 .showMoreColor {
+  font-size: .78em;
   display: block;
   color: #e86c25;
   font-weight: 300;
@@ -380,6 +384,7 @@ input[type=radio]:checked + label span:before {
 }
 
 .order-title {
+  font-weight: bold;
   padding-top: 15px;
   margin-left: 4px;
 }
@@ -390,6 +395,7 @@ input[type=radio]:checked + label span:before {
 
 /*Ship to*/
 .shipToColumn {
+  font-size: .78em;
   color: #7a7a7a;
   display: flex;
   flex-flow: column nowrap;
